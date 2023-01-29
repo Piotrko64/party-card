@@ -1,11 +1,12 @@
 export type BackgroundStore = {
     background: {
         color: string;
-        linearGradient: boolean;
     };
     confetti: {
         onStart: boolean;
         buttonConfetti: boolean;
+        amountConfetti: number;
+        isActive: boolean;
     };
     backgroundDecorations: {
         isDecorations: boolean;
@@ -15,4 +16,6 @@ export type BackgroundStore = {
         isFireworks: boolean;
         intensity: number;
     };
+    turnOnConfetti: () => void;
+    turnOffConfetti: () => void;
 };

@@ -2,3 +2,9 @@
     height: 50vh;
     flex-direction: column;
 }
+
+@media (max-width: 920px) {
+    .header {
+        height: 40vh;
+    }
+}

@@ -1,9 +1,13 @@
 .aboveText {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    letter-spacing: 4px;
+    padding-bottom: 30px;
 }
 
 @media (max-width: 920px) {
     .aboveText {
         font-size: 1.8rem;
+        letter-spacing: normal;
+        padding-bottom: 10px;
     }
 }

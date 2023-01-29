@@ -1,0 +1,11 @@
+.underText {
+    font-size: 1.25rem;
+    padding-top: 30px;
+}
+@media (max-width: 920px) {
+    .underText {
+        font-size: 1.2rem;
+
+        padding-top: 15px;
+    }
+}
