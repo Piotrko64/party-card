@@ -1,4 +1,4 @@
-import { NamesFont } from "@types/typesForStyles/NamesFont";
+import { NamesFont } from "types/typesForStyles/NamesFont";
 import { fontsToChoice } from "data/fonts/fontsToChoice";
 
 const SPARE_FONT = "'Noto Serif', serif";

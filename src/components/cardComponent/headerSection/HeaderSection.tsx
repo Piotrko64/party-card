@@ -1,9 +1,9 @@
-import { TopTextes } from "./topTextes/TopTextes";
+import { TopTexts } from "./topTexts/TopTexts";
 
 export function HeaderSection() {
     return (
-        <header>
-            <TopTextes />
-        </header>
+        <>
+            <TopTexts />
+        </>
     );
 }

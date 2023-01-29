@@ -1,0 +1,82 @@
+.name {
+    color: blue;
+    font-size: 5.4rem;
+    text-align: center;
+    font-weight: 700;
+    animation: animColor 7s ease-in-out infinite, shake 7s ease-in-out infinite;
+}
+
+.strokeWidth {
+    -webkit-text-stroke-width: 3px;
+    text-stroke-width: 3px;
+}
+
+@media (max-width: 1200px) {
+    .name {
+        font-size: 4.8rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .name {
+        font-size: 4rem;
+    }
+    .strokeWidth {
+        -webkit-text-stroke-width: 2px;
+    }
+}
+@media (max-width: 440px) {
+    .name {
+        font-size: 3.8rem;
+        -webkit-text-stroke-width: 1px;
+    }
+}
+
+@keyframes animColor {
+    0%,
+    100% {
+        background-position: 0% 0%;
+    }
+    20% {
+        background-position: 40% 40%;
+    }
+    30% {
+        background-position: 80% 80%;
+    }
+    40% {
+        background-position: 100% 100%;
+    }
+    50% {
+        background-position: 70% 70%;
+    }
+    65% {
+        background-position: 40% 40%;
+    }
+    80% {
+        background-position: 15% 15%;
+    }
+}
+
+@keyframes shake {
+    10% {
+        transform: rotateZ(0deg);
+    }
+
+    20% {
+        transform: rotateZ(0.4deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: rotateZ(-0.4deg);
+    }
+
+    40%,
+    60% {
+        transform: rotateZ(0.4deg);
+    }
+    80% {
+        transform: rotateZ(0deg);
+    }
+}

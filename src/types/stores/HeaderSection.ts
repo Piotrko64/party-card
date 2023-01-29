@@ -1,37 +1,29 @@
+import { NamesFont } from "types/typesForStyles/NamesFont";
+
 export type HeaderSection = {
     name: {
         title: string;
         color: string;
-        linearGradient: boolean;
+        isGradient: boolean;
         isStrokeColor: boolean;
         strokeColor: string;
-        font: string;
-        animation: string;
-        fadeIn: string;
+        font: NamesFont;
     };
-    background: {
-        color: string;
-        linearGradient: boolean;
-    };
+
     textAboveName: {
         text: string;
         color: string;
-        font: string;
+        font: NamesFont;
+        linearGradient: boolean;
     };
-    confetti: {
-        onStart: boolean;
-        buttonConfetti: boolean;
-    };
-    backgroundDecorations: {
-        isDecorations: boolean;
-        kindDecorations: string;
-    };
-    fireworks: {
-        isFireworks: boolean;
-        intensity: number;
+    textUnderName: {
+        text: string;
+        color: string;
+        font: NamesFont;
+        linearGradient: boolean;
     };
     endText: {
-        font: string;
+        font: NamesFont;
         text: string;
     };
 };
