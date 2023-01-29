@@ -14,13 +14,13 @@ export type HeaderSection = {
         text: string;
         color: string;
         font: NamesFont;
-        linearGradient: boolean;
+        isGradient: boolean;
     };
     textUnderName: {
         text: string;
         color: string;
         font: NamesFont;
-        linearGradient: boolean;
+        isGradient: boolean;
     };
     endText: {
         font: NamesFont;

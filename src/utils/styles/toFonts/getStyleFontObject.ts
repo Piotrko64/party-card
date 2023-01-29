@@ -9,7 +9,7 @@ export function getStyleFontObject({ font, color, isGradient }: Arguments) {
         color: isGradient ? "transparent" : color,
         backgroundImage: isGradient ? color : "none",
         backgroundClip: isGradient ? "text" : "none",
-        "-webkit-background-clip": isGradient ? "text" : "none",
+        WebkitBackgroundClip: isGradient ? "text" : "none",
         backgroundSize: isGradient ? "300%" : "100%",
     };
 }

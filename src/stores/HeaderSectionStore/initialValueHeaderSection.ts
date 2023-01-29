@@ -14,13 +14,13 @@ export const initialValueHeaderStore: HeaderSection = {
         text: "Happy Birthday",
         color: "white",
         font: "Noto Serif",
-        linearGradient: false,
+        isGradient: false,
     },
     textUnderName: {
         text: "Happy Birthday",
         color: "white",
         font: "Noto Serif",
-        linearGradient: false,
+        isGradient: false,
     },
 
     endText: {
