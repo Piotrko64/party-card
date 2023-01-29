@@ -1,0 +1,9 @@
+.aboveText {
+    font-size: 2rem;
+}
+
+@media (max-width: 920px) {
+    .aboveText {
+        font-size: 1.8rem;
+    }
+}
