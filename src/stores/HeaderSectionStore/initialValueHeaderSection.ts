@@ -5,7 +5,7 @@ export const initialValueHeaderStore = {
         linearGradient: false,
         isStrokeColor: true,
         strokeColor: "white",
-        font: "Lato",
+        font: "Noto Serif",
         animation: "shake",
         fadeIn: "opacity",
     },
@@ -16,12 +16,12 @@ export const initialValueHeaderStore = {
     textAboveName: {
         text: "Happy Birthday",
         color: "white",
-        font: "Lato",
+        font: "Noto Serif",
     },
     textUnderName: {
         text: "Happy Birthday",
         color: "white",
-        font: "Lato",
+        font: "Noto Serif",
     },
     confetti: {
         onStart: true,
@@ -36,7 +36,7 @@ export const initialValueHeaderStore = {
         intensity: 3,
     },
     endText: {
-        font: "Lato",
+        font: "Noto Serif",
         text: "",
     },
 };

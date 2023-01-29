@@ -1,9 +1,5 @@
-import { TopTextes } from "./topTextes/TopTextes";
+import { HeaderSection } from "./headerSection/HeaderSection";
 
 export function CardPageMainComponent() {
-    return (
-        <header>
-            <TopTextes />
-        </header>
-    );
+    return <HeaderSection />;
 }
