@@ -3,8 +3,8 @@ import Confetti from "react-confetti";
 import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 
 export function ConfettiComponent() {
-    const { confetti, turnOffConfetti } = useBackgroundStore((state) => state);
-    const { amountConfetti, isActive, onStart } = confetti;
+    const { amountConfetti, isActive, onStart } = useBackgroundStore((state) => state.confetti);
+    const { turnOffConfetti } = useBackgroundStore((state) => state);
 
     function getCorrectHeight() {
         const body = document.body,
@@ -21,6 +21,7 @@ export function ConfettiComponent() {
 
     return (
         <>
+            <button onClick={turnOffConfetti}> {isActive ? "asda" : "sssssssssssss"}</button>
             <Confetti
                 width={window.innerWidth}
                 height={getCorrectHeight()}
@@ -28,7 +29,6 @@ export function ConfettiComponent() {
                 gravity={0.25}
                 recycle={false}
                 wind={0}
-                onConfettiComplete={turnOffConfetti}
             />
         </>
     );

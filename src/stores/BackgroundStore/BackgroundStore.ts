@@ -1,7 +1,6 @@
 import { BackgroundStore } from "types/stores/BackgroundStore";
 import { create } from "zustand";
-import { actionsBackgroundStore } from "./actionsBackgroundStore";
-import { initialValueBackground } from "./initialValueBackground";
+import { produce } from "immer";
 
 export const useBackgroundStore = create<BackgroundStore>((set, get) => ({
     background: {
@@ -11,7 +10,7 @@ export const useBackgroundStore = create<BackgroundStore>((set, get) => ({
         onStart: true,
         buttonConfetti: true,
         amountConfetti: 800,
-        isActive: true,
+        isActive: false,
     },
     backgroundDecorations: {
         isDecorations: true,
@@ -22,21 +21,31 @@ export const useBackgroundStore = create<BackgroundStore>((set, get) => ({
         isFireworks: true,
         intensity: 3,
     },
-    bears: 0,
 
     turnOffConfetti: () =>
         set((state) => {
-            state.confetti.isActive = false;
-
-            return state;
+            console.log(state);
+            return {
+                confetti: {
+                    onStart: true,
+                    buttonConfetti: true,
+                    amountConfetti: 800,
+                    isActive: true,
+                },
+            };
         }),
 
-    turnOnConfetti: () =>
-        set({
-            background: {
-                color: "red",
-            },
-        }),
+    turnOnConfetti: () => {
+        set((state) => {
+            console.log(state);
+            return {
+                fireworks: {
+                    intensity: 10,
+                    isFireworks: false,
+                },
+            };
+        });
+    },
 
     // turnOnConfetti: () => {},
 }));
