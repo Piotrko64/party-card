@@ -11,6 +11,7 @@ export const initialValueBackground = {
     backgroundDecorations: {
         isDecorations: true,
         kindDecorations: "heart",
+        color: "red",
     },
     fireworks: {
         isFireworks: true,

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import { ConfettiComponent } from "./confetti/ConfettiComponent";
 import { FireworksComponent } from "./fireworks/FireworksComponent";
+import { IconBackground } from "./iconBackground/IconBackground";
 
 export function Background({ children }: React.PropsWithChildren) {
     const { background } = useBackgroundStore();
@@ -15,6 +16,7 @@ export function Background({ children }: React.PropsWithChildren) {
             {children}
             <FireworksComponent />
             <ConfettiComponent />
+            <IconBackground />
         </>
     );
 }

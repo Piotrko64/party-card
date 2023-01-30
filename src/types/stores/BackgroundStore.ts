@@ -11,6 +11,7 @@ export type BackgroundStore = {
     backgroundDecorations: {
         isDecorations: boolean;
         kindDecorations: string;
+        color: string;
     };
     fireworks: {
         isFireworks: boolean;

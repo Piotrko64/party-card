@@ -1,6 +1,6 @@
-import { CardPageMainComponent } from "components/cardComponent/CardPageMainComponent";
 import { CardPage } from "pages/CardPage";
-import { useState } from "react";
+import { Heart } from "ui/svg/Heart";
+
 import "./App.scss";
 
 function App() {

@@ -24,7 +24,7 @@ export function FireworksComponent() {
                         width: "100%",
                         height: "100%",
                         position: "fixed",
-                        background: background.color,
+                        background: "transparent",
                         zIndex: 1,
                     }}
                 />

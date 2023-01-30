@@ -1,0 +1,22 @@
+.svg {
+    height: 52px;
+    width: 57px;
+    display: flex;
+    position: absolute;
+    z-index: 9;
+    opacity: 0.85;
+    .path {
+        stroke-width: 12px;
+    }
+}
+
+@media (max-width: 920px) {
+    .svg {
+        height: 38px;
+        width: 38px;
+        opacity: 0.75;
+        .path {
+            stroke-width: 8px;
+        }
+    }
+}
