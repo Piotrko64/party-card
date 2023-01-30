@@ -1,6 +1,9 @@
 .underText {
     font-size: 1.25rem;
     padding-top: 30px;
+    max-width: 750px;
+    margin: 5px;
+    text-align: center;
 }
 @media (max-width: 920px) {
     .underText {

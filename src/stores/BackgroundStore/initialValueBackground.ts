@@ -1,6 +1,6 @@
 export const initialValueBackground = {
     background: {
-        color: "blue",
+        color: "#304440",
     },
     confetti: {
         onStart: true,
@@ -11,7 +11,7 @@ export const initialValueBackground = {
     backgroundDecorations: {
         isDecorations: true,
         kindDecorations: "heart",
-        color: "red",
+        color: "#009f7f",
     },
     fireworks: {
         isFireworks: true,

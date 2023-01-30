@@ -7,12 +7,15 @@
 }
 
 .strokeWidth {
-    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-width: 2.4px;
 }
 
 @media (max-width: 1200px) {
     .name {
         font-size: 4.9rem;
+    }
+    .strokeWidth {
+        -webkit-text-stroke-width: 1.8px;
     }
 }
 
@@ -21,13 +24,13 @@
         font-size: 4rem;
     }
     .strokeWidth {
-        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-width: 1.2px;
     }
 }
 @media (max-width: 440px) {
     .name {
         font-size: 3.8rem;
-        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-width: 0.4px;
     }
 }
 

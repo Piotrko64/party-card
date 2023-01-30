@@ -2,8 +2,8 @@ import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionSt
 
 import classes from "./name.module.scss";
 import cx from "classnames";
-import { getCorrectObjectForFont } from "utils/styles/getCorrectObjectForFont";
-import { getStyleFontObject } from "utils/styles/toFonts/getStyleFontObject";
+import { getCorrectObjectForFont } from "helpers/styles/getCorrectObjectForFont";
+import { getStyleFontObject } from "helpers/styles/toFonts/getStyleFontObject";
 
 export function Name() {
     const { name } = useHeaderSectionStore((state) => state);

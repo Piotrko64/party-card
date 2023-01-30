@@ -1,6 +1,6 @@
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
-import { getStyleFontObject } from "utils/styles/toFonts/getStyleFontObject";
-import { getCorrectObjectForFont } from "./../../../../../utils/styles/getCorrectObjectForFont";
+import { getStyleFontObject } from "helpers/styles/toFonts/getStyleFontObject";
+import { getCorrectObjectForFont } from "helpers/styles/getCorrectObjectForFont";
 import classes from "./aboveName.module.scss";
 
 export function AboveName() {
