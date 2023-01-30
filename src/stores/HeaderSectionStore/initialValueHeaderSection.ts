@@ -7,13 +7,13 @@ export const initialValueHeaderStore: HeaderSection = {
         isGradient: true,
         isStrokeColor: true,
         strokeColor: "white",
-        font: "Fjalla One",
+        font: "Oswald",
     },
 
     textAboveName: {
         text: "Happy Birthday",
         color: "white",
-        font: "Fjalla One",
+        font: "Oswald",
         isGradient: false,
     },
     textUnderName: {

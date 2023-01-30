@@ -1,4 +1,3 @@
-export const actionsBackgroundStore = (set: any) => ({
-    turnOnConfetti: () => set(() => ({ confetti: { isActive: true } })),
-    turnOffConfetti: () => set(() => ({ confetti: { isActive: false } })),
-});
+import { BackgroundStore, ConfettiType } from "types/stores/BackgroundStore";
+
+export const actionsBackgroundStore = (set: any, get: () => BackgroundStore) => ({});

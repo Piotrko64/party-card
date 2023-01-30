@@ -1,5 +1,5 @@
 export const fontsToChoice = [
-    { name: "Fjalla One", fullName: "'Fjalla One', sans-serif" },
+    { name: "Oswald", fullName: "'Oswald', sans-serif" },
     { name: "Noto Serif", fullName: "'Noto Serif', serif" },
     {
         name: "Lato",

@@ -1,10 +1,10 @@
 .header {
-    height: 50vh;
+    height: 60vh;
     flex-direction: column;
 }
 
 @media (max-width: 920px) {
     .header {
-        height: 40vh;
+        height: 50vh;
     }
 }

@@ -21,17 +21,15 @@ export function ConfettiComponent() {
 
     return (
         <>
-            {(onStart || isActive) && (
-                <Confetti
-                    width={window.innerWidth}
-                    height={getCorrectHeight()}
-                    numberOfPieces={amountConfetti}
-                    gravity={0.25}
-                    recycle={false}
-                    wind={0}
-                    onConfettiComplete={turnOffConfetti}
-                />
-            )}
+            <Confetti
+                width={window.innerWidth}
+                height={getCorrectHeight()}
+                numberOfPieces={amountConfetti}
+                gravity={0.25}
+                recycle={false}
+                wind={0}
+                onConfettiComplete={turnOffConfetti}
+            />
         </>
     );
 }
