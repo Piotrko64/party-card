@@ -1,5 +1,4 @@
 import { TagCloud } from "@frank-mayer/react-tag-cloud";
-import { useWishesSectionStore } from "./../../../../../stores/WishesSectionStore/WishesSectionStore";
 
 export function TagCloudComponent() {
     return (
@@ -9,7 +8,6 @@ export function TagCloudComponent() {
                     radius: Math.min(500, w.innerWidth, w.innerHeight) / 2,
                     maxSpeed: "normal",
                 })}
-                // onClickOptions={{ passive: true }}
             >
                 {[
                     "VSCode",

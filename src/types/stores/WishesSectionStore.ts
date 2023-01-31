@@ -1,7 +1,9 @@
 import { NamesFont } from "types/typesForStyles/NamesFont";
 
+export type ComponentNames = "tagCloud";
+
 export type TagCloud = {
-    name: "TagCloud";
+    name: ComponentNames;
     texts: Array<string>;
     color: string;
     font: NamesFont;

@@ -4,7 +4,7 @@ import { create } from "zustand";
 export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
     elements: [
         {
-            name: "TagCloud",
+            name: "tagCloud",
             id: "abc",
             texts: ["aaaa", "bbbb", "cccc", "dddd"],
             color: "red",
