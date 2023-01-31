@@ -119,6 +119,13 @@
   dependencies:
     fireworks-js "2.10.1"
 
+"@frank-mayer/react-tag-cloud@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@frank-mayer/react-tag-cloud/-/react-tag-cloud-1.1.1.tgz#280d248fdac5dfd45b1398302729c46b59f0663e"
+  integrity sha512-biNTK45+Q7t82NTZoh/Lkviu/azRPhTvpSq0EIOdTzrSYQRgoBG+OMAG0+QuiT8tiqVQNlqg6k8lOqfQglYEvw==
+  dependencies:
+    TagCloud "^2.3.0"
+
 "@swc/core-darwin-arm64@1.3.30":
   version "1.3.30"
   resolved "https://registry.yarnpkg.com/@swc/core-darwin-arm64/-/core-darwin-arm64-1.3.30.tgz#fb9b20a46455f49597e760e4dfe829196e0fe12e"
@@ -222,6 +229,11 @@
   integrity sha512-3GQ2oruZO9j8dSHcI0MUeOZQBhjYyDQsF/pKY4Px+CJxn0M16OhgFeEzUjeuwci4zhhjoNIDE9aFNaV5GMQ09g==
   dependencies:
     "@swc/core" "^1.3.22"
+
+TagCloud@^2.3.0, TagCloud@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/TagCloud/-/TagCloud-2.3.2.tgz#2f5e6d58f58d3ec060791ebeca6ac604b50f246e"
+  integrity sha512-WMnfCyRCjAejqTBHR3EVcA02nCOhoD1HEEU+KHS7m9Oj/t4IcOKTjklyOadTibeGRA4poK/rxwuO4g61qZvObA==
 
 anymatch@~3.1.2:
   version "3.1.3"

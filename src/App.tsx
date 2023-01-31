@@ -7,9 +7,9 @@ import "./App.scss";
 function App() {
     return (
         <>
-            {/* <CardPage />
-             */}
-            <StartPageMainComponent />
+            <CardPage />
+
+            {/* <StartPageMainComponent /> */}
         </>
     );
 }
