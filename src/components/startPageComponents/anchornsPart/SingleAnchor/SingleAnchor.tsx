@@ -1,17 +1,17 @@
 type Props = {
     color: string;
     text: string;
-    anchor: string;
+    href: string;
 };
 
-export function SingleButton({ text, color, anchor }: Props) {
+export function SingleAnchor({ text, color, href }: Props) {
     return (
         <a
             style={{
                 color,
                 borderColor: color,
             }}
-            href={anchor}
+            href={href}
         >
             {text}
         </a>

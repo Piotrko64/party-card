@@ -2,8 +2,8 @@ export const fontsToChoice = [
     { name: "Oswald", fullName: "'Oswald', sans-serif" },
     { name: "Noto Serif", fullName: "'Noto Serif', serif" },
     {
-        name: "Lato",
-        fullName: "'Lato', sans-serif",
+        name: "Jost",
+        fullName: "'Jost', sans-serif;",
     },
     {
         name: "Aboreto",
