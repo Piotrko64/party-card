@@ -6,7 +6,7 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
         {
             name: "tagCloud",
             id: "abc",
-            texts: ["aaaa", "bbbb", "cccc", "dddd"],
+            texts: ["🎉", "🥳", "🎉", "🥳", "🎉", "🥳", "🎉", "🥳", "🎉"],
             color: "red",
             font: "Oswald",
         },

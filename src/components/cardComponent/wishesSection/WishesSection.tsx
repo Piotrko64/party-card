@@ -8,9 +8,8 @@ export function WishesSection() {
     return (
         <main>
             {wishElements.map((element) => (
-                <div key={element.name}>{getWishComponent("tagCloud")} </div>
+                <div key={element.name}>{getWishComponent("tagCloud", { ...element })} </div>
             ))}
-            {/* <TagCloudComponent /> */}
         </main>
     );
 }
