@@ -1,11 +1,17 @@
+import { getCorrectObjectForFont } from "helpers/styles/getCorrectObjectForFont";
+import { getStyleFontObject } from "helpers/styles/toFonts/getStyleFontObject";
+import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
 import { ButtonConfetti } from "./buttonConfetti/ButtonConfetti";
 import classes from "./downText.module.scss";
 
 export function DownText() {
+    const endText = useHeaderSectionStore((state) => state.endText);
+    const styleObjectFont = { ...getStyleFontObject(getCorrectObjectForFont(endText)) };
+
     return (
-        <div className={classes.endText}>
+        <div className={classes.endText} style={styleObjectFont}>
             <ButtonConfetti />
-            <div> al ma koata as kor ma </div>
+            <div>{endText.text}</div>
         </div>
     );
 }

@@ -25,6 +25,7 @@ export const initialValueHeaderStore: HeaderSection = {
 
     endText: {
         font: "Noto Serif",
-        text: "",
+        text: "Dalsze życzenia for you",
+        color: "white",
     },
 };

@@ -4,26 +4,41 @@ import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
 import cx from "classnames";
 import classes from "./buttonConfetti.module.scss";
-import { shallow } from "zustand/shallow";
+import Confetti from "react-confetti";
+import { getHeightWindow } from "helpers/getHeightWindow";
+import { useState } from "react";
 
 export function ButtonConfetti() {
     const { textAboveName } = useHeaderSectionStore();
     const confetti = useBackgroundStore((state) => state.confetti);
-    const { buttonConfetti, isActive } = confetti;
+    const { buttonConfetti, amountConfetti } = confetti;
 
     const styleObjectFont = { ...getStyleFontObject(getCorrectObjectForFont(textAboveName)) };
 
+    const [isConfetti, setConfetti] = useState(false);
+
     return (
         <>
-            {(buttonConfetti || isActive) && (
+            {buttonConfetti && (
                 <button
                     data-color={styleObjectFont.color}
                     style={styleObjectFont}
-                    className={cx(classes.button, isActive ? classes.inActive : "")}
+                    className={cx(classes.button, isConfetti ? classes.inActive : "")}
+                    onClick={() => setConfetti(true)}
                 >
-                    {isActive ? "asdad" : "asdadsdssdd"}
                     Kliknij tu po więcej Confetti!
                 </button>
+            )}
+            {isConfetti && (
+                <Confetti
+                    width={window.innerWidth}
+                    height={getHeightWindow()}
+                    numberOfPieces={amountConfetti}
+                    gravity={0.25}
+                    recycle={false}
+                    wind={0}
+                    onConfettiComplete={() => setConfetti(false)}
+                />
             )}
         </>
     );

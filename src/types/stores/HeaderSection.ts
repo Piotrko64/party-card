@@ -25,5 +25,6 @@ export type HeaderSection = {
     endText: {
         font: NamesFont;
         text: string;
+        color: string;
     };
 };

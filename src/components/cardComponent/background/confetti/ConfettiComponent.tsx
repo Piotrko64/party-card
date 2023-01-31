@@ -1,35 +1,22 @@
-import { useState } from "react";
+import { getHeightWindow } from "helpers/getHeightWindow";
 import Confetti from "react-confetti";
 import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 
 export function ConfettiComponent() {
-    const { amountConfetti, isActive, onStart } = useBackgroundStore((state) => state.confetti);
-    const { turnOffConfetti } = useBackgroundStore((state) => state);
-
-    function getCorrectHeight() {
-        const body = document.body,
-            html = document.documentElement;
-
-        return Math.max(
-            body.scrollHeight,
-            body.offsetHeight,
-            html.clientHeight,
-            html.scrollHeight,
-            html.offsetHeight
-        );
-    }
+    const { amountConfetti, onStart } = useBackgroundStore((state) => state.confetti);
 
     return (
         <>
-            <button onClick={turnOffConfetti}> {isActive ? "asda" : "sssssssssssss"}</button>
-            <Confetti
-                width={window.innerWidth}
-                height={getCorrectHeight()}
-                numberOfPieces={amountConfetti}
-                gravity={0.25}
-                recycle={false}
-                wind={0}
-            />
+            {onStart && (
+                <Confetti
+                    width={window.innerWidth}
+                    height={getHeightWindow()}
+                    numberOfPieces={amountConfetti}
+                    gravity={0.25}
+                    recycle={false}
+                    wind={0}
+                />
+            )}
         </>
     );
 }
