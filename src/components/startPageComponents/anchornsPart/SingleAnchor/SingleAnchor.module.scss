@@ -1,0 +1,16 @@
+.anchor {
+    padding: 10px 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    font-family: "Jost";
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem;
+}
+@media (max-width: 920px) {
+    .anchor {
+        font-size: 1.2rem;
+    }
+}

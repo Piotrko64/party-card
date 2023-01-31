@@ -1,0 +1,13 @@
+.describe {
+    color: white;
+    text-align: center;
+    font-family: "Jost";
+    margin: 0;
+    padding-bottom: 15px;
+    font-size: 1.1rem;
+}
+@media (max-width: 920px) {
+    .describe {
+        padding-bottom: 5px;
+    }
+}

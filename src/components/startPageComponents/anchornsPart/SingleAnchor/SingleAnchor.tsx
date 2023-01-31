@@ -1,3 +1,5 @@
+import classes from "./singleAnchor.module.scss";
+
 type Props = {
     color: string;
     text: string;
@@ -12,6 +14,7 @@ export function SingleAnchor({ text, color, href }: Props) {
                 borderColor: color,
             }}
             href={href}
+            className={classes.anchor}
         >
             {text}
         </a>

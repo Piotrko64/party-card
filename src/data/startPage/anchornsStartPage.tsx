@@ -11,7 +11,7 @@ export const anchornsStartPage = [
     },
     {
         href: "",
-        text: "Jak to działa",
+        text: "Jak to działa?",
         color: "#8D51DB",
     },
 ];

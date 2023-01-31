@@ -1,0 +1,10 @@
+.anchorns {
+    gap: 30px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+@media (max-width: 920px) {
+    .anchorns {
+        gap: 15px;
+    }
+}

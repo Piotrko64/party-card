@@ -7,9 +7,11 @@ import cx from "classnames";
 export function StartPageMainComponent() {
     return (
         <header className={cx(classes.header)}>
-            <TitlePart />
-            <DescribePart />
-            <AnchornsPart />
+            <section className={cx(classes.mainContent, "flexColumn")}>
+                <TitlePart />
+                <DescribePart />
+                <AnchornsPart />
+            </section>
         </header>
     );
 }
