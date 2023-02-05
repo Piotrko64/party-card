@@ -1,6 +1,5 @@
 import { getWishComponent } from "helpers/wishesSection/getWishComponent";
 import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
-import { TagCloudComponent } from "./wishElements/tagCloudComponent/TagCloudComponent";
 
 export function WishesSection() {
     const wishElements = useWishesSectionStore((store) => store.elements);
@@ -8,7 +7,7 @@ export function WishesSection() {
     return (
         <main>
             {wishElements.map((element) => (
-                <div key={element.name}>{getWishComponent("tagCloud", { ...element })} </div>
+                <div key={element.name}>{getWishComponent(element.name, { ...element })} </div>
             ))}
         </main>
     );

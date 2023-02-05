@@ -1,12 +1,21 @@
 import { NamesFont } from "types/typesForStyles/NamesFont";
 
-export type ComponentNames = "tagCloud";
+export type ComponentNames = "tagCloud" | "wishWall";
 
-export type UnionWishElements = TagCloudType;
+type IdType = { id: string };
+
+export type UnionWishElements = (TagCloudType | WallWishType) & IdType;
 
 export type TagCloudType = {
-    name: ComponentNames;
+    name: "tagCloud";
     texts: Array<string>;
+    color: string;
+    font: NamesFont;
+};
+
+export type WallWishType = {
+    name: "wishWall";
+    wishes: Array<string>;
     color: string;
     font: NamesFont;
 };

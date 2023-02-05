@@ -3,7 +3,7 @@ export const fontsToChoice = [
     { name: "Noto Serif", fullName: "'Noto Serif', serif" },
     {
         name: "Jost",
-        fullName: "'Jost', sans-serif;",
+        fullName: "'Jost', sans-serif",
     },
     {
         name: "Aboreto",

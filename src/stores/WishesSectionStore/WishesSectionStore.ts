@@ -10,5 +10,19 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
             color: "red",
             font: "Oswald",
         },
+        {
+            name: "tagCloud",
+            id: "abc1",
+            texts: ["🎉", "🥳", "🎉", "🥳", "🎉", "🥳", "🎉", "Siemankoooo", "🎉"],
+            color: "blue",
+            font: "Jost",
+        },
+        {
+            name: "wishWall",
+            id: "abcwall",
+            wishes: ["Wszystkiego dobrego", "najlepszego", "jesteś wielki!"],
+            color: "red",
+            font: "Jost",
+        },
     ],
 }));
