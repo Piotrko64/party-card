@@ -1,0 +1,12 @@
+.container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--mainBackColor);
+    padding-top: 80px;
+    .generator {
+        padding: 10px;
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

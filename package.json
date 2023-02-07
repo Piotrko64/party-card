@@ -12,6 +12,7 @@
         "@fireworks-js/react": "^2.10.1",
         "@frank-mayer/react-tag-cloud": "^1.1.1",
         "classnames": "^2.3.2",
+        "framer-motion": "^9.0.1",
         "immer": "^9.0.19",
         "lodash": "^4.17.21",
         "react": "^18.2.0",
