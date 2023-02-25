@@ -1,3 +1,9 @@
+import { InputText } from "ui/form/inputText/InputText";
+
 export function NameFormSection() {
-    return <></>;
+    return (
+        <>
+            <InputText labelText="name" callback={() => {}} />
+        </>
+    );
 }
