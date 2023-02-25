@@ -3,6 +3,7 @@ import { getStyleFontObject } from "helpers/styles/toFonts/getStyleFontObject";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
 import { ButtonConfetti } from "./buttonConfetti/ButtonConfetti";
 import classes from "./downText.module.scss";
+import { ButtonSupriseCard } from "./supriseCard/buttonSupriseCard/ButtonSupriseCard";
 
 export function DownText() {
     const endText = useHeaderSectionStore((state) => state.endText);
@@ -10,6 +11,7 @@ export function DownText() {
 
     return (
         <div className={classes.endText} style={styleObjectFont}>
+            <ButtonSupriseCard />
             <ButtonConfetti />
             <div>{endText.text}</div>
         </div>

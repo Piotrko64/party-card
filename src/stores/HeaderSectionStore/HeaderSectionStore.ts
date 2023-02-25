@@ -1,9 +1,14 @@
-import { HeaderSection } from "types/stores/HeaderSection";
+import { EntireTypeHeader, HeaderSection } from "types/stores/HeaderSection";
 import { create } from "zustand";
-import { actionsHeaderStore } from "./actionsHeaderStore";
 import { initialValueHeaderStore } from "./initialValueHeaderSection";
+import { produce } from "immer";
 
-export const useHeaderSectionStore = create<HeaderSection>((set) => ({
+export const useHeaderSectionStore = create<EntireTypeHeader>((set) => ({
     ...initialValueHeaderStore,
-    ...actionsHeaderStore(set),
+    toggleCard: () =>
+        set(
+            produce((state: HeaderSection) => {
+                state.supriseCard.isShowCard = !state.supriseCard.isShowCard;
+            })
+        ),
 }));

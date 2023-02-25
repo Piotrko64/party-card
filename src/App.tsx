@@ -1,17 +1,12 @@
-import { StartPageMainComponent } from "components/startPageComponents/StartPageMainComponent";
-import { CardPage } from "pages/CardPage";
-import { GenerateCardPage } from "pages/GeneratorCardPage";
-import { Heart } from "ui/svg/Heart";
+import { mainRouter } from "data/routing/mainRouter";
+import { RouterProvider } from "react-router-dom";
 
 import "./App.scss";
 
 function App() {
     return (
         <>
-            {/* <CardPage /> */}
-
-            {/* <StartPageMainComponent /> */}
-            <GenerateCardPage />
+            <RouterProvider router={mainRouter} />
         </>
     );
 }
