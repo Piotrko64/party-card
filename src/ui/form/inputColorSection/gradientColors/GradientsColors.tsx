@@ -1,5 +1,7 @@
 import { useProposalsToInputs } from "stores/ProposalsToInputsStore/ProposalsToInputsStore";
 import classes from "./gradientColors.module.scss";
+import ColorPicker from "react-best-gradient-color-picker";
+import { useState } from "react";
 
 type Props = {
     changeColor: (color: string, isGradient: true) => void;
@@ -7,6 +9,9 @@ type Props = {
 
 export function GradientColors({ changeColor }: Props) {
     const { gradientColors } = useProposalsToInputs();
+    const [color, setColor] = useState(
+        "linear-gradient(90deg, rgba(96,93,93,1) 0%, rgba(255,255,255,1) 100%)"
+    );
 
     return (
         <>
@@ -21,11 +26,7 @@ export function GradientColors({ changeColor }: Props) {
                 ))}
             </div>
             <label className={classes.label}>
-                <input
-                    type="color"
-                    className={classes.input}
-                    onChange={(e) => changeColor(e.target.value, true)}
-                />
+                <ColorPicker value={color} onChange={setColor} />
                 Stwórz własny gradient
             </label>
         </>
