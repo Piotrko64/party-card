@@ -1,16 +1,18 @@
+import { without } from "lodash";
 import { useProposalsToInputs } from "stores/ProposalsToInputsStore/ProposalsToInputsStore";
 import classes from "./ordinaryColors.module.scss";
 
 type Props = {
     changeColor: (color: string) => void;
+    withoutLabel?: true;
 };
 
-export function OrdinaryColors({ changeColor }: Props) {
+export function OrdinaryColors({ changeColor, withoutLabel }: Props) {
     const { colors } = useProposalsToInputs();
 
     return (
         <>
-            <h4> Zwykłe kolory </h4>
+            {!withoutLabel && <h4> Zwykłe kolory </h4>}
             <div className={classes.colors}>
                 {colors.map((color) => (
                     <div

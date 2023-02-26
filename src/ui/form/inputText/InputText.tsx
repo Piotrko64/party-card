@@ -32,8 +32,10 @@ export function InputText({ labelText, callback, namePropertyToChange, valueInpu
     }
 
     function clickEmoji({ emoji }: { emoji: string }) {
-        input.current!.value = input.current!.value + " " + emoji;
-        callback(namePropertyToChange, valueInput + " " + emoji, "text");
+        if (valueInput.length + 1 < maxLength) {
+            input.current!.value = input.current!.value + " " + emoji;
+            callback(namePropertyToChange, valueInput + " " + emoji, "text");
+        }
     }
 
     function changeValueByCallback(event: ChangeEvent) {

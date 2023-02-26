@@ -1,6 +1,7 @@
 import { PossiblePropertySectionToChange } from "types/stores/HeaderSection";
 import { GradientColors } from "./gradientColors/GradientsColors";
 import { OrdinaryColors } from "./ordinaryColors/OrdinaryColors";
+import { StrokeManage } from "./strokeManage/StrokeManage";
 
 type Props = {
     callback: (
@@ -22,6 +23,7 @@ export function InputColorSection({ callback, nameSection }: Props) {
             <OrdinaryColors changeColor={handleChangeColor} />
 
             <GradientColors changeColor={handleChangeColor} />
+            <StrokeManage />
         </>
     );
 }
