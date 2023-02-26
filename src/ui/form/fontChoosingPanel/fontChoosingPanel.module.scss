@@ -31,3 +31,26 @@
         }
     }
 }
+@media (max-width: 720px) {
+    .fonts {
+        justify-content: center;
+        .font {
+            width: fit-content;
+
+            min-width: 100px;
+            min-height: 35px;
+            font-size: 1.1rem;
+            &:first-child {
+                border-bottom-left-radius: 6px;
+                border-top-left-radius: 6px;
+            }
+            &:last-child {
+                border-bottom-right-radius: 6px;
+                border-top-right-radius: 6px;
+            }
+            &.thisFont {
+                transform: translateY(-5px);
+            }
+        }
+    }
+}

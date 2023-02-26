@@ -12,3 +12,8 @@
     cursor: pointer;
     z-index: 99999;
 }
+@media (max-width: 720px) {
+    .back {
+        font-size: 1.1rem;
+    }
+}
