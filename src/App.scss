@@ -26,6 +26,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .flexColumn {
@@ -37,10 +38,11 @@ p {
 }
 
 .grayBlock {
-    padding: 10px 10px 20px;
+    padding: 10px 10px 10px;
     border-radius: 12px;
     background-color: var(--secondBackColor);
-    margin-top: 20px;
+
+    margin-bottom: 40px;
 }
 
 body {
