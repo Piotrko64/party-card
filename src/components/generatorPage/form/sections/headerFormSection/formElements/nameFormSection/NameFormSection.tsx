@@ -9,13 +9,14 @@ export function NameFormSection() {
 
     return (
         <>
-            <h2> Imię Jubilata </h2>
+            <h3> Imię Jubilata </h3>
             <InputText
-                labelText="name"
+                labelText="Napisz imię wybranej osoby"
                 namePropertyToChange="name"
                 callback={changeValueInput}
                 valueInput={name.text}
                 maxLength={40}
+                placeholder=""
             />
             <FontChoosingPanel callback={changeValueInput} nameSection={"name"} font={name.font} />
             <InputColorSection callback={changeValueInput} nameSection={"name"} thisColor={name.color} />

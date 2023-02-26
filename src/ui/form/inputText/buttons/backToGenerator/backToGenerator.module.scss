@@ -1,5 +1,5 @@
-.preview {
-    background: linear-gradient(rgb(201, 55, 250) 0%, rgb(104 16 159) 98%);
+.back {
+    background: linear-gradient(rgb(255, 226, 89) 0%, rgb(255, 167, 81) 100%);
     padding: 10px 12px;
     font-family: "Jost";
     position: fixed;
@@ -9,4 +9,6 @@
     color: black;
     text-decoration: none;
     font-weight: 700;
+    cursor: pointer;
+    z-index: 99999;
 }

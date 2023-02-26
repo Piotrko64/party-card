@@ -14,7 +14,7 @@ export function useObserver(htmlElement: RefObject<HTMLElement>) {
         if (htmlElement) observer.observe(htmlElement.current!);
 
         return () => {
-            if (htmlElement) observer.unobserve(htmlElement.current!);
+            // observer.unobserve(htmlElement.current!);
         };
     }, [htmlElement]);
 

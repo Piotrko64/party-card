@@ -1,6 +1,7 @@
 .inputContainer {
     display: flex;
     flex-direction: column;
+    position: relative;
     .label {
         margin-bottom: 5px;
         cursor: pointer;
@@ -10,8 +11,10 @@
         display: flex;
         justify-content: flex-end;
         margin-top: 10px;
-
-        position: relative;
+        position: absolute;
+        right: 0;
+        top: 80px;
+        z-index: 9999;
     }
     .counter {
         color: #b5b5b5;

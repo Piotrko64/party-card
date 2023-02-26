@@ -13,9 +13,17 @@ type Props = {
     namePropertyToChange: PossiblePropertySectionToChange;
     valueInput: string;
     maxLength: number;
+    placeholder: string;
 };
 
-export function InputText({ labelText, callback, namePropertyToChange, valueInput, maxLength }: Props) {
+export function InputText({
+    labelText,
+    callback,
+    namePropertyToChange,
+    valueInput,
+    maxLength,
+    placeholder,
+}: Props) {
     const idInput = useId();
     const [isActiveEmojiPicker, setActiveEmojiPicker] = useState(false);
     const input = useRef<HTMLInputElement>(null);
@@ -51,7 +59,7 @@ export function InputText({ labelText, callback, namePropertyToChange, valueInpu
                 <input
                     id={idInput}
                     className={classes.input}
-                    placeholder="text"
+                    placeholder={placeholder}
                     ref={input}
                     onChange={changeValueByCallback}
                     onFocus={() => setActiveEmojiPicker(false)}

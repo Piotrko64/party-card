@@ -7,14 +7,20 @@
     --gray: #575555;
 }
 h2 {
-    margin: 5px 0 5px;
+    margin: 40px 0 5px;
 }
-h3,
+h3 {
+    margin: 5px 0 10px;
+    letter-spacing: 2px;
+}
 h5 {
     margin: 25px 0 10px;
 }
 h4 {
-    margin: 0px 0 10px;
+    margin: 22px 0 10px;
+}
+p {
+    margin: 0.85rem 0 0.85rem;
 }
 .flexCenter {
     display: flex;

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export function PreviewButton() {
     return createPortal(
-        <Link to="/CardPage" className={classes.preview}>
+        <Link to="/PreviewCard" className={classes.preview}>
             Zobacz podgląd
         </Link>,
         document.body

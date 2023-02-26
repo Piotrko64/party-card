@@ -49,7 +49,7 @@ export function GradientColors({ changeColor, selectedColor }: Props) {
             <button className={classes.label} onClick={toggleActive}>
                 {isActivePicker ? "Schowaj picker" : "Stwórz własny gradient"}
             </button>
-            {isActivePicker && <ColorPicker value={color} hideControls onChange={handleChange} />}
+            {isActivePicker && <ColorPicker value={color} onChange={handleChange} />}
         </>
     );
 }

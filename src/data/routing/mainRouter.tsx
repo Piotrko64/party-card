@@ -2,6 +2,7 @@ import { StartPageMainComponent } from "components/startPageComponents/StartPage
 import { createBrowserRouter } from "react-router-dom";
 import { CardPage } from "pages/CardPage";
 import { GenerateCardPage } from "pages/GeneratorCardPage";
+import { PreviewCardPage } from "./../../pages/PreviewCard";
 
 export const mainRouter = createBrowserRouter([
     {
@@ -15,5 +16,9 @@ export const mainRouter = createBrowserRouter([
     {
         path: "/GenerateCard",
         element: <GenerateCardPage />,
+    },
+    {
+        path: "/PreviewCard",
+        element: <PreviewCardPage />,
     },
 ]);

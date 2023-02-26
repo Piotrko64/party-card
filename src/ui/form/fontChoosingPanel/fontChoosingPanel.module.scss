@@ -3,7 +3,8 @@
     // overflow-x: hidden;
     width: fit-content;
     display: flex;
-    gap: 5px;
+    gap: 8px;
+    flex-wrap: wrap;
 
     .font {
         background-color: var(--gray);

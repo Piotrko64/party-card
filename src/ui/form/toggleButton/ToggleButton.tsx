@@ -4,9 +4,10 @@ import { ChangeEvent } from "react";
 
 type Props = {
     onChecked: (isCheck: boolean) => void;
+    isChecked: boolean;
 };
 
-export function ToggleButton({ onChecked }: Props) {
+export function ToggleButton({ onChecked, isChecked }: Props) {
     function handleToggle(e: ChangeEvent) {
         onChecked((e.target as HTMLInputElement).checked);
     }
@@ -14,9 +15,16 @@ export function ToggleButton({ onChecked }: Props) {
     return (
         <>
             <label className={classes.switch}>
-                <input type="checkbox" className={classes.input} onChange={handleToggle} />
+                <input
+                    type="checkbox"
+                    className={classes.input}
+                    onChange={handleToggle}
+                    checked={isChecked}
+                />
+
                 <span className={cx(classes.slider, classes.round)}></span>
             </label>
+            {isChecked}
         </>
     );
 }

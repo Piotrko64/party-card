@@ -9,19 +9,20 @@ type Props = {
         newValue: string | boolean,
         lastProperty: "strokeColor" | "isStrokeColor"
     ) => void;
-    isStroke?: boolean;
+    isStroke: boolean;
     selectedColor: string;
 };
 
 export function StrokeManage({ callback, isStroke, selectedColor }: Props) {
     return (
         <div>
-            <h3> Obrys </h3>
+            <h4> Obrys </h4>
             <div>
                 <div className={classes.row}>
                     Czy zastosować kolorowy obrys?
                     <ToggleButton
                         onChecked={(isCheck: boolean) => callback("name", isCheck, "isStrokeColor")}
+                        isChecked={isStroke}
                     />
                 </div>
 
