@@ -1,8 +1,11 @@
 .preview {
     background-color: var(--violet);
-    padding: 10px;
-    font-family: "Lato";
+    padding: 10px 12px;
+    font-family: "Jost";
     position: fixed;
     bottom: 15px;
     right: 15px;
+    border-radius: 8px;
+    color: black;
+    text-decoration: none;
 }

@@ -1,12 +1,16 @@
 import EmojiPicker, { Theme, EmojiStyle } from "emoji-picker-react";
 import { ChangeEvent, FocusEvent, MouseEvent, useId, useRef, useState } from "react";
-import { PossiblePropertyTextToChange } from "types/stores/HeaderSection";
+import { PossiblePropertySectionToChange } from "types/stores/HeaderSection";
 import classes from "./inputText.module.scss";
 
 type Props = {
     labelText: string;
-    callback: (inputNameProperty: PossiblePropertyTextToChange, newValue: string) => void;
-    namePropertyToChange: PossiblePropertyTextToChange;
+    callback: (
+        inputNameProperty: PossiblePropertySectionToChange,
+        newValue: string,
+        lastProperty: "text"
+    ) => void;
+    namePropertyToChange: PossiblePropertySectionToChange;
     valueInput: string;
     maxLength: number;
 };
@@ -18,7 +22,6 @@ export function InputText({ labelText, callback, namePropertyToChange, valueInpu
 
     function togglePicker(e: MouseEvent) {
         e.preventDefault();
-
         setActiveEmojiPicker((prevState) => !prevState);
     }
 
@@ -30,11 +33,11 @@ export function InputText({ labelText, callback, namePropertyToChange, valueInpu
 
     function clickEmoji({ emoji }: { emoji: string }) {
         input.current!.value = input.current!.value + " " + emoji;
-        callback(namePropertyToChange, valueInput + " " + emoji);
+        callback(namePropertyToChange, valueInput + " " + emoji, "text");
     }
 
     function changeValueByCallback(event: ChangeEvent) {
-        callback(namePropertyToChange, (event.target as HTMLInputElement).value);
+        callback(namePropertyToChange, (event.target as HTMLInputElement).value, "text");
     }
 
     return (

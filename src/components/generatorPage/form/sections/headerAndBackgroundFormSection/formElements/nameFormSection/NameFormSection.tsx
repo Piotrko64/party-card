@@ -1,4 +1,5 @@
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
+import { FontChoosingPanel } from "ui/form/fontChoosingPanel/FontChoosingPanel";
 import { InputText } from "ui/form/inputText/InputText";
 
 export function NameFormSection() {
@@ -6,8 +7,6 @@ export function NameFormSection() {
 
     return (
         <>
-            {" "}
-            {name.text}
             <InputText
                 labelText="name"
                 namePropertyToChange="name"
@@ -15,6 +14,7 @@ export function NameFormSection() {
                 valueInput={name.text}
                 maxLength={40}
             />
+            <FontChoosingPanel callback={changeValueTextInput} nameSection={"name"} />
         </>
     );
 }

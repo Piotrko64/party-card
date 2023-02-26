@@ -1,4 +1,8 @@
-export const fontsToChoice = [
+import { NamesFont } from "types/typesForStyles/NamesFont";
+
+type FontsArray = Array<{ name: NamesFont; fullName: string }>;
+
+export const fontsToChoice: FontsArray = [
     { name: "Oswald", fullName: "'Oswald', sans-serif" },
     { name: "Noto Serif", fullName: "'Noto Serif', serif" },
     {

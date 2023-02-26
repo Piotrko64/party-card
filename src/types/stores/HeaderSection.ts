@@ -40,14 +40,20 @@ export type HeaderSection = {
 
 export type HeaderActions = {
     toggleCard: () => void;
-    changeValueTextInput: (inputNameProperty: PossiblePropertyTextToChange, newValue: string) => void;
+    changeValueTextInput: (
+        inputNameProperty: PossiblePropertySectionToChange,
+        newValue: string,
+        lastProperty: LastProperties
+    ) => void;
 };
 
 export type EntireTypeHeader = HeaderSection & HeaderActions;
 
-export type PossiblePropertyTextToChange =
+export type PossiblePropertySectionToChange =
     | "name"
     | "endText"
     | "supriseCard"
     | "textUnderName"
     | "textAboveName";
+
+export type LastProperties = "text" | "font" | "color";
