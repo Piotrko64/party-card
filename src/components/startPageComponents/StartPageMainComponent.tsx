@@ -1,4 +1,4 @@
-import { AnchornsPart } from "./anchornsPart/AnchornsPart";
+import { AnchornsPart } from "./anchorns/Anchorns";
 import { DescribePart } from "./describePart/DescribePart";
 import { TitlePart } from "./titlePart/TitlePart";
 import classes from "./startPageMainComponent.module.scss";

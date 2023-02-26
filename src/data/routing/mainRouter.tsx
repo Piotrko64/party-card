@@ -1,13 +1,13 @@
-import { StartPageMainComponent } from "components/startPageComponents/StartPageMainComponent";
 import { createBrowserRouter } from "react-router-dom";
 import { CardPage } from "pages/CardPage";
 import { GenerateCardPage } from "pages/GeneratorCardPage";
 import { PreviewCardPage } from "./../../pages/PreviewCard";
+import { StartPage } from "pages/StartPage";
 
 export const mainRouter = createBrowserRouter([
     {
         path: "/",
-        element: <StartPageMainComponent />,
+        element: <StartPage />,
     },
     {
         path: "/CardPage",
