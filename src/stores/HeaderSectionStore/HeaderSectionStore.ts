@@ -11,14 +11,14 @@ import { produce } from "immer";
 export const useHeaderSectionStore = create<EntireTypeHeader>((set) => ({
     ...initialValueHeaderStore,
 
-    changeValueTextInput: (
+    changeValueInput: (
         inputNameProperty: PossiblePropertySectionToChange,
-        newValue: string,
+        newValue: string | boolean,
         lastProperty: LastProperties
     ) =>
         set(
             produce((state: HeaderSection) => {
-                (state[inputNameProperty][lastProperty] satisfies typeof newValue) = newValue;
+                state[inputNameProperty][lastProperty] = newValue;
             })
         ),
     toggleCard: () =>

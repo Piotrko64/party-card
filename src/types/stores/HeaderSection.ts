@@ -40,9 +40,9 @@ export type HeaderSection = {
 
 export type HeaderActions = {
     toggleCard: () => void;
-    changeValueTextInput: (
+    changeValueInput: (
         inputNameProperty: PossiblePropertySectionToChange,
-        newValue: string,
+        newValue: string | boolean,
         lastProperty: LastProperties
     ) => void;
 };
@@ -56,4 +56,6 @@ export type PossiblePropertySectionToChange =
     | "textUnderName"
     | "textAboveName";
 
-export type LastProperties = "text" | "font" | "color";
+export type LastProperties = "text" | "font" | "color" | "isGradient";
+
+export type LastPropertiesBoolean = "isGradient";

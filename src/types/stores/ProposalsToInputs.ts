@@ -1,3 +1,4 @@
 export type ProposalsToInputs = {
-    emojiArray: Array<string>;
+    colors: Array<string>;
+    gradientColors: Array<string>;
 };

@@ -1,0 +1,9 @@
+.colors {
+    display: flex;
+    gap: 8px;
+    .singleColor {
+        height: 40px;
+        width: 50px;
+        border-radius: 4px;
+    }
+}

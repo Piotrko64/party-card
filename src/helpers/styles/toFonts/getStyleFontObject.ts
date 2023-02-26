@@ -10,6 +10,6 @@ export function getStyleFontObject({ font, color, isGradient }: Arguments) {
         backgroundImage: isGradient ? color : "none",
         backgroundClip: isGradient ? "text" : "none",
         WebkitBackgroundClip: isGradient ? "text" : "none",
-        backgroundSize: isGradient ? "300%" : "100%",
+        backgroundSize: isGradient ? "150%" : "100%",
     };
 }

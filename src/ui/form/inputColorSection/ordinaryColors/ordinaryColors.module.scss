@@ -1,0 +1,21 @@
+.colors {
+    display: flex;
+    gap: 5px;
+    .singleColor {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+    }
+}
+.label {
+    background-color: red;
+    padding: 8px 10px;
+    font-size: "Jost";
+    text-align: center;
+    .input {
+        visibility: hidden;
+        width: 0px;
+        padding: 0;
+        margin: 0;
+    }
+}
