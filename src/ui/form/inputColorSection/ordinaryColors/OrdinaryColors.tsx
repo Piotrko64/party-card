@@ -31,10 +31,17 @@ export function OrdinaryColors({ changeColor, withoutLabel, selectedColor }: Pro
                     ></div>
                 )}
             </div>
-            <label className={classes.label}>
-                <input type="color" className={classes.input} onChange={(e) => changeColor(e.target.value)} />
-                Wybierz własny kolor
-            </label>
+            <div>
+                {" "}
+                <label className={classes.label}>
+                    <input
+                        type="color"
+                        className={classes.input}
+                        onChange={(e) => changeColor(e.target.value)}
+                    />
+                    Wybierz własny kolor
+                </label>
+            </div>
         </>
     );
 }

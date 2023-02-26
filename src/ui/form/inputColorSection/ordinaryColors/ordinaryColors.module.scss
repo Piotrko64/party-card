@@ -1,7 +1,7 @@
 .colors {
     display: flex;
     gap: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     flex-wrap: wrap;
     .singleColor {
         width: 30px;
@@ -17,7 +17,8 @@
 }
 .label {
     background-color: transparent;
-
+    width: fit-content;
+    display: flex;
     color: var(--red);
     padding: 4px 8px;
     font-family: "Jost";
@@ -25,7 +26,7 @@
     text-align: center;
     border-radius: 8px;
     border: 2px solid var(--red);
-    margin-top: 8px;
+
     cursor: pointer;
     .input {
         visibility: hidden;
