@@ -10,9 +10,10 @@ type Props = {
     ) => void;
     nameSection: PossiblePropertySectionToChange;
     thisColor: string;
+    withoutGradient?: true;
 };
 
-export function InputColorSection({ callback, nameSection, thisColor }: Props) {
+export function InputColorSection({ callback, nameSection, thisColor, withoutGradient }: Props) {
     function handleChangeColor(newValue: string | boolean, isGradient?: true) {
         callback(nameSection, newValue, "color");
         isGradient ? callback(nameSection, true, "isGradient") : callback(nameSection, false, "isGradient");
@@ -22,7 +23,7 @@ export function InputColorSection({ callback, nameSection, thisColor }: Props) {
         <>
             <OrdinaryColors changeColor={handleChangeColor} selectedColor={thisColor} />
 
-            <GradientColors changeColor={handleChangeColor} selectedColor={thisColor} />
+            {!withoutGradient && <GradientColors changeColor={handleChangeColor} selectedColor={thisColor} />}
         </>
     );
 }

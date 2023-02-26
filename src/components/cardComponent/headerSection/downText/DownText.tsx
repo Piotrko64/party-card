@@ -13,7 +13,7 @@ export function DownText() {
         <div className={classes.endText} style={styleObjectFont}>
             <ButtonSupriseCard />
             <ButtonConfetti />
-            <div>{endText.text}</div>
+            <div className="flexCenter">{endText.text}</div>
         </div>
     );
 }

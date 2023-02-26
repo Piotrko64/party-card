@@ -18,6 +18,7 @@ export const useHeaderSectionStore = create<EntireTypeHeader>((set) => ({
     ) =>
         set(
             produce((state: HeaderSection) => {
+                //@ts-ignore
                 state[inputNameProperty][lastProperty] = newValue;
             })
         ),

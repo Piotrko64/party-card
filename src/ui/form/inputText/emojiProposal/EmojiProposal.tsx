@@ -2,13 +2,12 @@ import { useProposalsToInputs } from "stores/ProposalsToInputsStore/ProposalsToI
 import classes from "./emojiProposal.module.scss";
 
 export function EmojiProposal() {
-    const { emojiArray } = useProposalsToInputs();
-
-    return (
-        <div className={classes.emojiSet}>
-            {emojiArray.map((emoji) => (
-                <span>{emoji}</span>
-            ))}{" "}
-        </div>
-    );
+    // const { emojiArray } = useProposalsToInputs();
+    // return (
+    //     <div className={classes.emojiSet}>
+    //         {emojiArray.map((emoji) => (
+    //             <span>{emoji}</span>
+    //         ))}{" "}
+    //     </div>
+    // );
 }
