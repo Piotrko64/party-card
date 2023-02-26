@@ -1,10 +1,21 @@
 :root {
     --mainBackColor: #1a1919;
     --secondBackColor: #343232;
+    --red: rgb(238, 4, 57);
     --violet: #8d51db;
     --purple: rgb(205, 12, 171);
+    --gray: #575555;
 }
-
+h2 {
+    margin: 5px 0 5px;
+}
+h3,
+h5 {
+    margin: 25px 0 10px;
+}
+h4 {
+    margin: 0px 0 10px;
+}
 .flexCenter {
     display: flex;
     justify-content: center;

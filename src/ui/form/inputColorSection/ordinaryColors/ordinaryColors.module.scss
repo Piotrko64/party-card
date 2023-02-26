@@ -1,17 +1,31 @@
 .colors {
     display: flex;
     gap: 5px;
+    margin-bottom: 10px;
     .singleColor {
         width: 30px;
         height: 30px;
         border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &.selectedColor {
+            box-shadow: 0px 0px 6px -1px rgba(255, 255, 255, 1);
+            transform: translateY(-10px);
+        }
     }
 }
 .label {
-    background-color: red;
-    padding: 8px 10px;
-    font-size: "Jost";
+    background-color: transparent;
+
+    color: var(--red);
+    padding: 4px 8px;
+    font-family: "Jost";
+    font-size: 0.9rem;
     text-align: center;
+    border-radius: 8px;
+    border: 2px solid var(--red);
+    margin-top: 8px;
+    cursor: pointer;
     .input {
         visibility: hidden;
         width: 0px;

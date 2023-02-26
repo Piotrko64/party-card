@@ -1,7 +1,6 @@
 import { PossiblePropertySectionToChange } from "types/stores/HeaderSection";
 import { GradientColors } from "./gradientColors/GradientsColors";
 import { OrdinaryColors } from "./ordinaryColors/OrdinaryColors";
-import { StrokeManage } from "./strokeManage/StrokeManage";
 
 type Props = {
     callback: (
@@ -10,9 +9,10 @@ type Props = {
         lastProperty: "color" | "isGradient"
     ) => void;
     nameSection: PossiblePropertySectionToChange;
+    thisColor: string;
 };
 
-export function InputColorSection({ callback, nameSection }: Props) {
+export function InputColorSection({ callback, nameSection, thisColor }: Props) {
     function handleChangeColor(newValue: string | boolean, isGradient?: true) {
         callback(nameSection, newValue, "color");
         isGradient ? callback(nameSection, true, "isGradient") : callback(nameSection, false, "isGradient");
@@ -20,10 +20,9 @@ export function InputColorSection({ callback, nameSection }: Props) {
 
     return (
         <>
-            <OrdinaryColors changeColor={handleChangeColor} />
+            <OrdinaryColors changeColor={handleChangeColor} selectedColor={thisColor} />
 
-            <GradientColors changeColor={handleChangeColor} />
-            <StrokeManage />
+            <GradientColors changeColor={handleChangeColor} selectedColor={thisColor} />
         </>
     );
 }

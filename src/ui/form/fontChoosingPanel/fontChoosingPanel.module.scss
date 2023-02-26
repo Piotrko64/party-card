@@ -1,0 +1,32 @@
+.fonts {
+    border-radius: 8px;
+    // overflow-x: hidden;
+    width: fit-content;
+    display: flex;
+    gap: 5px;
+
+    .font {
+        background-color: var(--gray);
+        width: fit-content;
+        padding: 4px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 120px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        &:first-child {
+            border-bottom-left-radius: 8px;
+            border-top-left-radius: 8px;
+        }
+        &:last-child {
+            border-bottom-right-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        &.thisFont {
+            color: black;
+            background-color: white;
+            transform: translateY(-10px);
+        }
+    }
+}

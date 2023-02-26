@@ -15,7 +15,7 @@ export type HeaderSection = {
         text: string;
         color: string;
         isGradient: boolean;
-        isStrokeColor: boolean;
+
         strokeColor: string;
         font: NamesFont;
     };
@@ -56,6 +56,6 @@ export type PossiblePropertySectionToChange =
     | "textUnderName"
     | "textAboveName";
 
-export type LastProperties = "text" | "font" | "color" | "isGradient";
+export type LastProperties = "text" | "font" | "color" | "isGradient" | "isStrokeColor" | "strokeColor";
 
 export type LastPropertiesBoolean = "isGradient";
