@@ -1,4 +1,5 @@
 import { NameFormSection } from "./formElements/nameFormSection/NameFormSection";
+import { TextAboveName } from "./formElements/textAboveName/TextaboveName";
 
 export function HeaderFormSection() {
     return (
@@ -12,6 +13,9 @@ export function HeaderFormSection() {
             </p>
             <div className="grayBlock">
                 <NameFormSection />
+            </div>
+            <div className="grayBlock">
+                <TextAboveName />
             </div>
         </>
     );

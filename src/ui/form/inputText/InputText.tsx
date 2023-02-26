@@ -64,6 +64,7 @@ export function InputText({
                     onChange={changeValueByCallback}
                     onFocus={() => setActiveEmojiPicker(false)}
                     maxLength={maxLength}
+                    value={valueInput}
                 />
                 <img
                     src="/icons/happyIcon.png"
