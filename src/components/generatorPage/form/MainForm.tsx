@@ -1,9 +1,9 @@
-import { HeaderAndBackgroundFormSection } from "./sections/headerAndBackgroundFormSection/HeaderAndBackgroundFormSection";
+import { HeaderFormSection } from "./sections/headerFormSection/HeaderFormSection";
 
 export function MainForm() {
     return (
         <>
-            <HeaderAndBackgroundFormSection />
+            <HeaderFormSection />
         </>
     );
 }

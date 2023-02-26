@@ -1,6 +1,6 @@
 import { NameFormSection } from "./formElements/nameFormSection/NameFormSection";
 
-export function HeaderAndBackgroundFormSection() {
+export function HeaderFormSection() {
     return (
         <>
             <h2>Sekcja Główna</h2>

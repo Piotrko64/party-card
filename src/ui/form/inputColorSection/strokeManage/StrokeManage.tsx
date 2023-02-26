@@ -1,6 +1,7 @@
 import { PossiblePropertySectionToChange } from "types/stores/HeaderSection";
 import { OrdinaryColors } from "../ordinaryColors/OrdinaryColors";
 import { ToggleButton } from "./../../toggleButton/ToggleButton";
+import classes from "./strokeManage.module.scss";
 
 type Props = {
     callback: (
@@ -17,7 +18,7 @@ export function StrokeManage({ callback, isStroke, selectedColor }: Props) {
         <div>
             <h3> Obrys </h3>
             <div>
-                <div>
+                <div className={classes.row}>
                     Czy zastosować kolorowy obrys?
                     <ToggleButton
                         onChecked={(isCheck: boolean) => callback("name", isCheck, "isStrokeColor")}

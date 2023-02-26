@@ -17,7 +17,7 @@ type Props = {
 export function FontChoosingPanel({ callback, nameSection, font }: Props) {
     return (
         <>
-            <h4> Dobierz odpowiednią czcionkę! </h4>
+            <h4> Dobierz odpowiednią czcionkę i kolor dla niej! </h4>
             <div className={classes.fonts}>
                 {fontsToChoice.map(({ fullName, name }) => (
                     <div
