@@ -7,9 +7,7 @@ import { getStyleFontObject } from "helpers/styles/toFonts/getStyleFontObject";
 
 export function Name() {
     const { name } = useHeaderSectionStore((state) => state);
-    const { title, font, color, isGradient, isStrokeColor, strokeColor } = name;
-
-    const objectFont = { font, color, isGradient };
+    const { text, isStrokeColor, strokeColor } = name;
 
     const styleObjectFont = {
         ...getStyleFontObject(getCorrectObjectForFont(name)),
@@ -18,7 +16,7 @@ export function Name() {
 
     return (
         <div className={cx(classes.name, isStrokeColor ? classes.strokeWidth : "")} style={styleObjectFont}>
-            {title}
+            {text}
         </div>
     );
 }

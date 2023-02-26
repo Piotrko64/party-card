@@ -1,13 +1,17 @@
 import EmojiPicker, { Theme, EmojiStyle } from "emoji-picker-react";
-import { FocusEvent, MouseEvent, useId, useRef, useState } from "react";
+import { ChangeEvent, FocusEvent, MouseEvent, useId, useRef, useState } from "react";
+import { PossiblePropertyTextToChange } from "types/stores/HeaderSection";
 import classes from "./inputText.module.scss";
 
 type Props = {
     labelText: string;
-    callback: () => void;
+    callback: (inputNameProperty: PossiblePropertyTextToChange, newValue: string) => void;
+    namePropertyToChange: PossiblePropertyTextToChange;
+    valueInput: string;
+    maxLength: number;
 };
 
-export function InputText({ labelText, callback }: Props) {
+export function InputText({ labelText, callback, namePropertyToChange, valueInput, maxLength }: Props) {
     const idInput = useId();
     const [isActiveEmojiPicker, setActiveEmojiPicker] = useState(false);
     const input = useRef<HTMLInputElement>(null);
@@ -25,7 +29,12 @@ export function InputText({ labelText, callback }: Props) {
     }
 
     function clickEmoji({ emoji }: { emoji: string }) {
-        input.current!.value = input.current!.value + emoji;
+        input.current!.value = input.current!.value + " " + emoji;
+        callback(namePropertyToChange, valueInput + " " + emoji);
+    }
+
+    function changeValueByCallback(event: ChangeEvent) {
+        callback(namePropertyToChange, (event.target as HTMLInputElement).value);
     }
 
     return (
@@ -39,8 +48,9 @@ export function InputText({ labelText, callback }: Props) {
                     className={classes.input}
                     placeholder="text"
                     ref={input}
-                    onInput={callback}
+                    onChange={changeValueByCallback}
                     onFocus={() => setActiveEmojiPicker(false)}
+                    maxLength={maxLength}
                 />
                 <img
                     src="/icons/happyIcon.png"
@@ -48,6 +58,9 @@ export function InputText({ labelText, callback }: Props) {
                     onMouseDown={togglePicker}
                     className={classes.img}
                 />
+            </div>
+            <div className={classes.counter}>
+                {valueInput.length}/{maxLength.toString()}
             </div>
             {/* <EmojiProposal /> */}
             {isActiveEmojiPicker && (

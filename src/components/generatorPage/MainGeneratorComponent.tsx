@@ -1,3 +1,4 @@
+import { PreviewButton } from "ui/form/inputText/buttons/previewButton/PreviewButton";
 import { MainForm } from "./form/MainForm";
 import classes from "./mainGeneratorComponent.module.scss";
 
@@ -8,6 +9,8 @@ export function MainGeneratorComponent() {
                 <h1> Stwórzmy ładną kartkę! 🥳</h1>
                 <MainForm />
             </div>
+
+            <PreviewButton />
         </div>
     );
 }

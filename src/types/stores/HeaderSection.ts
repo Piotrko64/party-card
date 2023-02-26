@@ -2,7 +2,7 @@ import { NamesFont } from "types/typesForStyles/NamesFont";
 
 export type HeaderSection = {
     name: {
-        title: string;
+        text: string;
         color: string;
         isGradient: boolean;
         isStrokeColor: boolean;
@@ -38,6 +38,16 @@ export type HeaderSection = {
     };
 };
 
-export type HeaderActions = { toggleCard: () => any };
+export type HeaderActions = {
+    toggleCard: () => void;
+    changeValueTextInput: (inputNameProperty: PossiblePropertyTextToChange, newValue: string) => void;
+};
 
 export type EntireTypeHeader = HeaderSection & HeaderActions;
+
+export type PossiblePropertyTextToChange =
+    | "name"
+    | "endText"
+    | "supriseCard"
+    | "textUnderName"
+    | "textAboveName";
