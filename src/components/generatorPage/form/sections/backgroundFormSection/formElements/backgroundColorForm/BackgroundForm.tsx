@@ -1,7 +1,7 @@
 import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import { InputColorSection } from "ui/form/inputColorSection/InputColorSection";
 
-export function BackgroundColorForm() {
+export function BackgroundForm() {
     const { changeValue, background } = useBackgroundStore();
 
     return (

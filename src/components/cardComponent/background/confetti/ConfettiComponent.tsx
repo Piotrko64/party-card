@@ -1,4 +1,3 @@
-import { getHeightWindow } from "helpers/getHeightWindow";
 import Confetti from "react-confetti";
 import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 
