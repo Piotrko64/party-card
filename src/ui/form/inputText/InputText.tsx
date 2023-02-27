@@ -5,12 +5,8 @@ import classes from "./inputText.module.scss";
 
 type Props = {
     labelText: string;
-    callback: (
-        inputNameProperty: PossiblePropertySectionToChange,
-        newValue: string,
-        lastProperty: "text"
-    ) => void;
-    namePropertyToChange: PossiblePropertySectionToChange;
+    callback: (inputNameProperty: string, newValue: string, lastProperty: "text") => void;
+    namePropertyToChange: string;
     valueInput: string;
     maxLength: number;
     placeholder: string;

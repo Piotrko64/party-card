@@ -1,9 +1,4 @@
-import {
-    EntireTypeHeader,
-    HeaderSection,
-    LastProperties,
-    PossiblePropertySectionToChange,
-} from "types/stores/HeaderSection";
+import { EntireTypeHeader, HeaderSection } from "types/stores/HeaderSection";
 import { create } from "zustand";
 import { initialValueHeaderStore } from "./initialValueHeaderSection";
 import { produce } from "immer";
@@ -11,11 +6,7 @@ import { produce } from "immer";
 export const useHeaderSectionStore = create<EntireTypeHeader>((set) => ({
     ...initialValueHeaderStore,
 
-    changeValueInput: (
-        inputNameProperty: PossiblePropertySectionToChange,
-        newValue: string | boolean,
-        lastProperty: LastProperties
-    ) =>
+    changeValueInput: (inputNameProperty: string, newValue: string | boolean, lastProperty: string) =>
         set(
             produce((state: HeaderSection) => {
                 //@ts-ignore

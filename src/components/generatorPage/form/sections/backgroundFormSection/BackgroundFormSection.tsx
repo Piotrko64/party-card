@@ -1,4 +1,5 @@
-import { BackgroundColorForm } from "./formElements/BackgroundColorForm/BackgroundColorForm";
+import { BackgroundColorForm } from "./formElements/backgroundColorForm/BackgroundColorForm";
+import { FireworksManage } from "./formElements/fireworksManage/FireworksManage";
 
 export function BackgroundFormSection() {
     return (
@@ -7,6 +8,9 @@ export function BackgroundFormSection() {
             <p>Nadaj koloru oraz wykaż się kreatywnością poprzez nasz panel w którym zadbasz o efekt WoW!</p>
             <div className="grayBlock">
                 <BackgroundColorForm />
+            </div>
+            <div className="grayBlock">
+                <FireworksManage />
             </div>
         </>
     );

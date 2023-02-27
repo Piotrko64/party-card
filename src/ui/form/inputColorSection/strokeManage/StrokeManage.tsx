@@ -1,7 +1,6 @@
 import { PossiblePropertySectionToChange } from "types/stores/HeaderSection";
+import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggleButton";
 import { OrdinaryColors } from "../ordinaryColors/OrdinaryColors";
-import { ToggleButton } from "./../../toggleButton/ToggleButton";
-import classes from "./strokeManage.module.scss";
 
 type Props = {
     callback: (
@@ -18,13 +17,11 @@ export function StrokeManage({ callback, isStroke, selectedColor }: Props) {
         <div>
             <h4> Obrys </h4>
             <div>
-                <div className={classes.row}>
-                    Czy zastosować kolorowy obrys?
-                    <ToggleButton
-                        onChecked={(isCheck: boolean) => callback("name", isCheck, "isStrokeColor")}
-                        isChecked={isStroke}
-                    />
-                </div>
+                <TextWithToggleButton
+                    callback={(isCheck: boolean) => callback("name", isCheck, "isStrokeColor")}
+                    isChecked={isStroke}
+                    text="Czy zastosować kolorowy obrys?"
+                />
 
                 {isStroke && (
                     <>
