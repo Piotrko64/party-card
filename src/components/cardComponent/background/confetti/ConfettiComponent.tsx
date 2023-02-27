@@ -12,7 +12,7 @@ export function ConfettiComponent() {
                     width={window.innerWidth}
                     height={window.innerHeight}
                     numberOfPieces={amountConfetti}
-                    gravity={0.1}
+                    gravity={0.75}
                     recycle={false}
                     wind={0}
                 />

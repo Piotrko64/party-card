@@ -2,6 +2,7 @@ import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggl
 import { useBackgroundStore } from "./../../../../../../../stores/BackgroundStore/BackgroundStore";
 import { ChangeEvent } from "react";
 import { ListDecorations } from "./listDecorations/ListDecorations";
+import { InputColorSection } from "ui/form/inputColorSection/InputColorSection";
 
 export function DecorationPanel() {
     const { backgroundDecorations: decorations, changeValue } = useBackgroundStore();
@@ -19,6 +20,12 @@ export function DecorationPanel() {
                 isChecked={decorations.isDecorations}
             />
             <ListDecorations />
+            <InputColorSection
+                withoutGradient
+                nameSection="backgroundDecorations"
+                callback={changeValue}
+                thisColor={decorations.color}
+            />
         </>
     );
 }

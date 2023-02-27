@@ -1,15 +1,34 @@
 .container {
-    margin-top: 25px;
     display: flex;
     gap: 10px;
     .relative {
         position: relative;
-        height: 60px;
-        width: 60px;
+        height: 80px;
+        width: 80px;
         background-color: var(--gray);
         border-radius: 5px;
         justify-content: center;
         align-items: center;
         display: flex;
+        transition: all 0.2s ease-in-out;
+        padding: 20px;
+        cursor: pointer;
+        &.selected {
+            transform: translateY(-10px);
+        }
+    }
+}
+@media (max-width: 920px) {
+    .container {
+        margin-top: 20px;
+
+        .relative {
+            height: 60px;
+            width: 60px;
+
+            &.selected {
+                transform: translateY(-5px);
+            }
+        }
     }
 }
