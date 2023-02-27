@@ -1,6 +1,8 @@
 import { BackgroundColorForm } from "./formElements/backgroundColorForm/BackgroundColorForm";
 import { FireworksManage } from "./formElements/fireworksManage/FireworksManage";
 import { ConfettiManage } from "./formElements/confettiManage/ConfettiManage";
+import { DecorationPanel } from "./formElements/decorationsPanel/DecorationsPanel";
+import { ListDecorations } from "./formElements/decorationsPanel/listDecorations/ListDecorations";
 
 export function BackgroundFormSection() {
     return (
@@ -15,6 +17,9 @@ export function BackgroundFormSection() {
             </div>
             <div className="grayBlock">
                 <ConfettiManage />
+            </div>
+            <div className="grayBlock">
+                <DecorationPanel />
             </div>
         </>
     );
