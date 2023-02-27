@@ -1,5 +1,6 @@
 import { ChangeEvent } from "react";
 import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
+import { InputRange } from "ui/form/inputRange/InputRange";
 import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggleButton";
 import classes from "./fireworksManage.module.scss";
 
@@ -27,19 +28,11 @@ export function FireworksManage() {
             {fireworks.isFireworks && (
                 <div>
                     <h4> Dobierz intensywność fajerwerek </h4>
-                    <div className={classes.inputRange}>
-                        {" "}
-                        <input
-                            type="range"
-                            step="0.1"
-                            min="0"
-                            max={MAX_INTENSITY}
-                            onChange={handleChangeIntensity}
-                            value={fireworks.intensity}
-                            className={classes.input}
-                        />{" "}
-                        {((fireworks.intensity / +MAX_INTENSITY) * 100).toFixed(0) + "/100"}
-                    </div>
+                    <InputRange
+                        max={MAX_INTENSITY}
+                        callback={handleChangeIntensity}
+                        intensity={fireworks.intensity}
+                    />
                 </div>
             )}
         </>
