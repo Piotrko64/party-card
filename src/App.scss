@@ -10,7 +10,7 @@ h2 {
     margin: 40px 0 5px;
 }
 h3 {
-    margin: 10px 0 10px;
+    margin: 5px 0 20px;
     letter-spacing: 2px;
 }
 h5 {
@@ -41,7 +41,7 @@ p {
     padding: 10px 10px 10px;
     border-radius: 12px;
     background-color: var(--secondBackColor);
-
+    border: 4px solid var(--gray);
     margin-bottom: 40px;
 }
 
@@ -70,8 +70,12 @@ html {
     }
 }
 @media (max-width: 720px) {
-    h2,
-    h3,
+    h2 {
+        font-size: 1.3rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
     h4 {
         font-size: 1.1em;
     }

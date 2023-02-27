@@ -1,6 +1,6 @@
 export const initialValueBackground = {
     background: {
-        color: "#6a88a0",
+        color: "#111222",
     },
     confetti: {
         onStart: true,

@@ -40,11 +40,7 @@ export type HeaderSection = {
 
 export type HeaderActions = {
     toggleCard: () => void;
-    changeValueInput: (
-        inputNameProperty: PossiblePropertySectionToChange,
-        newValue: string | boolean,
-        lastProperty: LastProperties
-    ) => void;
+    changeValueInput: (inputNameProperty: string, newValue: string | boolean, lastProperty: string) => void;
 };
 
 export type EntireTypeHeader = HeaderSection & HeaderActions;

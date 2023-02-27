@@ -10,7 +10,7 @@ export function ConfettiComponent() {
             {onStart && (
                 <Confetti
                     width={window.innerWidth}
-                    height={getHeightWindow()}
+                    height={window.innerHeight}
                     numberOfPieces={amountConfetti}
                     gravity={0.25}
                     recycle={false}

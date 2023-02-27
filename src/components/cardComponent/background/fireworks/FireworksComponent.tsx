@@ -22,7 +22,7 @@ export function FireworksComponent() {
                         top: 0,
                         left: 0,
                         width: "100%",
-                        height: "100%",
+                        height: "100vh",
                         position: "fixed",
                         background: "transparent",
                         zIndex: 1,

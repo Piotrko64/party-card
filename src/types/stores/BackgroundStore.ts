@@ -19,6 +19,14 @@ export type BackgroundStore = {
         isFireworks: boolean;
         intensity: number;
     };
+
     turnOnConfetti: () => any;
     turnOffConfetti: () => any;
+    changeValue: (inputNameProperty: string, newValue: string | boolean, lastProperty: string) => void;
 };
+
+export type PossiblePropertySectionToChangeBackground =
+    | "background"
+    | "confetti"
+    | "backgroundDecorations"
+    | "fireworks";

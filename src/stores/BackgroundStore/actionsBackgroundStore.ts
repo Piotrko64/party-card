@@ -1,9 +1,14 @@
-import { BackgroundStore, ConfettiType } from "types/stores/BackgroundStore";
+import produce from "immer";
+import {
+    BackgroundStore,
+    ConfettiType,
+    PossiblePropertySectionToChangeBackground,
+} from "types/stores/BackgroundStore";
+import { PossiblePropertySectionToChange } from "types/stores/HeaderSection";
 
 export const actionsBackgroundStore = (set: any) => ({
     turnOffConfetti: () =>
         set((state: BackgroundStore) => {
-            console.log(state);
             return {
                 confetti: {
                     onStart: true,
@@ -14,9 +19,16 @@ export const actionsBackgroundStore = (set: any) => ({
             };
         }),
 
+    changeValue: (inputNameProperty: string, newValue: string | boolean, lastProperty: string) =>
+        set(
+            produce((state: BackgroundStore) => {
+                //@ts-ignore
+                state[inputNameProperty][lastProperty] = newValue;
+            })
+        ),
+
     turnOnConfetti: () => {
         set((state: BackgroundStore) => {
-            console.log(state);
             return {
                 fireworks: {
                     intensity: 10,
