@@ -1,0 +1,32 @@
+.supriseCard {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+    text-align: center;
+    left: 0;
+    top: 0;
+
+    font-size: 3rem;
+
+    transition: all 0.4s ease-in-out;
+    overflow-y: auto;
+    .text {
+        min-height: 60vh;
+        padding: 40px 10px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button {
+        padding: 15px;
+        text-decoration: underline;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        padding-top: 20px;
+        margin-top: auto;
+        font-size: 1.3rem;
+    }
+}

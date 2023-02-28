@@ -13,6 +13,14 @@ export const useHeaderSectionStore = create<EntireTypeHeader>((set) => ({
                 state[inputNameProperty][lastProperty] = newValue;
             })
         ),
+
+    changeBackgroundSupriseCard: (color: string) =>
+        set(
+            produce((state: HeaderSection) => {
+                state.supriseCard.backgroundColor = color;
+            })
+        ),
+
     toggleCard: () =>
         set(
             produce((state: HeaderSection) => {

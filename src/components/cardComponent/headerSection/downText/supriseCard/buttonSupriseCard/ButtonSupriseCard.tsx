@@ -2,23 +2,24 @@ import cx from "classnames";
 import { getCorrectObjectForFont } from "helpers/styles/getCorrectObjectForFont";
 import { getStyleFontObject } from "helpers/styles/toFonts/getStyleFontObject";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
+import { SupriseCard } from "../supriseCard/SupriseCard";
 import classes from "./buttonSupriseCard.module.scss";
 
 export function ButtonSupriseCard() {
-    const { supriseCard, toggleCard } = useHeaderSectionStore();
-
+    const { supriseCard, toggleCard, textUnderName } = useHeaderSectionStore();
     const { isActive, isShowCard } = supriseCard;
 
-    const styleObjectFont = { ...getStyleFontObject(getCorrectObjectForFont(supriseCard)) };
+    const styleObjectFont = { ...getStyleFontObject(getCorrectObjectForFont(textUnderName)) };
 
     return (
         <>
             {isActive && (
-                <button data-color={styleObjectFont.color} style={styleObjectFont} onClick={toggleCard}>
+                <button style={styleObjectFont} onClick={toggleCard} className={classes.button}>
                     Kliknij tu po niespodziankę!
                 </button>
             )}
-            {isShowCard && <div>aaaaaaaaaaaaaaaa</div>}
+            <br></br>
+            {isActive && <SupriseCard />}
         </>
     );
 }

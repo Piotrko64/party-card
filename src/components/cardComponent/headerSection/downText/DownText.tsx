@@ -4,6 +4,7 @@ import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionSt
 import { ButtonConfetti } from "./buttonConfetti/ButtonConfetti";
 import classes from "./downText.module.scss";
 import cx from "classnames";
+import { ButtonSupriseCard } from "./supriseCard/buttonSupriseCard/ButtonSupriseCard";
 
 export function DownText() {
     const endText = useHeaderSectionStore((state) => state.endText);
@@ -11,7 +12,7 @@ export function DownText() {
 
     return (
         <div className={classes.endText} style={styleObjectFont}>
-            {/* <ButtonSupriseCard /> */}
+            <ButtonSupriseCard />
             <ButtonConfetti />
             <div className={cx("flexCenter", classes.downText)}>{endText.text}</div>
         </div>

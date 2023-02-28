@@ -14,9 +14,8 @@ export type HeaderSection = {
         isShowCard: boolean;
         text: string;
         color: string;
-        isGradient: boolean;
+        backgroundColor: string;
 
-        strokeColor: string;
         font: NamesFont;
     };
     textAboveName: {
@@ -43,6 +42,7 @@ export type HeaderSection = {
 };
 
 export type HeaderActions = {
+    changeBackgroundSupriseCard: (color: string) => void;
     toggleCard: () => void;
     changeValueInput: (inputNameProperty: string, newValue: string | boolean, lastProperty: string) => void;
 };
