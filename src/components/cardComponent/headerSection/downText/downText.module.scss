@@ -3,4 +3,15 @@
     padding: 30px 5px;
     font-size: 1rem;
     margin-bottom: 3vh;
+    .downText {
+        margin-bottom: 5px;
+    }
+}
+@media (max-width: 920px) {
+    .endText {
+        margin-bottom: 4vh;
+        .downText {
+            margin-bottom: 10px;
+        }
+    }
 }
