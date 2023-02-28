@@ -10,7 +10,6 @@ export function useAddWishForm() {
             (component) => component.title === nameWish
         )?.componentObject;
         addElementWish(findComponentObject as UnionWishElements);
-        console.log(findComponentObject);
     }
 
     return addWishToForm;
