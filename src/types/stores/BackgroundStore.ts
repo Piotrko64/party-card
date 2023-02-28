@@ -1,5 +1,3 @@
-import { NamesIconBackground } from "types/background/NamesIconBackground";
-
 export type ConfettiType = {
     onStart: boolean;
     buttonConfetti: boolean;
@@ -14,7 +12,7 @@ export type BackgroundStore = {
     confetti: ConfettiType;
     backgroundDecorations: {
         isDecorations: boolean;
-        kindDecorations: NamesIconBackground;
+        kindDecorations: string;
         color: string;
     };
     fireworks: {
@@ -22,8 +20,6 @@ export type BackgroundStore = {
         intensity: number;
     };
 
-    turnOnConfetti: () => any;
-    turnOffConfetti: () => any;
     changeValue: (inputNameProperty: string, newValue: string | boolean, lastProperty: string) => void;
 };
 

@@ -1,3 +1,5 @@
+import { BackgroundStore } from "types/stores/BackgroundStore";
+
 export const initialValueBackground = {
     background: {
         color: "#111222",
