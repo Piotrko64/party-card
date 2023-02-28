@@ -5,10 +5,34 @@
     margin: 5px;
     text-align: center;
 }
+.gif {
+    margin-top: 40px;
+    width: 290px;
+    max-height: 330px;
+}
+@media (max-width: 1450) {
+    .gif {
+        margin-top: 30px;
+        width: 240px;
+        max-height: 290px;
+    }
+}
 @media (max-width: 920px) {
     .underText {
         font-size: 1.2rem;
 
         padding-top: 5px;
+    }
+    .gif {
+        margin-top: 20px;
+        width: 190px;
+        max-height: 240px;
+    }
+}
+@media (max-width: 540px) {
+    .gif {
+        margin-top: 20px;
+        width: 190px;
+        max-height: 240px;
     }
 }

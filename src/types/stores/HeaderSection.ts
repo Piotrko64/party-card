@@ -31,6 +31,10 @@ export type HeaderSection = {
         font: NamesFont;
         isGradient: boolean;
     };
+    gif: {
+        isShow: boolean;
+        url: string;
+    };
     endText: {
         font: NamesFont;
         text: string;

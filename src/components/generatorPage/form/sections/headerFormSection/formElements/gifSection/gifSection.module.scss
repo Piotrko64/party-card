@@ -1,0 +1,34 @@
+.container {
+    margin-top: 45px;
+    .row {
+        margin-top: 35px;
+        display: flex;
+        h4 {
+            margin-top: 0;
+        }
+        .selectedGif {
+            margin-left: 75px;
+            img {
+                width: 300px;
+            }
+        }
+    }
+}
+@media (max-width: 920px) {
+    .container {
+        margin-top: 25px;
+        .row {
+            margin-top: 15px;
+
+            flex-direction: column;
+
+            .selectedGif {
+                margin-left: 0px;
+                margin-top: 20px;
+                img {
+                    width: 240px;
+                }
+            }
+        }
+    }
+}

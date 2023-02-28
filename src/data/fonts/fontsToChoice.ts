@@ -13,10 +13,7 @@ export const fontsToChoice: FontsArray = [
         name: "Aboreto",
         fullName: "'Aboreto', cursive",
     },
-    {
-        name: "Josefin",
-        fullName: "'Josefin Sans', sans-serif",
-    },
+
     {
         name: "Kaushan",
         fullName: "'Kaushan Script', cursive",

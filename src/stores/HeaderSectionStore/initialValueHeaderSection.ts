@@ -31,7 +31,10 @@ export const initialValueHeaderStore: HeaderSection = {
         font: "Noto Serif",
         isGradient: false,
     },
-
+    gif: {
+        isShow: false,
+        url: "",
+    },
     endText: {
         font: "Noto Serif",
         text: "Dalsze życzenia for you",

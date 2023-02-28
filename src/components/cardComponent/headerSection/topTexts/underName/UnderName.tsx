@@ -4,14 +4,18 @@ import { getCorrectObjectForFont } from "helpers/styles/getCorrectObjectForFont"
 import classes from "./underName.module.scss";
 
 export function UnderName() {
-    const { textUnderName } = useHeaderSectionStore((state) => state);
+    const { textUnderName, gif } = useHeaderSectionStore((state) => state);
     const { text } = textUnderName;
 
     const styleObjectFont = { ...getStyleFontObject(getCorrectObjectForFont(textUnderName)) };
 
     return (
-        <div style={styleObjectFont} className={classes.underText}>
-            {text}
-        </div>
+        <>
+            <div style={styleObjectFont} className={classes.underText}>
+                {text}
+            </div>
+
+            {gif.isShow && <img src={gif.url} alt="gif" className={classes.gif} />}
+        </>
     );
 }
