@@ -1,4 +1,5 @@
-import { WishesSectionStore } from "types/stores/WishesSectionStore";
+import produce from "immer";
+import { UnionWishElements, WishesSectionStore } from "types/stores/WishesSectionStore";
 import { create } from "zustand";
 
 export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
@@ -25,4 +26,6 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
             font: "Jost",
         },
     ],
+
+    addElementWish: (obj: UnionWishElements) => set(produce((state) => state.elements.push(obj))),
 }));

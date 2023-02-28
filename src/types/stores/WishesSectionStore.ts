@@ -22,4 +22,5 @@ export type WallWishType = {
 
 export type WishesSectionStore = {
     elements: Array<UnionWishElements>;
+    addElementWish: (el: UnionWishElements) => void;
 };
