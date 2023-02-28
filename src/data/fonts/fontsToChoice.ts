@@ -14,7 +14,11 @@ export const fontsToChoice: FontsArray = [
         fullName: "'Aboreto', cursive",
     },
     {
-        name: "Sail",
-        fullName: "'Sail', cursive",
+        name: "Josefin",
+        fullName: "'Josefin Sans', sans-serif",
+    },
+    {
+        name: "Kaushan",
+        fullName: "'Kaushan Script', cursive",
     },
 ];

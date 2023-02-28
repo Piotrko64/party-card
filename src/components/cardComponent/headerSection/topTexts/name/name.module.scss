@@ -2,9 +2,10 @@
     color: blue;
     font-size: 5.8rem;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     animation: animColor 7s ease-in-out infinite, shake 7s ease-in-out infinite;
     stroke: none;
+    width: 120%;
 }
 
 .strokeWidth {
@@ -34,6 +35,9 @@
 @media (max-width: 440px) {
     .name {
         font-size: 3.8rem;
+    }
+
+    .strokeWidth {
         -webkit-text-stroke-width: 0.4px;
         stroke-width: 0.4px;
     }
