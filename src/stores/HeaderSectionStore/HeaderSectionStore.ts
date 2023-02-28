@@ -17,6 +17,7 @@ export const useHeaderSectionStore = create<EntireTypeHeader>((set) => ({
     changeBackgroundSupriseCard: (color: string) =>
         set(
             produce((state: HeaderSection) => {
+                console.log(color);
                 state.supriseCard.backgroundColor = color;
             })
         ),

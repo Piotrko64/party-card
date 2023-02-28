@@ -1,17 +1,27 @@
-import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import { GradientColors } from "./gradientColors/GradientsColors";
 import { OrdinaryColors } from "./ordinaryColors/OrdinaryColors";
 
 type Props = {
-    callback: (nameSection: string, newValue: string | boolean, lastProperty: "color" | "isGradient") => void;
+    callback: (
+        nameSection: string,
+        newValue: string | boolean,
+        lastProperty: "color" | "isGradient" | "backgroundColor"
+    ) => void;
     nameSection: string;
     thisColor: string;
     withoutGradient?: true;
+    backgroundColorCase?: true;
 };
 
-export function InputColorSection({ callback, nameSection, thisColor, withoutGradient }: Props) {
+export function InputColorSection({
+    callback,
+    nameSection,
+    thisColor,
+    withoutGradient,
+    backgroundColorCase,
+}: Props) {
     function handleChangeColor(newValue: string | boolean, isGradient?: true) {
-        callback(nameSection, newValue, "color");
+        callback(nameSection, newValue, backgroundColorCase ? "backgroundColor" : "color");
 
         isGradient ? callback(nameSection, true, "isGradient") : callback(nameSection, false, "isGradient");
     }

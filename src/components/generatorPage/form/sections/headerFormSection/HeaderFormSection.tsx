@@ -2,6 +2,7 @@ import { NameFormSection } from "./formElements/nameFormSection/NameFormSection"
 import { TextAboveName } from "./formElements/textAboveName/TextaboveName";
 import { TextOnEnd } from "./formElements/textOnEnd/TextOnEnd";
 import { TextUnderName } from "./formElements/textUnderName/TextUnderName";
+import { SupriseCardForm } from "./formElements/supriseCardForm/SupriseCardForm";
 
 export function HeaderFormSection() {
     return (
@@ -24,6 +25,9 @@ export function HeaderFormSection() {
             </div>
             <div className="grayBlock">
                 <TextOnEnd />
+            </div>
+            <div className="grayBlock">
+                <SupriseCardForm />
             </div>
         </>
     );

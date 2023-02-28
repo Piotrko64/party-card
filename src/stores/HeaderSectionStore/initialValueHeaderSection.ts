@@ -14,7 +14,7 @@ export const initialValueHeaderStore: HeaderSection = {
         isShowCard: true,
         text: "My name",
         color: "blue",
-        backgroundColor: "black",
+        backgroundColor: "red",
 
         font: "Oswald",
     },

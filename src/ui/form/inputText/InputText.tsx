@@ -9,7 +9,7 @@ type Props = {
     namePropertyToChange: string;
     valueInput: string;
     maxLength: number;
-    placeholder: string;
+    placeholder?: string;
 };
 
 export function InputText({
@@ -18,7 +18,7 @@ export function InputText({
     namePropertyToChange,
     valueInput,
     maxLength,
-    placeholder,
+    placeholder = "",
 }: Props) {
     const idInput = useId();
     const [isActiveEmojiPicker, setActiveEmojiPicker] = useState(false);
