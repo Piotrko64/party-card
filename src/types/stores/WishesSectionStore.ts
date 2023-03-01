@@ -1,10 +1,10 @@
 import { NamesFont } from "types/typesForStyles/NamesFont";
 
-export type ComponentNames = "tagCloud" | "wishWall" | "imageURL";
+export type ComponentNames = "tagCloud" | "wishWall" | "imageURL" | "text";
 
 type IdType = { id: string };
 
-export type UnionWishElements = TagCloudType | WallWishType | ImageURLType;
+export type UnionWishElements = TagCloudType | WallWishType | ImageURLType | TextType;
 
 export type UnionWishElementsWithTexts = TagCloudType | WallWishType;
 
@@ -29,6 +29,19 @@ export type ImageURLType = {
     isBorder: boolean;
     backgroundColor: string;
     url: string;
+} & IdType;
+
+export type TextType = {
+    size: "normal" | "medium" | "theBiggest";
+    name: "text";
+    text: string;
+    isFullWidth: boolean;
+    color: string;
+    backgroundColor: string;
+    font: NamesFont;
+    marginTop: number;
+    marginBottom: number;
+    isGradient: boolean;
 } & IdType;
 
 export type WishesSectionStore = {

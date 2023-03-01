@@ -12,7 +12,11 @@ export function MainGeneratorComponent() {
             </div>
 
             <PreviewButton />
-            <ScrollRestoration />
+            <ScrollRestoration
+                getKey={(location, matches) => {
+                    return location.pathname;
+                }}
+            />
         </div>
     );
 }

@@ -10,48 +10,20 @@ import { v4 } from "uuid";
 export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
     elements: [
         {
-            name: "tagCloud",
-            id: "abc",
-            texts: [
-                { id: v4(), content: "🎉" },
-
-                { id: v4(), content: "🥳" },
-
-                { id: v4(), content: "🎉" },
-
-                { id: v4(), content: "🥳" },
-
-                { id: v4(), content: "🎉" },
-
-                { id: v4(), content: "🥳" },
-
-                { id: v4(), content: "🎉" },
-            ],
-            color: "red",
-            font: "Oswald",
+            id: "asdsadsa",
+            name: "text",
+            text: "Dowolny napis",
+            isFullWidth: true,
+            color: "black",
+            backgroundColor: "white",
+            font: "Jost",
+            marginTop: 0,
+            marginBottom: 0,
+            isGradient: true,
+            size: "medium",
         },
         { name: "imageURL", url: "", isBorder: true, backgroundColor: "white", id: v4() },
-        {
-            name: "wishWall",
-            id: "abcwall",
-            texts: [
-                { id: v4(), content: "🎉" },
 
-                { id: v4(), content: "🥳" },
-
-                { id: v4(), content: "🎉" },
-
-                { id: v4(), content: "🥳" },
-
-                { id: v4(), content: "🎉" },
-
-                { id: v4(), content: "🥳" },
-
-                { id: v4(), content: "🎉" },
-            ],
-            color: "red",
-            font: "Jost",
-        },
         {
             name: "tagCloud",
             id: "abc1",
