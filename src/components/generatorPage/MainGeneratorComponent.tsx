@@ -1,3 +1,4 @@
+import { ScrollRestoration } from "react-router-dom";
 import { PreviewButton } from "ui/form/inputText/buttons/previewButton/PreviewButton";
 import { MainForm } from "./form/MainForm";
 import classes from "./mainGeneratorComponent.module.scss";
@@ -11,6 +12,7 @@ export function MainGeneratorComponent() {
             </div>
 
             <PreviewButton />
+            <ScrollRestoration />
         </div>
     );
 }

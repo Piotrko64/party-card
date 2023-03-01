@@ -2,7 +2,7 @@ import { WallWishType } from "types/stores/WishesSectionStore";
 import { SingleWish } from "./singleWish/SingleWish";
 import styles from "./wishWall.module.scss";
 
-export function WishWall({ wishes, color, font }: WallWishType) {
+export function WishWall({ texts: wishes, color, font }: WallWishType) {
     return (
         <>
             <div className={styles.allWish}>

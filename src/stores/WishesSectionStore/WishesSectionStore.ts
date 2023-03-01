@@ -14,7 +14,7 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
         {
             name: "wishWall",
             id: "abcwall",
-            wishes: ["Wszystkiego dobrego", "najlepszego", "jesteś wielki!"],
+            texts: ["Wszystkiego dobrego", "najlepszego", "jesteś wielki!"],
             color: "red",
             font: "Jost",
         },
@@ -26,6 +26,16 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
             font: "Jost",
         },
     ],
+
+    changeWishValue: (nameProperty: string, newValue: string | Array<string>, id: string) =>
+        set(
+            produce((state) => {
+                const elementToChange = state.elements.find(
+                    (element: UnionWishElements) => element.id === id
+                );
+                elementToChange[nameProperty] = newValue;
+            })
+        ),
 
     addElementWish: (obj: UnionWishElements) =>
         set(
