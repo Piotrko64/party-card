@@ -7,11 +7,6 @@ export function PreviewCardPage() {
         <>
             <CardPageMainComponent />
             <BackToGenerator />
-            <ScrollRestoration
-                getKey={(location, matches) => {
-                    return location.pathname;
-                }}
-            />
         </>
     );
 }

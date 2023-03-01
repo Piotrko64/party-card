@@ -1,5 +1,5 @@
 import { mainRouter } from "data/routing/mainRouter";
-import { RouterProvider } from "react-router-dom";
+import { RouterProvider, ScrollRestoration } from "react-router-dom";
 import "./App.scss";
 
 function App() {
