@@ -1,8 +1,9 @@
-import { DragDropContext, Draggable, Droppable, DropResult } from "react-beautiful-dnd";
+import { DragDropContext, Draggable, Droppable, DropResult } from "@hello-pangea/dnd";
 
 import { getWishForm } from "helpers/wishesSection/getWishForm";
 import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
 import { useAddWishForm } from "./../../../../../hooks/form/wishes/useAddWishForm";
+import { ListAvailableWish } from "./listAvailableWish/ListAvailableWish";
 export function WishesFormSection() {
     const wishElements = useWishesSectionStore((store) => store.elements);
 
@@ -11,7 +12,11 @@ export function WishesFormSection() {
     return (
         <>
             <h2> Sekcja z życzeniami </h2>
-            <p></p>
+            <p>
+                Tutaj możesz popisać się kreatywnością, dodawaj dowolne sekcje dostępne poniżej. Kolejność
+                każdej takiej sekcji możesz zmieniać przeciągnięciami{" "}
+            </p>
+            <ListAvailableWish />
             <div className="grayBlock">
                 <DragDropContext onDragEnd={(r) => console.log(r)}>
                     <Droppable droppableId="droppable">

@@ -1,0 +1,21 @@
+.listComponents {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: white;
+    margin-bottom: 10px;
+    button {
+        border-radius: 5px;
+        background-color: var(--gray);
+        color: white;
+        padding: 10px 15px;
+        font-family: "Jost";
+        font-size: 1rem;
+        transition: all 0.3s ease-in-out;
+        border: 3px solid white;
+        font-weight: 600;
+        &:active {
+            background-color: var(--purple);
+        }
+    }
+}

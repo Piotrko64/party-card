@@ -15,7 +15,7 @@ export function ButtonSupriseCard() {
         <>
             {isActive && (
                 <button style={styleObjectFont} onClick={toggleCard} className={classes.button}>
-                    Kliknij tu po niespodziankę!
+                    Kliknij tu!
                 </button>
             )}
             <br></br>
