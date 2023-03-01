@@ -5,7 +5,12 @@ import { produce } from "immer";
 
 export const useHeaderSectionStore = create<EntireTypeHeader>((set) => ({
     ...initialValueHeaderStore,
-
+    toggleActiveHeader: () =>
+        set(
+            produce((state: HeaderSection) => {
+                state.isActive = !state.isActive;
+            })
+        ),
     changeValueInput: (inputNameProperty: string, newValue: string | boolean, lastProperty: string) =>
         set(
             produce((state: HeaderSection) => {

@@ -1,12 +1,14 @@
 import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
-import { sizes } from "./../../../../../../../../data/fonts/sizes";
+import { sizes } from "data/fonts/sizes";
 import classes from "./sizePanel.module.scss";
+import cx from "classnames";
 
 type Props = {
     idElement: string;
+    sizeTitle: string;
 };
 
-export function SizePanel({ idElement }: Props) {
+export function SizePanel({ idElement, sizeTitle }: Props) {
     const { changePropertyValue } = useWishesSectionStore();
 
     function changeSize(size: string) {
@@ -19,7 +21,7 @@ export function SizePanel({ idElement }: Props) {
                 <div
                     key={size.originalTitle}
                     onClick={() => changeSize(size.originalTitle)}
-                    className={classes.size}
+                    className={cx(classes.size, size.originalTitle === sizeTitle && classes.select)}
                 >
                     {size.plTitle}
                 </div>

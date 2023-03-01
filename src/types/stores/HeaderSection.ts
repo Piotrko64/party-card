@@ -1,6 +1,7 @@
 import { NamesFont } from "types/typesForStyles/NamesFont";
 
 export type HeaderSection = {
+    isActive: boolean;
     name: {
         text: string;
         color: string;
@@ -43,6 +44,7 @@ export type HeaderSection = {
 
 export type HeaderActions = {
     changeBackgroundSupriseCard: (color: string) => void;
+    toggleActiveHeader: () => void;
     toggleCard: () => void;
     changeValueInput: (inputNameProperty: string, newValue: string | boolean, lastProperty: string) => void;
 };

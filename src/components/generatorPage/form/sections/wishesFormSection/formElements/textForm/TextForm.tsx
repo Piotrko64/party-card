@@ -21,7 +21,7 @@ export function TextForm({
     isFullWidth,
     color,
     backgroundColor,
-    isGradient,
+    size,
 }: TextType) {
     const { changePropertyValue } = useWishesSectionStore();
     function changeMarginTop(event: ChangeEvent) {
@@ -91,13 +91,15 @@ export function TextForm({
                 isChecked={isFullWidth}
                 callback={toggleFullWidth}
             />
+            <h4> Kolor tekstu </h4>
             <OrdinaryColors changeColor={changeColorFont} selectedColor={color} />
             <GradientColors changeColor={changeColorFontGradient} selectedColor={color} />
 
             <h4> Kolor tła</h4>
             <OrdinaryColors changeColor={changeColorBackground} selectedColor={backgroundColor} />
 
-            <SizePanel idElement={id} />
+            <h4> Dobierz rozmiar</h4>
+            <SizePanel idElement={id} sizeTitle={size} />
         </>
     );
 }
