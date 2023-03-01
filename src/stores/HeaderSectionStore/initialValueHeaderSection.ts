@@ -10,7 +10,7 @@ export const initialValueHeaderStore: HeaderSection = {
         font: "Oswald",
     },
     supriseCard: {
-        isActive: true,
+        isActive: false,
         isShowCard: true,
         text: "My name",
         color: "blue",

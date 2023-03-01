@@ -26,17 +26,19 @@ export function TextComponent({
         }
 
         return {
-            marginBottom,
-            marginTop,
+            marginBottom: marginBottom + "px",
+            marginTop: marginTop + "px",
+
             backgroundColor,
             width: isFullWidth ? "100%" : "fit-content",
-            borderRadius: isFullWidth ? "0" : "10",
+
+            borderRadius: isFullWidth ? "0" : "10px",
             ...addStyleBySize(),
         };
     }
 
     return (
-        <div style={{ ...getContainerStyle() }}>
+        <div style={{ ...getContainerStyle() }} className={classes.container}>
             <div style={{ ...fontStyles }} className={classes.text}>
                 {text}
             </div>

@@ -5,12 +5,8 @@ import classes from "./fontChoosingPanel.module.scss";
 import cx from "classnames";
 
 type Props = {
-    callback: (
-        nameSection: PossiblePropertySectionToChange,
-        newValue: NamesFont,
-        lastProperty: "font"
-    ) => void;
-    nameSection: PossiblePropertySectionToChange;
+    callback: (nameSection: string, newValue: NamesFont, lastProperty: "font") => void;
+    nameSection: string;
     font: NamesFont;
 };
 

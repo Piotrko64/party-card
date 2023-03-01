@@ -1,3 +1,30 @@
-.text {
-    text-align: center;
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 700px;
+
+    max-width: 100vw;
+    // min-height: 200px;
+    position: relative;
+
+    .text {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        white-space: pre-wrap;
+    }
+}
+
+@media (max-width: 920px) {
+    .container {
+        min-width: 400px;
+    }
+}
+
+@media (max-width: 540px) {
+    .container {
+        min-width: 290px;
+    }
 }
