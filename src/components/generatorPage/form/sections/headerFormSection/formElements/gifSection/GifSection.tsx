@@ -4,9 +4,11 @@ import { tenorKey } from "config/tenorKey";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
 import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggleButton";
 
-type objectGif = { preview: { url: string } };
+import { GifSection } from "ui/form/gifSection/GifSection";
 
-export function GifSection() {
+export type objectGif = { preview: { url: string } };
+
+export function GifSectionHeader() {
     const { gif, changeValueInput } = useHeaderSectionStore();
 
     function changeGif({ preview }: objectGif) {
@@ -26,15 +28,16 @@ export function GifSection() {
                 callback={toggleActiveGif}
             />
             {gif.isShow && (
-                <div className={classes.row}>
-                    <div>
-                        <GifPicker tenorApiKey={tenorKey} onGifClick={changeGif} />
-                    </div>
-                    <div className={classes.selectedGif}>
-                        <h4> Wybrany gif: </h4>
-                        {gif.url ? <img src={gif.url} alt="gif" /> : "Nic nie wybrano"}{" "}
-                    </div>
-                </div>
+                <GifSection url={gif.url} changeGif={changeGif} />
+                // <div className={classes.row}>
+                //     <div>
+                //         <GifPicker tenorApiKey={tenorKey} onGifClick={changeGif} />
+                //     </div>
+                //     <div className={classes.selectedGif}>
+                //         <h4> Wybrany gif: </h4>
+                //         {gif.url ? <img src={gif.url} alt="gif" /> : "Nic nie wybrano"}{" "}
+                //     </div>
+                // </div>
             )}
         </div>
     );

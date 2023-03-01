@@ -87,7 +87,7 @@ export function TextForm({
             <h4> Odstęp dolny </h4>
             <InputRange intensity={marginBottom} callback={changeMarginBottom} max="250" />
             <TextWithToggleButton
-                text="Zastosować na całą szerokość?"
+                text="Zastosować na całą szerokość? (brak zaokrągleń)"
                 isChecked={isFullWidth}
                 callback={toggleFullWidth}
             />

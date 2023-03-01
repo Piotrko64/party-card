@@ -2,7 +2,7 @@ import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionSt
 import { FontChoosingPanel } from "ui/form/fontChoosingPanel/FontChoosingPanel";
 import { InputColorSection } from "ui/form/inputColorSection/InputColorSection";
 import { InputText } from "ui/form/inputText/InputText";
-import { GifSection } from "../gifSection/GifSection";
+import { GifSectionHeader } from "../gifSection/GifSection";
 
 export function TextUnderName() {
     const { changeValueInput, textUnderName } = useHeaderSectionStore();
@@ -29,7 +29,7 @@ export function TextUnderName() {
                 nameSection={"textUnderName"}
                 thisColor={textUnderName.color}
             />
-            <GifSection />
+            <GifSectionHeader />
         </>
     );
 }

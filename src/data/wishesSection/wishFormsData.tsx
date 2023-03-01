@@ -2,6 +2,9 @@ import { ImageForm } from "components/generatorPage/form/sections/wishesFormSect
 import { TagCloudForm } from "components/generatorPage/form/sections/wishesFormSection/formElements/tagCloudForm/TagCloudForm";
 import { TextForm } from "components/generatorPage/form/sections/wishesFormSection/formElements/textForm/TextForm";
 import { WishWallForm } from "components/generatorPage/form/sections/wishesFormSection/formElements/wishWall/WishWallForm";
+import { GifSectionType } from "types/stores/WishesSectionStore";
+import { GifSection } from "./../../ui/form/gifSection/GifSection";
+
 import {
     ImageURLType,
     TagCloudType,
@@ -9,6 +12,7 @@ import {
     UnionWishElements,
     WallWishType,
 } from "types/stores/WishesSectionStore";
+import { GifSectionFormWishes } from "ui/form/gifSectionFormWishes/GifSectionFormWishes";
 
 export function wishFormsData(props: UnionWishElements) {
     return [
@@ -16,5 +20,6 @@ export function wishFormsData(props: UnionWishElements) {
         { name: "wishWall", component: <WishWallForm {...(props as WallWishType)} /> },
         { name: "imageURL", component: <ImageForm {...(props as ImageURLType)} /> },
         { name: "text", component: <TextForm {...(props as TextType)} /> },
+        { name: "gif", component: <GifSectionFormWishes {...(props as GifSectionType)} /> },
     ];
 }
