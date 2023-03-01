@@ -9,7 +9,10 @@ export function ListAvailableWish() {
     return (
         <div className={classes.listComponents}>
             {componentsToAdd.map((component) => (
-                <button onClick={() => addComponentToStore(component.title as ComponentNames)}>
+                <button
+                    key={component.title}
+                    onClick={() => addComponentToStore(component.title as ComponentNames)}
+                >
                     {component.plName} +
                 </button>
             ))}

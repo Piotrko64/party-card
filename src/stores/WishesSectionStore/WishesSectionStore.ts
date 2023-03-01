@@ -1,5 +1,9 @@
 import produce from "immer";
-import { UnionWishElements, WishesSectionStore } from "types/stores/WishesSectionStore";
+import {
+    UnionWishElements,
+    UnionWishElementsWithTexts,
+    WishesSectionStore,
+} from "types/stores/WishesSectionStore";
 import { create } from "zustand";
 import { v4 } from "uuid";
 
@@ -26,6 +30,7 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
             color: "red",
             font: "Oswald",
         },
+        { name: "imageURL", url: "", isBorder: true, backgroundColor: "white", id: v4() },
         {
             name: "wishWall",
             id: "abcwall",
@@ -74,7 +79,9 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
         set(
             produce((state: WishesSectionStore) => {
                 const findComponent = state.elements.find((element) => element.id === idComponent);
-                const findText = findComponent?.texts.find((text) => text.id === textId);
+                const findText = (findComponent as UnionWishElementsWithTexts)?.texts.find(
+                    (text) => text.id === textId
+                );
                 if (findText) {
                     findText.content = newValue;
                 }
@@ -84,20 +91,39 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
     addTextInput: (idComponent: string) =>
         set(
             produce((state: WishesSectionStore) => {
-                const findComponent = state.elements.find((element) => element.id === idComponent);
+                const findComponent = state.elements.find(
+                    (element) => element.id === idComponent
+                ) as UnionWishElementsWithTexts;
                 if (findComponent) findComponent.texts = [{ id: v4(), content: "" }, ...findComponent.texts];
             })
         ),
 
-    deleteTextInput: (idComponent: string, idText: string) =>
+    changePropertyValue(newValue: string | boolean, idComponent: string, nameProperty: string) {
         set(
             produce((state: WishesSectionStore) => {
                 const findComponent = state.elements.find((element) => element.id === idComponent);
+
+                if (findComponent) {
+                    //@ts-ignore
+                    console.log(findComponent[nameProperty]);
+                    //@ts-ignore
+                    findComponent[nameProperty] = newValue;
+                }
+            })
+        );
+    },
+
+    deleteTextInput: (idComponent: string, idText: string) =>
+        set(
+            produce((state: WishesSectionStore) => {
+                const findComponent = state.elements.find(
+                    (element) => element.id === idComponent
+                ) as UnionWishElementsWithTexts;
                 if (findComponent) {
                     const newArrayText = [...findComponent.texts];
                     const indexText = newArrayText.findIndex((text) => text.id === idText);
                     newArrayText.splice(indexText, 1);
-                    console.log(newArrayText, indexText);
+
                     findComponent.texts = newArrayText;
                 }
             })

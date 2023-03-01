@@ -26,4 +26,16 @@ export const componentsToAdd = [
         plName: "Ściana życzeń",
         enName: "Wish Wall",
     },
+    {
+        title: "imageURL",
+        componentObject: {
+            id: uuidv4(),
+            name: "imageURL",
+            isBorder: false,
+            backgroundColor: "white",
+            url: "",
+        },
+        plName: "Zdjęcie ( z adresu URL )",
+        enName: "Image ( URL )",
+    },
 ];
