@@ -19,13 +19,17 @@ export function DecorationPanel() {
                 callback={toggleDecorations}
                 isChecked={decorations.isDecorations}
             />
-            <ListDecorations />
-            <InputColorSection
-                withoutGradient
-                nameSection="backgroundDecorations"
-                callback={changeValue}
-                thisColor={decorations.color}
-            />
+            {decorations.isDecorations && (
+                <>
+                    <ListDecorations />
+                    <InputColorSection
+                        withoutGradient
+                        nameSection="backgroundDecorations"
+                        callback={changeValue}
+                        thisColor={decorations.color}
+                    />{" "}
+                </>
+            )}
         </>
     );
 }

@@ -8,8 +8,8 @@ export function SupriseCardForm() {
     const { isActive, color, backgroundColor, font, text } = useHeaderSectionStore(
         (state) => state.supriseCard
     );
-    console.log({ isActive, color, backgroundColor, font, text });
-    const { changeValueInput, changeBackgroundSupriseCard } = useHeaderSectionStore();
+
+    const { changeValueInput } = useHeaderSectionStore();
 
     function toggleSupriseCard() {
         changeValueInput("supriseCard", !isActive, "isActive");
@@ -23,31 +23,36 @@ export function SupriseCardForm() {
                 callback={toggleSupriseCard}
                 isChecked={isActive}
             />
-            <InputText
-                labelText="Dodaj tekst do kartki niespodzianki"
-                callback={changeValueInput}
-                valueInput={text}
-                namePropertyToChange="supriseCard"
-                maxLength={300}
-                placeholder="Napisz coś co zaskoczy 😏!"
-            />
-            <FontChoosingPanel callback={changeValueInput} font={font} nameSection="supriseCard" />
-            <h4> Ustaw kolor dla napisów </h4>
-            <InputColorSection
-                withoutGradient
-                thisColor={color}
-                nameSection="supriseCard"
-                callback={changeValueInput}
-            />
-            <h4> Ustaw kolor dla tła </h4>
 
-            <InputColorSection
-                withoutGradient
-                thisColor={backgroundColor}
-                nameSection="supriseCard"
-                callback={changeValueInput}
-                backgroundColorCase
-            />
+            {isActive && (
+                <>
+                    <InputText
+                        labelText="Dodaj tekst do kartki niespodzianki"
+                        callback={changeValueInput}
+                        valueInput={text}
+                        namePropertyToChange="supriseCard"
+                        maxLength={300}
+                        placeholder="Napisz coś co zaskoczy 😏!"
+                    />
+                    <FontChoosingPanel callback={changeValueInput} font={font} nameSection="supriseCard" />
+                    <h4> Ustaw kolor dla napisów </h4>
+                    <InputColorSection
+                        withoutGradient
+                        thisColor={color}
+                        nameSection="supriseCard"
+                        callback={changeValueInput}
+                    />
+                    <h4> Ustaw kolor dla tła </h4>
+
+                    <InputColorSection
+                        withoutGradient
+                        thisColor={backgroundColor}
+                        nameSection="supriseCard"
+                        callback={changeValueInput}
+                        backgroundColorCase
+                    />
+                </>
+            )}
         </>
     );
 }

@@ -10,7 +10,16 @@ button {
     cursor: pointer;
 }
 h2 {
-    margin: 40px 0 5px;
+    margin: 50px 0 5px;
+    font-weight: 400;
+    font-family: "Kaushan Script", cursive;
+    &::first-letter {
+        color: var(--purple);
+        font-size: 1.5em;
+        font-family: "Kaushan Script", cursive;
+        padding-right: 2px;
+        font-weight: 800;
+    }
 }
 h3 {
     margin: 5px 0 20px;

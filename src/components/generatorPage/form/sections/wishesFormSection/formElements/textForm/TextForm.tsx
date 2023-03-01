@@ -11,6 +11,7 @@ import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggl
 import { OrdinaryColors } from "ui/form/inputColorSection/ordinaryColors/OrdinaryColors";
 import { GradientColors } from "ui/form/inputColorSection/gradientColors/GradientsColors";
 import { SizePanel } from "./sizePanel/SizePanel";
+import { useGetTextFormFunctions } from "./hooks/useGetTextFormFunctions";
 
 export function TextForm({
     marginTop,
@@ -23,39 +24,16 @@ export function TextForm({
     backgroundColor,
     size,
 }: TextType) {
-    const { changePropertyValue } = useWishesSectionStore();
-    function changeMarginTop(event: ChangeEvent) {
-        changePropertyValue((event.target as HTMLInputElement).value, id, "marginTop");
-    }
-    function changeMarginBottom(event: ChangeEvent) {
-        changePropertyValue((event.target as HTMLInputElement).value, id, "marginBottom");
-    }
-
-    function changeFont(newValue: NamesFont) {
-        changePropertyValue(newValue, id, "font");
-    }
-
-    function changeValueTextArea(event: ChangeEvent) {
-        changePropertyValue((event.target as HTMLInputElement).value, id, "text");
-    }
-
-    function toggleFullWidth() {
-        changePropertyValue(!isFullWidth, id, "isFullWidth");
-    }
-
-    function changeColorFont(color: string) {
-        changePropertyValue(color, id, "color");
-        changePropertyValue(false, id, "isGradient");
-    }
-
-    function changeColorFontGradient(color: string) {
-        changeColorFont(color);
-        changePropertyValue(true, id, "isGradient");
-    }
-
-    function changeColorBackground(color: string) {
-        changePropertyValue(color, id, "backgroundColor");
-    }
+    const {
+        changeColorBackground,
+        changeColorFont,
+        changeColorFontGradient,
+        changeFont,
+        changeMarginBottom,
+        changeMarginTop,
+        toggleFullWidth,
+        changeValueTextArea,
+    } = useGetTextFormFunctions({ id, isFullWidth });
 
     return (
         <>

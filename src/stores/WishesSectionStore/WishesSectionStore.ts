@@ -8,40 +8,7 @@ import { create } from "zustand";
 import { v4 } from "uuid";
 
 export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
-    elements: [
-        {
-            id: "asdsadsa",
-            name: "text",
-            text: "Dowolny napis",
-            isFullWidth: true,
-            color: "linear-gradient(110deg, rgb(120, 19, 235) 0%, rgb(142, 21, 255) 10%, rgb(150, 57, 236) 25%, rgb(227, 56, 56) 50%, rgb(236, 170, 0) 80%, rgb(233, 186, 68) 100%)",
-            backgroundColor: "white",
-            font: "Jost",
-            marginTop: 0,
-            marginBottom: 0,
-            isGradient: true,
-            size: "theBiggest",
-        },
-        {
-            name: "gif",
-            id: v4(),
-
-            url: "",
-        },
-        { name: "imageURL", url: "", isBorder: true, backgroundColor: "white", id: v4() },
-
-        {
-            name: "tagCloud",
-            id: "abc1",
-            texts: [
-                { id: v4(), content: "🎉" },
-
-                { id: v4(), content: "🎉" },
-            ],
-            color: "blue",
-            font: "Jost",
-        },
-    ],
+    elements: [],
 
     changeWishValue: (nameProperty: string, newValue: string | Array<string>, id: string) =>
         set(

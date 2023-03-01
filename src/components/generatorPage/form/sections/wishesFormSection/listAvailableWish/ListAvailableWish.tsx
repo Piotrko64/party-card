@@ -22,6 +22,7 @@ export function ListAvailableWish() {
                     </button>
                 ))
             )}
+            {wishElements.length === 0 && <h3> Nie wybrano żadnych elementów </h3>}
         </div>
     );
 }
