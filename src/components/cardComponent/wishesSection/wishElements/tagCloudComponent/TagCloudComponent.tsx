@@ -16,7 +16,7 @@ export function TagCloudComponent({ texts, color, font }: TagCloudType) {
                     maxSpeed: "normal",
                 })}
             >
-                {texts}
+                {texts.map((el) => el.content)}
             </TagCloud>
         </div>
     );

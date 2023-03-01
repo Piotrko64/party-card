@@ -8,7 +8,8 @@ export function WishWall({ texts: wishes, color, font }: WallWishType) {
             <div className={styles.allWish}>
                 {wishes.map((wish, index) => (
                     <SingleWish
-                        text={wish}
+                        key={wish.id}
+                        text={wish.content}
                         side={index % 2 === 0 ? "left" : "right"}
                         color={color}
                         font={font}
