@@ -16,6 +16,7 @@ export function WishesFormSection() {
                 Tutaj możesz popisać się kreatywnością, dodawaj dowolne sekcje dostępne poniżej. Kolejność
                 każdej takiej sekcji możesz zmieniać przeciągnięciami{" "}
             </p>
+
             <ListAvailableWish />
             <div className="grayBlock">
                 <DragDropContext onDragEnd={(r) => console.log(r)}>
@@ -40,7 +41,6 @@ export function WishesFormSection() {
                         )}
                     </Droppable>
                 </DragDropContext>
-                <button onClick={() => addElement("tagCloud")}>aaaaaaaaaaaaa</button>
             </div>
         </>
     );

@@ -57,4 +57,15 @@ export const componentsToAdd = [
         plName: "Wystylizowany tekst",
         enName: "Custom text",
     },
+    {
+        title: "gif",
+        componentObject: {
+            id: uuidv4(),
+            name: "gif",
+
+            url: "",
+        },
+        plName: "Gif",
+        enName: "Gif",
+    },
 ];

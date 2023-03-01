@@ -22,6 +22,12 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
             isGradient: true,
             size: "theBiggest",
         },
+        {
+            name: "gif",
+            id: v4(),
+
+            url: "",
+        },
         { name: "imageURL", url: "", isBorder: true, backgroundColor: "white", id: v4() },
 
         {
@@ -77,8 +83,6 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
 
                 if (findComponent) {
                     //@ts-ignore
-                    console.log(findComponent[nameProperty]);
-                    //@ts-ignore
                     findComponent[nameProperty] = newValue;
                 }
             })
@@ -104,6 +108,7 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
     addElementWish: (obj: UnionWishElements) =>
         set(
             produce((state) => {
+                if (state.elements.length >= 20) return;
                 state.elements = [obj, ...state.elements];
             })
         ),

@@ -3,8 +3,6 @@ import { TagCloudForm } from "components/generatorPage/form/sections/wishesFormS
 import { TextForm } from "components/generatorPage/form/sections/wishesFormSection/formElements/textForm/TextForm";
 import { WishWallForm } from "components/generatorPage/form/sections/wishesFormSection/formElements/wishWall/WishWallForm";
 import { GifSectionType } from "types/stores/WishesSectionStore";
-import { GifSection } from "./../../ui/form/gifSection/GifSection";
-
 import {
     ImageURLType,
     TagCloudType,

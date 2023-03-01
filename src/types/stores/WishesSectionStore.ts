@@ -33,7 +33,7 @@ export type ImageURLType = {
 
 export type GifSectionType = {
     name: "gif";
-    isShow: false;
+
     url: "";
 } & IdType;
 
