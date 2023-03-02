@@ -7,19 +7,39 @@
     h3 {
         color: var(--purple);
         text-decoration: underline;
+        margin-top: 20px;
     }
     button {
         border-radius: 5px;
-        background-color: var(--gray);
+        background-color: var(--secondBackColor);
         color: white;
         padding: 10px 15px;
         font-family: "Jost";
         font-size: 1rem;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.2s ease-in-out;
         border: 3px solid white;
         font-weight: 600;
+        &:hover {
+            transform: translateY(-10px);
+        }
         &:active {
             background-color: var(--purple);
+        }
+    }
+}
+@media (max-width: 920px) {
+    .listComponents {
+        h3 {
+            color: var(--purple);
+            text-decoration: underline;
+            margin-top: 10px;
+        }
+        button {
+            border: 2px solid white;
+            padding: 5px 15px;
+            &:hover {
+                transform: translateY(-5px);
+            }
         }
     }
 }

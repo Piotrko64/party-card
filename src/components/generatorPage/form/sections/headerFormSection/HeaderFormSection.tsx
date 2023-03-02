@@ -6,6 +6,7 @@ import { SupriseCardForm } from "./formElements/supriseCardForm/SupriseCardForm"
 import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggleButton";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
 import classes from "./headerFormSection.module.scss";
+import { elementListHeaderForm } from "data/form/headerSection/elementListHeaderForm";
 
 export function HeaderFormSection() {
     const { toggleActiveHeader, isActive } = useHeaderSectionStore();
@@ -27,21 +28,9 @@ export function HeaderFormSection() {
             />
             {isActive ? (
                 <>
-                    <div className="grayBlock">
-                        <NameFormSection />
-                    </div>
-                    <div className="grayBlock">
-                        <TextAboveName />
-                    </div>
-                    <div className="grayBlock">
-                        <TextUnderName />
-                    </div>
-                    <div className="grayBlock">
-                        <TextOnEnd />
-                    </div>
-                    <div className="grayBlock">
-                        <SupriseCardForm />
-                    </div>
+                    {elementListHeaderForm.map((element) => (
+                        <div className="grayBlock">{element}</div>
+                    ))}
                 </>
             ) : (
                 <h3 className={classes.alert}> Sekcja została wyłączona </h3>

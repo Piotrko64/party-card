@@ -29,18 +29,21 @@ export function ConfettiManage() {
                 callback={toggleConfetti}
                 isChecked={confetti.onStart}
             />
-            <h4> Dobierz intensywność confetti </h4>
-            <InputRange
-                max={MAX_AMOUNT}
-                callback={changeAmountConfetti}
-                intensity={confetti.amountConfetti}
-            />
-
             <TextWithToggleButton
                 text="Dodać przycisk do confetti do sekcji głównej?"
                 callback={toggleButtonConfetti}
                 isChecked={confetti.buttonConfetti}
             />
+            {(confetti.onStart || confetti.buttonConfetti) && (
+                <>
+                    <h4> Dobierz intensywność confetti </h4>
+                    <InputRange
+                        max={MAX_AMOUNT}
+                        callback={changeAmountConfetti}
+                        intensity={confetti.amountConfetti}
+                    />
+                </>
+            )}
         </>
     );
 }

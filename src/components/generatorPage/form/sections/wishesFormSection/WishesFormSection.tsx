@@ -4,6 +4,9 @@ import { getWishForm } from "helpers/wishesSection/getWishForm";
 import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
 import { useAddWishForm } from "./../../../../../hooks/form/wishes/useAddWishForm";
 import { ListAvailableWish } from "./listAvailableWish/ListAvailableWish";
+import cx from "classnames";
+import classes from "./wishesFormSection.module.scss";
+
 export function WishesFormSection() {
     const wishElements = useWishesSectionStore((store) => store.elements);
 
@@ -18,30 +21,33 @@ export function WishesFormSection() {
             </p>
 
             <ListAvailableWish />
-            <div className="grayBlock">
-                <DragDropContext onDragEnd={(r) => console.log(r)}>
-                    <Droppable droppableId="droppable">
-                        {(provided) => (
-                            <div className="list" {...provided.droppableProps} ref={provided.innerRef}>
-                                {wishElements.map((element, index) => (
-                                    <Draggable key={element.id} draggableId={element.id} index={index}>
-                                        {(provided) => (
-                                            <div
-                                                ref={provided.innerRef}
-                                                {...provided.draggableProps}
-                                                {...provided.dragHandleProps}
-                                            >
-                                                {getWishForm(element.name, { ...element })}
-                                            </div>
-                                        )}
-                                    </Draggable>
-                                ))}
-                                <>{provided.placeholder}</>
-                            </div>
-                        )}
-                    </Droppable>
-                </DragDropContext>
-            </div>
+            {wishElements.length > 0 && (
+                <div className={cx(classes.container)}>
+                    <DragDropContext onDragEnd={(r) => console.log(r)}>
+                        <Droppable droppableId="droppable">
+                            {(provided) => (
+                                <div className="list" {...provided.droppableProps} ref={provided.innerRef}>
+                                    {wishElements.map((element, index) => (
+                                        <Draggable key={element.id} draggableId={element.id} index={index}>
+                                            {(provided) => (
+                                                <div
+                                                    ref={provided.innerRef}
+                                                    {...provided.draggableProps}
+                                                    {...provided.dragHandleProps}
+                                                    className={classes.singleWish}
+                                                >
+                                                    {getWishForm(element.name, { ...element })}
+                                                </div>
+                                            )}
+                                        </Draggable>
+                                    ))}
+                                    <>{provided.placeholder}</>
+                                </div>
+                            )}
+                        </Droppable>
+                    </DragDropContext>
+                </div>
+            )}
         </>
     );
 }

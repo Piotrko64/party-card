@@ -21,7 +21,7 @@ export function GifSectionHeader() {
 
     return (
         <div className={classes.container}>
-            <h3> Gif </h3>
+            <h4> Gif </h4>
             <TextWithToggleButton
                 text="Chcesz dodać śmiesznego gifa?"
                 isChecked={gif.isShow}

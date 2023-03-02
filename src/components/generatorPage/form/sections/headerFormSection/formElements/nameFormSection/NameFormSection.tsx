@@ -18,7 +18,7 @@ export function NameFormSection() {
                 maxLength={40}
                 placeholder=""
             />
-            <FontChoosingPanel callback={changeValueInput} nameSection={"name"} font={name.font} />
+            <FontChoosingPanel callback={changeValueInput} nameSection={"name"} font={name.font} isHeader />
             <InputColorSection callback={changeValueInput} nameSection={"name"} thisColor={name.color} />
             <StrokeManage
                 callback={changeValueInput}

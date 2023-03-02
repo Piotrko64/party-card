@@ -3,6 +3,7 @@ import { NamesFont } from "types/typesForStyles/NamesFont";
 export type HeaderSection = {
     isActive: boolean;
     name: {
+        isActive: boolean;
         text: string;
         color: string;
         isGradient: boolean;
@@ -20,12 +21,14 @@ export type HeaderSection = {
         font: NamesFont;
     };
     textAboveName: {
+        isActive: boolean;
         text: string;
         color: string;
         font: NamesFont;
         isGradient: boolean;
     };
     textUnderName: {
+        isActive: boolean;
         text: string;
         color: string;
         font: NamesFont;
@@ -36,6 +39,7 @@ export type HeaderSection = {
         url: string;
     };
     endText: {
+        isActive: boolean;
         font: NamesFont;
         text: string;
         color: string;
@@ -47,6 +51,7 @@ export type HeaderActions = {
     toggleActiveHeader: () => void;
     toggleCard: () => void;
     changeValueInput: (inputNameProperty: string, newValue: string | boolean, lastProperty: string) => void;
+    toggleActiveSection: (nameSection: string) => void;
 };
 
 export type EntireTypeHeader = HeaderSection & HeaderActions;

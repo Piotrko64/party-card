@@ -26,6 +26,13 @@ export const useHeaderSectionStore = create<EntireTypeHeader>((set) => ({
             })
         ),
 
+    toggleActiveSection: (nameSection: string) =>
+        set(
+            produce((state) => {
+                state[nameSection].isActive = !state[nameSection].isActive;
+            })
+        ),
+
     toggleCard: () =>
         set(
             produce((state: HeaderSection) => {
