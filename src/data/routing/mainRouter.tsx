@@ -3,6 +3,7 @@ import { CardPage } from "pages/CardPage";
 import { GenerateCardPage } from "pages/GeneratorCardPage";
 import { PreviewCardPage } from "./../../pages/PreviewCard";
 import { StartPage } from "pages/StartPage";
+import { QRPage } from "./../../pages/QRPage";
 
 function Layout() {
     return (
@@ -36,6 +37,10 @@ export const mainRouter = createBrowserRouter([
             {
                 path: "/PreviewCard",
                 element: <PreviewCardPage />,
+            },
+            {
+                path: "/qrCode/:id",
+                element: <QRPage />,
             },
         ],
     },
