@@ -4,6 +4,7 @@ import { GenerateCardPage } from "pages/GeneratorCardPage";
 import { PreviewCardPage } from "./../../pages/PreviewCard";
 import { StartPage } from "pages/StartPage";
 import { QRPage } from "./../../pages/QRPage";
+import { InfoPage } from "pages/InfoPage";
 
 function Layout() {
     return (
@@ -25,6 +26,10 @@ export const mainRouter = createBrowserRouter([
             {
                 path: "/",
                 element: <StartPage />,
+            },
+            {
+                path: "/info",
+                element: <InfoPage />,
             },
             {
                 path: "/:id",
