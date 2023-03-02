@@ -21,7 +21,13 @@ export type BackgroundStore = {
     };
 
     changeValue: (inputNameProperty: string, newValue: string | boolean, lastProperty: string) => void;
+    setEntireBackgroundStore: (newState: BackgroundStoreWithoutFunctions) => void;
 };
+
+export type BackgroundStoreWithoutFunctions = Omit<
+    BackgroundStore,
+    "changeValue" | "setEntireBackgroundStore"
+>;
 
 export type PossiblePropertySectionToChangeBackground =
     | "background"

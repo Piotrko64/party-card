@@ -47,6 +47,7 @@ export type HeaderSection = {
 };
 
 export type HeaderActions = {
+    setEntireHeaderStore: (newState: HeaderSection) => void;
     changeBackgroundSupriseCard: (color: string) => void;
     toggleActiveHeader: () => void;
     toggleCard: () => void;

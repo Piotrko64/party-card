@@ -57,6 +57,6 @@ export type WishesSectionStore = {
     changeValueText: (idComponent: string, textId: string, newValue: string) => void;
     addTextInput: (idComponent: string) => void;
     deleteTextInput: (idComponent: string, idText: string) => void;
-
+    setWishesElements: (newElements: Array<UnionWishElements>) => void;
     changePropertyValue: (newValue: string | boolean, idComponent: string, nameProperty: string) => void;
 };

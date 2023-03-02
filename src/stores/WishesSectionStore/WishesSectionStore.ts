@@ -72,6 +72,16 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
             })
         ),
 
+    setWishesElements: (newElements: Array<UnionWishElements>) => {
+        set(
+            produce((state: WishesSectionStore) => {
+                if (newElements) {
+                    state.elements = newElements;
+                }
+            })
+        );
+    },
+
     addElementWish: (obj: UnionWishElements) =>
         set(
             produce((state) => {

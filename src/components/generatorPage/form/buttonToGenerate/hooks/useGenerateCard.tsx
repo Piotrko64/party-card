@@ -2,7 +2,7 @@ import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
 import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
 import { DataToWrite } from "types/firebase/DataToWrite";
-import { getCardById, writeNewData } from "./../../../../../firebase/initialFirebase";
+import { writeNewData } from "./../../../../../firebase/initialFirebase";
 
 export function useGenerateCard() {
     const header = useHeaderSectionStore();
@@ -10,6 +10,7 @@ export function useGenerateCard() {
     const background = useBackgroundStore();
 
     const objCardForDatabase: DataToWrite = {
+        date: new Date().toISOString(),
         nameAuthor: "",
         idAuthor: "",
         headerSection: JSON.parse(JSON.stringify(header)),
@@ -18,9 +19,6 @@ export function useGenerateCard() {
     };
 
     return () => {
-        const a = writeNewData(objCardForDatabase);
-        getCardById("8e74cc2c-c008-4269-8716-ce408f1c7291");
-        console.log(a);
-        console.log(objCardForDatabase);
+        writeNewData(objCardForDatabase);
     };
 }

@@ -16,19 +16,11 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-const db = getDatabase();
+export const db = getDatabase();
 
 export function writeNewData(cardInfo: DataToWrite) {
     const reference = ref(db, "cards/" + v4());
     set(reference, cardInfo)
         .then((e) => console.log(e))
         .catch((e) => console.log(e));
-}
-
-export function getCardById(id: string) {
-    const reference = ref(db, "cards/" + id);
-    onValue(reference, (snapshot) => {
-        const data = snapshot.val();
-        console.log("data", data);
-    });
 }

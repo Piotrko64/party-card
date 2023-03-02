@@ -5,6 +5,11 @@ import { produce } from "immer";
 
 export const useHeaderSectionStore = create<EntireTypeHeader>((set) => ({
     ...initialValueHeaderStore,
+
+    setEntireHeaderStore: (newState: HeaderSection) => {
+        set((state: EntireTypeHeader) => ({ ...state, ...newState }));
+    },
+
     toggleActiveHeader: () =>
         set(
             produce((state: HeaderSection) => {

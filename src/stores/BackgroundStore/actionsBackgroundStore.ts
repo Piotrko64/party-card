@@ -1,11 +1,11 @@
 import produce from "immer";
-import { BackgroundStore } from "types/stores/BackgroundStore";
+import { BackgroundStore, BackgroundStoreWithoutFunctions } from "types/stores/BackgroundStore";
 
 import { NamesIconBackground } from "types/background/NamesIconBackground";
 
 export const actionsBackgroundStore = (set: any) => ({
-    setEntireBackgroundStore: () => {
-        set((state: BackgroundStore) => ({ ...state }));
+    setEntireBackgroundStore: (newState: BackgroundStoreWithoutFunctions) => {
+        set((state: BackgroundStore) => ({ ...state, ...newState }));
     },
 
     changeValue: (
