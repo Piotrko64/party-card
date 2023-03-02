@@ -24,19 +24,20 @@ export function QRPageMainComponent() {
 
     return (
         <div className={classes.page}>
-            <div ref={qrCard}>
+            <h1> Kod został wygenerowany! </h1>
+            <div ref={qrCard} className={classes.card}>
                 <h2> Zeskanuj poniższy kod QR </h2>
-                <QRCode
-                    size={256}
-                    style={{ height: "auto", maxWidth: "100%", width: "400px" }}
-                    value={link}
-                    viewBox={`0 0 256 256`}
-                />
+                <QRCode size={256} value={link} viewBox={`0 0 256 256`} className={classes.qrCode} />
                 <p> Czeka tam na Ciebie miła niespodzianka</p>
             </div>
-            <div>
-                <button onClick={createImage}>Pobierz powyższy kod QR jako zdjęcie</button>{" "}
-                <button onClick={copyLink}> Skopiuj link do kartki </button>
+            <div className={classes.buttons}>
+                <button onClick={createImage} className={classes.download}>
+                    Pobierz powyższy kod QR jako zdjęcie
+                </button>{" "}
+                <button onClick={copyLink} className={classes.copy}>
+                    {" "}
+                    Skopiuj link do kartki{" "}
+                </button>
             </div>
         </div>
     );

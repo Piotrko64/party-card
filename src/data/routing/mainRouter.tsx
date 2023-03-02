@@ -27,7 +27,7 @@ export const mainRouter = createBrowserRouter([
                 element: <StartPage />,
             },
             {
-                path: "/CardPage",
+                path: "/:id",
                 element: <CardPage />,
             },
             {

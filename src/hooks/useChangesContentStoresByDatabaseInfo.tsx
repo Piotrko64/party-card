@@ -11,12 +11,16 @@ export function useChangesContentStoresByDatabaseInfo(id: string) {
 
     function changeStores() {
         const reference = ref(db, "cards/" + id);
-        onValue(reference, (snapshot) => {
-            const data = snapshot.val();
-            setEntireBackgroundStore(data.backgroundSection);
-            setWishesElements(data.wishesSection);
-            setEntireHeaderStore(data.headerSection);
-        });
+        try {
+            onValue(reference, (snapshot) => {
+                const data = snapshot.val();
+                setEntireBackgroundStore(data.backgroundSection);
+                setWishesElements(data.wishesSection);
+                setEntireHeaderStore(data.headerSection);
+            });
+        } catch (err) {
+            throw err;
+        }
     }
 
     return changeStores;
