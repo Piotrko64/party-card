@@ -1,13 +1,13 @@
 import produce from "immer";
-import {
-    BackgroundStore,
-    ConfettiType,
-    PossiblePropertySectionToChangeBackground,
-} from "types/stores/BackgroundStore";
-import { PossiblePropertySectionToChange } from "types/stores/HeaderSection";
+import { BackgroundStore } from "types/stores/BackgroundStore";
+
 import { NamesIconBackground } from "types/background/NamesIconBackground";
 
 export const actionsBackgroundStore = (set: any) => ({
+    setEntireBackgroundStore: () => {
+        set((state: BackgroundStore) => ({ ...state }));
+    },
+
     changeValue: (
         inputNameProperty: string | NamesIconBackground,
         newValue: string | boolean,
