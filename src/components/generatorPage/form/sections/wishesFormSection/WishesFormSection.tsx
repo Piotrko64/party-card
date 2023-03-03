@@ -35,10 +35,11 @@ export function WishesFormSection() {
                                                 <div
                                                     ref={provided.innerRef}
                                                     {...provided.draggableProps}
-                                                    {...provided.dragHandleProps}
                                                     className={classes.singleWish}
                                                 >
-                                                    <DragLines />
+                                                    <div {...provided.dragHandleProps} className="flexCenter">
+                                                        <DragLines />
+                                                    </div>
                                                     <div> {getWishForm(element.name, { ...element })}</div>
                                                 </div>
                                             )}

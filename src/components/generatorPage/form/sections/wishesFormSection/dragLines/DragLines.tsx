@@ -9,13 +9,8 @@ export function DragLines({ more }: Props) {
             <div className={cx(classes.line, classes.first)}></div>
 
             <div className={cx(classes.line, classes.first)}></div>
-            {more && (
-                <>
-                    <div className={cx(classes.line, classes.first)}></div>
 
-                    <div className={cx(classes.line, classes.first)}></div>
-                </>
-            )}
+            <div className={cx(classes.line, classes.first)}></div>
         </div>
     );
 }
