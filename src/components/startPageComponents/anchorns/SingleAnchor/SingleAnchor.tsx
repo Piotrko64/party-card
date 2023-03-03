@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import classes from "./singleAnchor.module.scss";
 
 type Props = {
@@ -8,15 +9,15 @@ type Props = {
 
 export function SingleAnchor({ text, color, href }: Props) {
     return (
-        <a
+        <Link
             style={{
                 color,
                 borderColor: color,
             }}
-            href={href}
+            to={href}
             className={classes.anchor}
         >
             {text}
-        </a>
+        </Link>
     );
 }
