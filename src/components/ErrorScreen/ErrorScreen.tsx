@@ -6,14 +6,14 @@ export function ErrorScreen() {
         <>
             <div className={classes.screen}>
                 <h1>Oops..!!</h1>
-                <h2> Nie znaleziono strony </h2>
+                <h2> Coś poszło nie tak </h2>
 
                 <div className={classes.links}>
                     <Link to="/" className={classes.home}>
                         {" "}
                         Przejdź do strony głównej
                     </Link>
-                    <Link to="/generatePage" className={classes.generate}>
+                    <Link to="/GeneratePage" className={classes.generate}>
                         {" "}
                         Przejdź do generatora kart{" "}
                     </Link>

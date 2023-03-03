@@ -9,6 +9,7 @@ import { LocalMode } from "pages/LocaLmode";
 
 import { ErrorScreen } from "./../../components/ErrorScreen/ErrorScreen";
 import { Footer } from "components/footer/Footer";
+import { Page404 } from "pages/Page404";
 
 function Layout() {
     return (
@@ -55,7 +56,7 @@ export const mainRouter = createBrowserRouter([
             },
             {
                 path: "*",
-                element: <ErrorScreen />,
+                element: <Page404 />,
             },
         ],
     },
