@@ -22,3 +22,10 @@
         color: black;
     }
 }
+
+@media (max-width: 920px) {
+    .localMode {
+        padding-top: 15px;
+        margin-top: 40px;
+    }
+}

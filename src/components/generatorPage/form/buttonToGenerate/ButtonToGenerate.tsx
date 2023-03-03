@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export function ButtonToGenerate() {
     const generate = useGenerateCard();
-    const changeContentStore = useChangesContentStoresByDatabaseInfo();
+
     const navigate = useNavigate();
 
     const [isError, setError] = useState(false);
@@ -18,7 +18,7 @@ export function ButtonToGenerate() {
         try {
             setLoading(true);
 
-            changeContentStore(id);
+            generate(id);
         } catch (err) {
             setLoading(false);
             setError(true);

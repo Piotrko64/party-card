@@ -18,7 +18,7 @@ export function useGenerateCard() {
         backgroundSection: JSON.parse(JSON.stringify(background)),
     };
 
-    return () => {
-        writeNewData(objCardForDatabase);
+    return (id: string) => {
+        writeNewData(objCardForDatabase, id);
     };
 }
