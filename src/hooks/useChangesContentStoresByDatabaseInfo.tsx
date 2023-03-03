@@ -4,12 +4,12 @@ import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import { useHeaderSectionStore } from "./../stores/HeaderSectionStore/HeaderSectionStore";
 import { useWishesSectionStore } from "./../stores/WishesSectionStore/WishesSectionStore";
 
-export function useChangesContentStoresByDatabaseInfo(id: string) {
+export function useChangesContentStoresByDatabaseInfo() {
     const { setEntireHeaderStore } = useHeaderSectionStore();
     const { setWishesElements } = useWishesSectionStore();
     const { setEntireBackgroundStore } = useBackgroundStore();
 
-    function changeStores() {
+    function changeStores(id: string) {
         const reference = ref(db, "cards/" + id);
         try {
             onValue(reference, (snapshot) => {

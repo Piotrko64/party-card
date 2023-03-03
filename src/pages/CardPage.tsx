@@ -6,9 +6,9 @@ import { useChangesContentStoresByDatabaseInfo } from "./../hooks/useChangesCont
 export function CardPage() {
     const { id } = useParams();
 
-    const changeStoresData = useChangesContentStoresByDatabaseInfo(id!);
+    const changeStoresData = useChangesContentStoresByDatabaseInfo();
 
-    const { isLoading, error } = useQuery(id!, changeStoresData);
+    const { isLoading, error } = useQuery(id!, () => changeStoresData(id!));
 
     return (
         <>

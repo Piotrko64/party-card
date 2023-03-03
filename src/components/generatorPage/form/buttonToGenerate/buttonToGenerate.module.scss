@@ -1,0 +1,24 @@
+.error {
+    color: var(--red);
+}
+.localMode {
+    border-top: 2px solid white;
+    padding-top: 30px;
+    margin-top: 80px;
+}
+.generate {
+    margin-top: 40px;
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 15px;
+    background-color: transparent;
+    color: var(--violet);
+    font-family: "Oswald";
+    border-radius: 5px;
+    border: 3px solid var(--violet);
+    transition: all 0.3s ease-out;
+    &:hover {
+        background-color: var(--violet);
+        color: black;
+    }
+}

@@ -5,6 +5,7 @@ import { PreviewCardPage } from "./../../pages/PreviewCard";
 import { StartPage } from "pages/StartPage";
 import { QRPage } from "./../../pages/QRPage";
 import { InfoPage } from "pages/InfoPage";
+import { LocalMode } from "pages/LocaLmode";
 
 function Layout() {
     return (
@@ -31,10 +32,7 @@ export const mainRouter = createBrowserRouter([
                 path: "/info",
                 element: <InfoPage />,
             },
-            {
-                path: "/:id",
-                element: <CardPage />,
-            },
+            { path: "/localMode", element: <LocalMode /> },
             {
                 path: "/GenerateCard",
                 element: <GenerateCardPage />,
@@ -46,6 +44,10 @@ export const mainRouter = createBrowserRouter([
             {
                 path: "/qrCode/:id",
                 element: <QRPage />,
+            },
+            {
+                path: "/:id",
+                element: <CardPage />,
             },
         ],
     },
