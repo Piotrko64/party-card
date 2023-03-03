@@ -5,17 +5,21 @@ import classes from "./underName.module.scss";
 
 export function UnderName() {
     const { textUnderName, gif } = useHeaderSectionStore((state) => state);
-    const { text } = textUnderName;
+    const { text, isActive } = textUnderName;
 
     const styleObjectFont = { ...getStyleFontObject(getCorrectObjectForFont(textUnderName)) };
 
     return (
         <>
-            <div style={styleObjectFont} className={classes.underText}>
-                {text}
-            </div>
+            {isActive && (
+                <>
+                    <div style={styleObjectFont} className={classes.underText}>
+                        {text}
+                    </div>
 
-            {gif.isShow && <img src={gif.url} alt="gif" className={classes.gif} />}
+                    {gif.isShow && <img src={gif.url} alt="gif" className={classes.gif} />}
+                </>
+            )}
         </>
     );
 }

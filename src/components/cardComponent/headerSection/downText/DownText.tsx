@@ -14,7 +14,7 @@ export function DownText() {
         <div className={classes.endText} style={styleObjectFont}>
             <ButtonSupriseCard />
             <ButtonConfetti />
-            <div className={cx("flexCenter", classes.downText)}>{endText.text}</div>
+            {endText.isActive && <div className={cx("flexCenter", classes.downText)}>{endText.text}</div>}
         </div>
     );
 }

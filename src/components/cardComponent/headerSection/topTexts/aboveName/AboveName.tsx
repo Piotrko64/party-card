@@ -5,13 +5,13 @@ import classes from "./aboveName.module.scss";
 
 export function AboveName() {
     const { textAboveName } = useHeaderSectionStore((state) => state);
-    const { text } = textAboveName;
+    const { text, isActive } = textAboveName;
 
     const styleObjectFont = { ...getStyleFontObject(getCorrectObjectForFont(textAboveName)) };
 
     return (
         <div style={styleObjectFont} className={classes.aboveText}>
-            {text}
+            {isActive && text}
         </div>
     );
 }
