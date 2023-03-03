@@ -4,7 +4,7 @@ export const initialValueHeaderStore: HeaderSection = {
     isActive: true,
     name: {
         isActive: false,
-        text: "My name",
+        text: "NAME",
         color: "linear-gradient(110deg,rgb(120,19,235) 0%,rgb(142,21,255) 10%,rgb(150,57,236) 25%,rgba(227,56,56,1) 50%,rgba(236,170,0,1) 80%,rgb(233,186,68) 100%)",
         isGradient: true,
         isStrokeColor: false,
@@ -14,7 +14,7 @@ export const initialValueHeaderStore: HeaderSection = {
     supriseCard: {
         isActive: false,
         isShowCard: true,
-        text: "My name",
+        text: "",
         color: "blue",
         backgroundColor: "red",
 
@@ -29,7 +29,7 @@ export const initialValueHeaderStore: HeaderSection = {
     },
     textUnderName: {
         isActive: false,
-        text: "Mam nadzieję że Ci się spodoba!",
+        text: "",
         color: "white",
         font: "Noto Serif",
         isGradient: false,
@@ -41,7 +41,7 @@ export const initialValueHeaderStore: HeaderSection = {
     endText: {
         isActive: false,
         font: "Noto Serif",
-        text: "Dalsze życzenia for you",
+        text: "",
         color: "white",
     },
 };
