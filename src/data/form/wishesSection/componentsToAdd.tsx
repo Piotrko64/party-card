@@ -6,7 +6,7 @@ export const componentsToAdd = [
         title: "tagCloud",
         componentObject: {
             name: "tagCloud",
-            texts: ["😄"],
+            texts: [{ id: uuidv4(), content: "" }],
             color: "black",
             font: "Oswald",
             id: uuidv4(),
@@ -19,7 +19,7 @@ export const componentsToAdd = [
         componentObject: {
             id: uuidv4(),
             name: "wishWall",
-            texts: ["❤️"],
+            texts: [{ id: uuidv4(), content: "" }],
             color: "black",
             font: "Jost",
         },

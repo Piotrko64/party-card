@@ -8,18 +8,18 @@ export type UnionWishElements = TagCloudType | WallWishType | ImageURLType | Tex
 
 export type UnionWishElementsWithTexts = TagCloudType | WallWishType;
 
-type ListTextes = Array<{ id: string; content: string }>;
+export type ListTexts = Array<{ id: string; content: string }>;
 
 export type TagCloudType = {
     name: "tagCloud";
-    texts: ListTextes;
+    texts: ListTexts;
     color: string;
     font: NamesFont;
 } & IdType;
 
 export type WallWishType = {
     name: "wishWall";
-    texts: ListTextes;
+    texts: ListTexts;
     color: string;
     font: NamesFont;
 } & IdType;

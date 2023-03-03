@@ -12,7 +12,7 @@ export function useAddWishForm() {
         )?.componentObject;
 
         const newId = v4();
-        console.log(newId);
+
         addElementWish({ ...findComponentObject, id: newId } as UnionWishElements);
     }
 
