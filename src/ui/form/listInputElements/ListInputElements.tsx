@@ -40,9 +40,13 @@ export function ListInputElement({ idElement, texts }: Props) {
                                             {...provided.dragHandleProps}
                                             className={classes.singleText}
                                         >
-                                            <div className={classes.lines}>
-                                                <DragLines more />
-                                            </div>
+                                            <button onClick={() => deleteTextInput(idElement, text.id)}>
+                                                <img
+                                                    src="/icons/trash.png"
+                                                    alt="delete"
+                                                    className={classes.trash}
+                                                />
+                                            </button>
 
                                             <input
                                                 value={text.content}
@@ -54,13 +58,9 @@ export function ListInputElement({ idElement, texts }: Props) {
                                                 }
                                                 className={classes.input}
                                             />
-                                            <button onClick={() => deleteTextInput(idElement, text.id)}>
-                                                <img
-                                                    src="/icons/trash.png"
-                                                    alt="delete"
-                                                    className={classes.trash}
-                                                />
-                                            </button>
+                                            <div className={classes.lines}>
+                                                <DragLines more />
+                                            </div>
                                         </div>
                                     )}
                                 </Draggable>
