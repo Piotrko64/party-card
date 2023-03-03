@@ -8,6 +8,7 @@ import classes from "./qrPageMainComponent.module.scss";
 import { useChangesContentStoresByDatabaseInfo } from "./../../hooks/useChangesContentStoresByDatabaseInfo";
 import { useQuery } from "react-query";
 import { LoadingScreen } from "components/LoadingScreen/LoadingScreen";
+import { ErrorScreen } from "components/ErrorScreen/ErrorScreen";
 
 export function QRPageMainComponent() {
     let { id } = useParams();
@@ -29,9 +30,10 @@ export function QRPageMainComponent() {
 
     return (
         <>
-            {isError && "err"}
             {isLoading ? (
                 <LoadingScreen />
+            ) : isError ? (
+                <ErrorScreen />
             ) : (
                 <div className={classes.page}>
                     <h1> Kod został wygenerowany! </h1>

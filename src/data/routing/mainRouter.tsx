@@ -8,6 +8,7 @@ import { InfoPage } from "pages/InfoPage";
 import { LocalMode } from "pages/LocaLmode";
 
 import { Page404 } from "pages/Page404";
+import { ErrorScreen } from "./../../components/ErrorScreen/ErrorScreen";
 
 function Layout() {
     return (
@@ -53,7 +54,7 @@ export const mainRouter = createBrowserRouter([
             },
             {
                 path: "*",
-                element: <Page404 />,
+                element: <ErrorScreen />,
             },
         ],
     },

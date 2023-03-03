@@ -1,4 +1,5 @@
 import { CardPageMainComponent } from "components/cardComponent/CardPageMainComponent";
+import { ErrorScreen } from "components/ErrorScreen/ErrorScreen";
 import { LoadingScreen } from "components/LoadingScreen/LoadingScreen";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
@@ -9,12 +10,7 @@ export function CardPage() {
 
     const changeStoresData = useChangesContentStoresByDatabaseInfo();
 
-    const { isLoading, error } = useQuery(`card/${id!}`, () => changeStoresData(id!));
+    const { isLoading, isError } = useQuery(`card/${id!}`, () => changeStoresData(id!));
 
-    return (
-        <>
-            {isLoading ? <LoadingScreen /> : <CardPageMainComponent />}
-            {error && "error"}
-        </>
-    );
+    return <>{isLoading ? <LoadingScreen /> : isError ? <ErrorScreen /> : <CardPageMainComponent />}</>;
 }

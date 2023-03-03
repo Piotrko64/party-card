@@ -10,7 +10,7 @@ export function TextUnderName() {
 
     return (
         <>
-            <h3> Tekst pojawiający się pod imieniem oraz gif </h3>
+            <h3> Tekst pod imieniem oraz gif </h3>
 
             <ToggleActiveSection nameSection="textUnderName" isActive={textUnderName.isActive}>
                 <InputText

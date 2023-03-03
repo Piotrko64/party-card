@@ -9,7 +9,7 @@ export function TextAboveName() {
 
     return (
         <>
-            <h3> Tekst pojawiający się nad imieniem </h3>
+            <h3> Tekst nad imieniem </h3>
 
             <ToggleActiveSection nameSection="textAboveName" isActive={textAboveName.isActive}>
                 <div>

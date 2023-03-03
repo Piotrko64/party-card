@@ -9,7 +9,7 @@ export function TextOnEnd() {
 
     return (
         <>
-            <h3> Tekst pojawiający się na samym dole sekcji głównej </h3>
+            <h3> Tekst na samym dole sekcji głównej </h3>
             <ToggleActiveSection nameSection="endText" isActive={endText.isActive}>
                 <InputText
                     labelText="Możesz wymyślić tekst wprowadzający do sekcji z życzeniami"
