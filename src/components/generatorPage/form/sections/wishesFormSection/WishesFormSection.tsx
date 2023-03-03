@@ -7,6 +7,8 @@ import { ListAvailableWish } from "./listAvailableWish/ListAvailableWish";
 import cx from "classnames";
 import classes from "./wishesFormSection.module.scss";
 
+import { DragLines } from "./dragLines/DragLines";
+
 export function WishesFormSection() {
     const wishElements = useWishesSectionStore((store) => store.elements);
 
@@ -36,7 +38,8 @@ export function WishesFormSection() {
                                                     {...provided.dragHandleProps}
                                                     className={classes.singleWish}
                                                 >
-                                                    {getWishForm(element.name, { ...element })}
+                                                    <DragLines />
+                                                    <div> {getWishForm(element.name, { ...element })}</div>
                                                 </div>
                                             )}
                                         </Draggable>

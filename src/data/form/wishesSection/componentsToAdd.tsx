@@ -19,7 +19,7 @@ export const componentsToAdd = [
         componentObject: {
             id: uuidv4(),
             name: "wishWall",
-            wishes: ["❤️"],
+            texts: ["❤️"],
             color: "black",
             font: "Jost",
         },

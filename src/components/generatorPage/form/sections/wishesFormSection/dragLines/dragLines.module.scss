@@ -1,0 +1,18 @@
+.lines {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    cursor: grab;
+    .line {
+        background-color: var(--gray);
+        width: 2px;
+        margin: 2px;
+        &.first {
+            height: 95%;
+            margin-left: 2px;
+        }
+        &.second {
+            height: 90%;
+        }
+    }
+}

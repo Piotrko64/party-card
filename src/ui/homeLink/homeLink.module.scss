@@ -1,0 +1,15 @@
+.backToHome {
+    margin: 40px 0 40px;
+
+    a {
+        text-decoration: none;
+        display: flex;
+
+        align-items: center;
+        color: white;
+        img {
+            width: 20px;
+            margin-right: 15px;
+        }
+    }
+}
