@@ -13,25 +13,26 @@ export function ButtonToGenerate() {
     const [isError, setError] = useState(false);
     const [isLoading, setLoading] = useState(false);
 
-    function goToQRCode() {
+    async function goToQRCode() {
         const id = v4();
+
         try {
+            setError(false);
             setLoading(true);
 
-            generate(id);
+            await generate(id);
+            navigate("/qrCode/" + id);
         } catch (err) {
             setLoading(false);
             setError(true);
-            throw err;
         }
-        navigate("/qrCode/" + id);
     }
 
     return (
         <>
             <h2> Generowanie kartki </h2>
             <p> Poniższy przycisk wygeneruje twoją kartkę z życzeniami jak i kod QR </p>
-            <button className={classes.generate} onClick={goToQRCode} disabled={isLoading || isError}>
+            <button className={classes.generate} onClick={goToQRCode} disabled={isLoading}>
                 {isLoading ? "Ładowanie..." : "Wygeneruj kartkę"}
             </button>
             {isError && (
@@ -48,7 +49,10 @@ export function ButtonToGenerate() {
                 włączyć tryb lokalny. Przeniesie Cię on do zrobionej kartki. Jest to dobra funckja jeżeli
                 chciałbyś pokazać kartkę znajomemu z poziomu swojego telefonu bez tworzenia kodu bądź linku.{" "}
             </p>
-            <Link to="/localMode"> Przejdź do trybu lokalnego </Link>
+            <Link to="/localMode" className={classes.localModeButton}>
+                {" "}
+                Przejdź do trybu lokalnego{" "}
+            </Link>
         </>
     );
 }

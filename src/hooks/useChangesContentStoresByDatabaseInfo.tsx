@@ -1,4 +1,4 @@
-import { onValue, ref } from "firebase/database";
+import { onValue, ref, get, child } from "firebase/database";
 import { db } from "firebase/initialFirebase";
 import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import { useHeaderSectionStore } from "./../stores/HeaderSectionStore/HeaderSectionStore";
@@ -9,18 +9,24 @@ export function useChangesContentStoresByDatabaseInfo() {
     const { setWishesElements } = useWishesSectionStore();
     const { setEntireBackgroundStore } = useBackgroundStore();
 
-    function changeStores(id: string) {
-        const reference = ref(db, "cards/" + id);
-        try {
-            onValue(reference, (snapshot) => {
+    async function changeStores(id: string) {
+        const dbRef = ref(db);
+
+        await get(child(dbRef, `/cards/${id}`))
+            .then((snapshot) => {
                 const data = snapshot.val();
+
+                if (!snapshot.exists() || !data) {
+                    throw "Not exist!";
+                }
+
                 setEntireBackgroundStore(data.backgroundSection);
                 setWishesElements(data.wishesSection);
                 setEntireHeaderStore(data.headerSection);
+            })
+            .catch((err) => {
+                throw new Error(err);
             });
-        } catch (err) {
-            throw err;
-        }
     }
 
     return changeStores;

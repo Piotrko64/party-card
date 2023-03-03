@@ -21,7 +21,7 @@
 .page {
     display: flex;
     align-items: center;
-    padding-top: 10vh;
+    padding-top: 8vh;
     flex-direction: column;
     text-align: center;
     font-family: "Oswald";
@@ -59,13 +59,16 @@
         flex-wrap: wrap;
         justify-content: center;
         flex-direction: column;
+        font-family: "Jost";
+        padding-bottom: 8vh;
         button {
-            padding: 10px 20px;
+            padding: 5px 15px;
             border: 3px solid;
             background-color: transparent;
             color: white;
             font-size: 1.1rem;
             border-radius: 5px;
+            font-family: "Jost";
 
             &.download {
                 border-color: var(--purple);
@@ -75,6 +78,18 @@
                 border-color: var(--violet);
                 color: var(--violet);
             }
+        }
+        .goToCard {
+            padding: 5px 15px;
+
+            border: 3px solid;
+            background-color: transparent;
+            color: white;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            border-color: var(--red);
+            color: var(--red);
+            text-decoration: none;
         }
     }
 }

@@ -18,9 +18,10 @@ const app = initializeApp(firebaseConfig);
 
 export const db = getDatabase();
 
-export function writeNewData(cardInfo: DataToWrite, id: string) {
+export async function writeNewData(cardInfo: DataToWrite, id: string) {
     const reference = ref(db, "cards/" + id);
-    set(reference, cardInfo)
-        .then((e) => console.log(e))
-        .catch((e) => console.log(e));
+
+    await set(reference, cardInfo).catch((err) => {
+        throw new Error(err);
+    });
 }
