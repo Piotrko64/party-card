@@ -7,6 +7,8 @@ import { QRPage } from "./../../pages/QRPage";
 import { InfoPage } from "pages/InfoPage";
 import { LocalMode } from "pages/LocaLmode";
 
+import { Page404 } from "pages/Page404";
+
 function Layout() {
     return (
         <>
@@ -46,8 +48,12 @@ export const mainRouter = createBrowserRouter([
                 element: <QRPage />,
             },
             {
-                path: "/:id",
+                path: "/card/:id",
                 element: <CardPage />,
+            },
+            {
+                path: "*",
+                element: <Page404 />,
             },
         ],
     },
