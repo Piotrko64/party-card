@@ -7,8 +7,8 @@ import { QRPage } from "./../../pages/QRPage";
 import { InfoPage } from "pages/InfoPage";
 import { LocalMode } from "pages/LocaLmode";
 
-import { Page404 } from "pages/Page404";
 import { ErrorScreen } from "./../../components/ErrorScreen/ErrorScreen";
+import { Footer } from "components/footer/Footer";
 
 function Layout() {
     return (
@@ -19,6 +19,7 @@ function Layout() {
                     return location.pathname;
                 }}
             />
+            <Footer />
         </>
     );
 }

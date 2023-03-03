@@ -4,6 +4,7 @@ import cx from "classnames";
 import { Background } from "./background/Background";
 import { WishesSection } from "./wishesSection/WishesSection";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
+import { Footer } from "components/footer/Footer";
 
 export function CardPageMainComponent() {
     const { isActive } = useHeaderSectionStore();

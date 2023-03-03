@@ -1,0 +1,60 @@
+.footer {
+    width: 100%;
+    padding: 30px 10px;
+    background-color: #0e1016e0;
+    color: white;
+    font-family: "Jost";
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 9999;
+
+    .party {
+        text-align: center;
+        font-weight: 900;
+        font-size: 1.45rem;
+        padding-bottom: 20px;
+        background-image: linear-gradient(
+            110deg,
+            #ff0000 0%,
+            #bc10e7 50%,
+
+            #5e92d0 100%
+        );
+        background-position: center;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        width: fit-content;
+        margin: auto auto 15px;
+    }
+    .links {
+        display: flex;
+        flex-direction: column;
+        a {
+            color: white;
+            margin-bottom: 10px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    p {
+        text-align: center;
+        a {
+            color: white;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    img {
+        width: 90px;
+        margin: auto;
+    }
+    .linkToPortfolio {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
