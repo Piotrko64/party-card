@@ -19,8 +19,8 @@ export function TextComponent({
     function getContainerStyle() {
         function addStyleBySize() {
             return {
-                fontSize: size === "normal" ? "1.2rem" : size === "medium" ? "2.1rem" : "4.2rem",
-                padding: size === "normal" ? "5px" : size === "medium" ? "15px 8px" : "20px 8px",
+                fontSize: size === "normal" ? "1.4rem" : size === "medium" ? "1.9rem" : "3.4rem",
+                padding: size === "normal" ? "5px" : size === "medium" ? "10px 8px" : "15px 8px",
                 fontWeight: size === "theBiggest" ? "600" : "400",
             };
         }

@@ -1,3 +1,17 @@
+.img {
+    border: 3px solid var(--purple);
+    width: 45px;
+    background-color: var(--mainBackColor);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    border-left: none;
+    border-top: none;
+    border-bottom-right-radius: 20px;
+    z-index: 99999;
+}
+
 .panel {
     background-color: var(--mainBackColor);
     position: fixed;
@@ -17,7 +31,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        a {
+        .exampleButton {
             background-color: white;
             color: black;
 

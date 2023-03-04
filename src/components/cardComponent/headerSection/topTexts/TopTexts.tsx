@@ -10,14 +10,8 @@ export function TopTexts() {
     const { gif } = useHeaderSectionStore();
     const header = useRef<HTMLDivElement>(null);
 
-    function changeHeightStyle() {
-        const height = header.current?.style.height;
-
-        return { height: gif.isShow ? +height?.slice(0, 2)! + 0 + "vh" : height };
-    }
-
     return (
-        <header className={cx(classes.header, "flexCenter")} style={changeHeightStyle()} ref={header}>
+        <header className={cx(classes.header, "flexCenter")} ref={header}>
             <AboveName />
             <Name />
             <UnderName />

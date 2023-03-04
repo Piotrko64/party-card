@@ -16,7 +16,7 @@ export function Footer() {
                         Piotr Kołodziejczyk
                     </a>
                 </p>
-                <img src="logoPK.png" alt="logo" />
+                <img src="/logoPK.png" alt="logo" />
             </div>
         </footer>
     );

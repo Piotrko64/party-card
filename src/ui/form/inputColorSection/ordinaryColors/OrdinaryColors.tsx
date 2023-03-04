@@ -38,6 +38,7 @@ export function OrdinaryColors({ changeColor, withoutLabel, selectedColor }: Pro
                         type="color"
                         className={classes.input}
                         onChange={(e) => changeColor(e.target.value)}
+                        value={selectedColor}
                     />
                     Wybierz własny kolor
                 </label>

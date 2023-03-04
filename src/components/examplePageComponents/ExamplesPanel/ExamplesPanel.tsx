@@ -29,29 +29,36 @@ export function ExamplesPanel() {
         setEntireHeaderStore(card.headerSection as HeaderSection);
         setEntireBackgroundStore(card.backgroundSection as BackgroundStoreWithoutFunctions);
         setWishesElements(card.wishesSection as Array<UnionWishElements>);
+
+        window.scrollTo(0, 0);
     }, [id]);
 
     return (
-        <div className={classes.panel}>
-            <div className={classes.flexColumn}>
-                {listExamplesCard.map((example, index) => {
-                    const numberOfExample = index + 1;
+        <>
+            <div className={classes.panel}>
+                <div className={classes.flexColumn}>
+                    {listExamplesCard.map((example, index) => {
+                        const numberOfExample = index + 1;
 
-                    return (
-                        <Link
-                            key={example.id}
-                            to={"/examples/" + numberOfExample}
-                            className={cx(
-                                classes.exampleButton,
-                                +id! === numberOfExample && classes.selected
-                            )}
-                        >
-                            {numberOfExample}
-                        </Link>
-                    );
-                })}
+                        return (
+                            <Link
+                                key={example.id}
+                                to={"/examples/" + numberOfExample}
+                                className={cx(
+                                    classes.exampleButton,
+                                    +id! === numberOfExample && classes.selected
+                                )}
+                            >
+                                {numberOfExample}
+                            </Link>
+                        );
+                    })}
+                </div>
+                <div className={classes.title}> Przykłady </div>
             </div>
-            <div className={classes.title}> Przykłady </div>
-        </div>
+            <Link to="/">
+                <img src="/icons/leftArrow.png" className={classes.img} />
+            </Link>
+        </>
     );
 }
