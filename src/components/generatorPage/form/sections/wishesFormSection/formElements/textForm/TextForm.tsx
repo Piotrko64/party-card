@@ -42,7 +42,7 @@ export function TextForm({
             <div className={classes.textAreaContainer}>
                 <textarea
                     className={classes.textArea}
-                    placeholder="Podaj adres ULR zdjęcia do kartki"
+                    placeholder=""
                     onChange={changeValueTextArea}
                     value={text}
                 ></textarea>

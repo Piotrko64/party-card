@@ -1,14 +1,50 @@
 .panel {
-    background-color: var(--gray);
-    border: 2px solid white;
+    background-color: var(--mainBackColor);
     position: fixed;
-    left: 15px;
+    left: 0px;
     bottom: 50%;
-    transform: translateY(-50%);
+    transform: translateY(50%);
     z-index: 99999;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    padding: 20px 0 20px 0px;
+    font-family: "Oswald";
+    font-weight: 400;
+    border: 3px solid var(--purple);
+    border-left: none;
+    .flexColumn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        a {
+            background-color: white;
+            color: black;
+
+            font-family: "Oswald";
+            min-width: 25px;
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid transparent;
+            border-left: none;
+            &:first-child {
+                border-top-right-radius: 10px;
+            }
+            &:last-child {
+                border-bottom-right-radius: 10px;
+            }
+            &.selected {
+                background-color: var(--purple);
+                color: var(--mainBackColor);
+                border: 2px solid var(--purple);
+                border-left: none;
+            }
+        }
+    }
 }
 
 .title {
     writing-mode: vertical-rl;
+
     text-orientation: upright;
 }

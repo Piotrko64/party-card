@@ -5,7 +5,7 @@ export const anchornsStartPage = [
         color: "#EE0439",
     },
     {
-        href: "examples",
+        href: "examples/1",
         text: "Zobacz przykłady",
         color: "#CD0CAB",
     },

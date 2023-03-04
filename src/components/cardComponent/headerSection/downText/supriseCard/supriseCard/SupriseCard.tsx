@@ -13,7 +13,7 @@ export function SupriseCard() {
     const style = getStyleFontObject({ font, color });
 
     return createPortal(
-        <div style={{ backgroundColor, top: isShowCard ? "100vh" : "0vh" }} className={classes.supriseCard}>
+        <div style={{ backgroundColor, left: isShowCard ? "100%" : "0%" }} className={classes.supriseCard}>
             <p style={{ ...style }} className={classes.text}>
                 {text}
             </p>

@@ -1,4 +1,3 @@
-import cx from "classnames";
 import { getCorrectObjectForFont } from "helpers/styles/getCorrectObjectForFont";
 import { getStyleFontObject } from "helpers/styles/toFonts/getStyleFontObject";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
@@ -7,7 +6,7 @@ import classes from "./buttonSupriseCard.module.scss";
 
 export function ButtonSupriseCard() {
     const { supriseCard, toggleCard, textUnderName } = useHeaderSectionStore();
-    const { isActive, isShowCard } = supriseCard;
+    const { isActive } = supriseCard;
 
     const styleObjectFont = { ...getStyleFontObject(getCorrectObjectForFont(textUnderName)) };
 

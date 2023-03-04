@@ -8,18 +8,23 @@ export function ExamplesPanel() {
 
     return (
         <div className={classes.panel}>
-            {listExamplesCard.map((_example, index) => {
-                const numberOfExample = index + 1;
+            <div className={classes.flexColumn}>
+                {listExamplesCard.map((_example, index) => {
+                    const numberOfExample = index + 1;
 
-                return (
-                    <Link
-                        to={"/examples/" + numberOfExample}
-                        className={cx(classes.exampleButton, +id! === numberOfExample)}
-                    >
-                        {numberOfExample}
-                    </Link>
-                );
-            })}
+                    return (
+                        <Link
+                            to={"/examples/" + numberOfExample}
+                            className={cx(
+                                classes.exampleButton,
+                                +id! === numberOfExample && classes.selected
+                            )}
+                        >
+                            {numberOfExample}
+                        </Link>
+                    );
+                })}
+            </div>
             <div className={classes.title}> Przykłady </div>
         </div>
     );

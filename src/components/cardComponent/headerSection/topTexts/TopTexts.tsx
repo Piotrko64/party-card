@@ -13,7 +13,7 @@ export function TopTexts() {
     function changeHeightStyle() {
         const height = header.current?.style.height;
 
-        return { height: gif.isShow ? +height?.slice(0, 2)! + 15 + "vh" : height };
+        return { height: gif.isShow ? +height?.slice(0, 2)! + 0 + "vh" : height };
     }
 
     return (

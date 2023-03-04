@@ -35,7 +35,7 @@ export const mainRouter = createBrowserRouter([
                 element: <StartPage />,
             },
             {
-                path: "/examples",
+                path: "/examples/:id",
                 element: <ExamplePage />,
             },
             {
