@@ -1,9 +1,9 @@
-import { useProposalsToInputs } from "stores/ProposalsToInputsStore/ProposalsToInputsStore";
 import classes from "./gradientColors.module.scss";
 import ColorPicker from "react-best-gradient-color-picker";
 import { useState } from "react";
 import cx from "classnames";
 import { isGradientAndNotColorInArray } from "utils/isGradient";
+import { gradientColors } from "data/colors/colors";
 
 type Props = {
     changeColor: (color: string, isGradient: true) => void;
@@ -11,11 +11,7 @@ type Props = {
 };
 
 export function GradientColors({ changeColor, selectedColor }: Props) {
-    const { gradientColors } = useProposalsToInputs();
     const [isActivePicker, setActivePicker] = useState(false);
-    const [color, setColor] = useState(
-        "linear-gradient(90deg, rgba(96,93,93,1) 0%, rgba(255,255,255,1) 100%)"
-    );
 
     function toggleActive() {
         setActivePicker((prevState) => !prevState);
@@ -23,7 +19,6 @@ export function GradientColors({ changeColor, selectedColor }: Props) {
 
     function handleChange(color: string) {
         changeColor(color, true);
-        setColor(color);
     }
 
     return (
@@ -50,7 +45,7 @@ export function GradientColors({ changeColor, selectedColor }: Props) {
             <button className={classes.label} onClick={toggleActive}>
                 {isActivePicker ? "Schowaj picker" : "Stwórz własny gradient"}
             </button>
-            {isActivePicker && <ColorPicker value={color} onChange={handleChange} />}
+            {isActivePicker && <ColorPicker value={selectedColor} onChange={handleChange} />}
         </>
     );
 }

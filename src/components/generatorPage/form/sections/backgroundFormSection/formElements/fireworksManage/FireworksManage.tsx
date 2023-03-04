@@ -2,9 +2,8 @@ import { ChangeEvent } from "react";
 import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import { InputRange } from "ui/form/inputRange/InputRange";
 import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggleButton";
-import classes from "./fireworksManage.module.scss";
 
-const MAX_INTENSITY = "30";
+const MAX_INTENSITY = "20";
 
 export function FireworksManage() {
     const { fireworks, changeValue } = useBackgroundStore();

@@ -1,7 +1,7 @@
-import { useProposalsToInputs } from "stores/ProposalsToInputsStore/ProposalsToInputsStore";
 import classes from "./ordinaryColors.module.scss";
 import cx from "classnames";
 import { isNotGradientAndNotColorInArray } from "utils/isGradient";
+import { ordinaryColors } from "../../../../data/colors/colors";
 
 type Props = {
     changeColor: (color: string) => void;
@@ -10,13 +10,11 @@ type Props = {
 };
 
 export function OrdinaryColors({ changeColor, withoutLabel, selectedColor }: Props) {
-    const { colors } = useProposalsToInputs();
-
     return (
         <>
             {!withoutLabel && <h5> Zwykłe kolory </h5>}
             <div className={classes.colors}>
-                {colors.map((color) => (
+                {ordinaryColors.map((color) => (
                     <div
                         key={color}
                         className={cx(classes.singleColor, selectedColor === color && classes.selectedColor)}
@@ -25,7 +23,7 @@ export function OrdinaryColors({ changeColor, withoutLabel, selectedColor }: Pro
                     ></div>
                 ))}
 
-                {isNotGradientAndNotColorInArray(selectedColor, colors) && (
+                {isNotGradientAndNotColorInArray(selectedColor, ordinaryColors) && (
                     <div
                         className={cx(classes.singleColor, classes.selectedColor)}
                         style={{ backgroundColor: selectedColor }}
@@ -33,7 +31,6 @@ export function OrdinaryColors({ changeColor, withoutLabel, selectedColor }: Pro
                 )}
             </div>
             <div>
-                {" "}
                 <label className={classes.label}>
                     <input
                         type="color"

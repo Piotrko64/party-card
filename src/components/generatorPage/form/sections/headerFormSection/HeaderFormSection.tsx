@@ -1,8 +1,3 @@
-import { NameFormSection } from "./formElements/nameFormSection/NameFormSection";
-import { TextAboveName } from "./formElements/textAboveName/TextaboveName";
-import { TextOnEnd } from "./formElements/textOnEnd/TextOnEnd";
-import { TextUnderName } from "./formElements/textUnderName/TextUnderName";
-import { SupriseCardForm } from "./formElements/supriseCardForm/SupriseCardForm";
 import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggleButton";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
 import classes from "./headerFormSection.module.scss";
