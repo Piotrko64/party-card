@@ -60,6 +60,10 @@ export const mainRouter = createBrowserRouter([
                 element: <CardPage />,
             },
             {
+                path: "/404",
+                element: <Page404 />,
+            },
+            {
                 path: "*",
                 element: <Page404 />,
             },

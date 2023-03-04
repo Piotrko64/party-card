@@ -7,7 +7,7 @@ export function WishesSection() {
     return (
         <main>
             {wishElements.map((element) => (
-                <div key={element.name}>{getWishComponent(element.name, { ...element })} </div>
+                <div key={element.id}>{getWishComponent(element.name, { ...element })} </div>
             ))}
         </main>
     );

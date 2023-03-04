@@ -1,7 +1,7 @@
 export type ConfettiType = {
     onStart: boolean;
     buttonConfetti: boolean;
-    amountConfetti: number;
+    amountConfetti: string;
     isActive: boolean;
 };
 
@@ -17,7 +17,7 @@ export type BackgroundStore = {
     };
     fireworks: {
         isFireworks: boolean;
-        intensity: number;
+        intensity: string;
     };
 
     changeValue: (inputNameProperty: string, newValue: string | boolean, lastProperty: string) => void;

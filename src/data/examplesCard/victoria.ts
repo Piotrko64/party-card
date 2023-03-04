@@ -1,4 +1,10 @@
+import { BackgroundStore } from "types/stores/BackgroundStore";
+import { HeaderSection } from "types/stores/HeaderSection";
+import { WishesSectionStore } from "types/stores/WishesSectionStore";
+import { WishesSection } from "./../../components/cardComponent/wishesSection/WishesSection";
+
 export const victoriaExampleCard = {
+    id: "viki",
     headerSection: {
         isActive: true,
         name: {

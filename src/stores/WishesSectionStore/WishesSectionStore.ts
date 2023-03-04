@@ -75,9 +75,8 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
     setWishesElements: (newElements: Array<UnionWishElements>) => {
         set(
             produce((state: WishesSectionStore) => {
-                if (newElements) {
-                    state.elements = newElements;
-                }
+                state.elements = newElements;
+                console.log(newElements, state.elements);
             })
         );
     },

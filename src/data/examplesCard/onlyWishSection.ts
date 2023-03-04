@@ -1,4 +1,5 @@
-export const onlyWishSection = {
+export const onlyWishExampleCard = {
+    id: "wish",
     headerSection: {
         isActive: false,
         name: {
