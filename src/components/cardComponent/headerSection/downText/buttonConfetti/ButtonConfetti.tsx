@@ -36,8 +36,11 @@ export function ButtonConfetti() {
                     numberOfPieces={amountConfetti}
                     gravity={0.25}
                     recycle={false}
+                    style={{ pointerEvents: "none" }}
                     wind={0}
-                    onConfettiComplete={() => setConfetti(false)}
+                    onConfettiComplete={() => {
+                        setConfetti(false);
+                    }}
                 />
             )}
         </>

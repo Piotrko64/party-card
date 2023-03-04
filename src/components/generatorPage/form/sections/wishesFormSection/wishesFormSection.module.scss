@@ -5,6 +5,26 @@
     background-color: rgba(255, 255, 255, 0.233);
     padding: 0;
 }
+
+.deleteButton {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backMainColor);
+    color: var(--red);
+    font-size: 1rem;
+    font-family: "Jost";
+    border: 2px solid var(--red);
+    border-radius: 5px;
+    margin-top: 40px;
+    img {
+        width: 30px;
+        margin-left: 15px;
+    }
+}
+
 .singleWish {
     // border-top: 3px solid white;
     border: 2px solid var(--gray);

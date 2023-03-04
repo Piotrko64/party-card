@@ -1,0 +1,14 @@
+.panel {
+    background-color: var(--gray);
+    border: 2px solid white;
+    position: fixed;
+    left: 15px;
+    bottom: 50%;
+    transform: translateY(-50%);
+    z-index: 99999;
+}
+
+.title {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}

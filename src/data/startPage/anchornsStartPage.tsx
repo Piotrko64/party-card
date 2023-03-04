@@ -1,11 +1,11 @@
 export const anchornsStartPage = [
     {
-        href: "GenerateCard",
+        href: "generateCard",
         text: "Stwórz nową kartkę",
         color: "#EE0439",
     },
     {
-        href: "",
+        href: "examples",
         text: "Zobacz przykłady",
         color: "#CD0CAB",
     },

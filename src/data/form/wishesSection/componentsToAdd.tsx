@@ -20,7 +20,7 @@ export const componentsToAdd = [
             id: uuidv4(),
             name: "wishWall",
             texts: [{ id: uuidv4(), content: "" }],
-            color: "black",
+            color: "red",
             font: "Jost",
         },
         plName: "Ściana życzeń",

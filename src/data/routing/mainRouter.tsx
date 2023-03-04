@@ -10,6 +10,7 @@ import { LocalMode } from "pages/LocaLmode";
 import { ErrorScreen } from "./../../components/ErrorScreen/ErrorScreen";
 import { Footer } from "components/footer/Footer";
 import { Page404 } from "pages/Page404";
+import { ExamplePage } from "./../../pages/ExamplesPage";
 
 function Layout() {
     return (
@@ -34,16 +35,20 @@ export const mainRouter = createBrowserRouter([
                 element: <StartPage />,
             },
             {
+                path: "/examples",
+                element: <ExamplePage />,
+            },
+            {
                 path: "/info",
                 element: <InfoPage />,
             },
             { path: "/localMode", element: <LocalMode /> },
             {
-                path: "/GenerateCard",
+                path: "/generateCard",
                 element: <GenerateCardPage />,
             },
             {
-                path: "/PreviewCard",
+                path: "/previewCard",
                 element: <PreviewCardPage />,
             },
             {

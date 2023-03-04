@@ -82,6 +82,14 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
         );
     },
 
+    deleteElement: (id: string) => {
+        set(
+            produce((state) => {
+                state.elements = state.elements.filter((element: UnionWishElements) => element.id !== id);
+            })
+        );
+    },
+
     addElementWish: (obj: UnionWishElements) =>
         set(
             produce((state) => {

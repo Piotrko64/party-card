@@ -52,6 +52,7 @@ export type TextType = {
 
 export type WishesSectionStore = {
     elements: Array<UnionWishElements>;
+    deleteElement: (id: string) => void;
     addElementWish: (el: UnionWishElements) => void;
     changeWishValue: (nameProperty: string, newValue: string | Array<string>, id: string) => void;
     changeValueText: (idComponent: string, textId: string, newValue: string) => void;

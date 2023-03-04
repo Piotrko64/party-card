@@ -11,8 +11,7 @@ import { DragLines } from "./dragLines/DragLines";
 
 export function WishesFormSection() {
     const wishElements = useWishesSectionStore((store) => store.elements);
-
-    const addElement = useAddWishForm();
+    const deleteElement = useWishesSectionStore((store) => store.deleteElement);
 
     return (
         <>
@@ -32,15 +31,30 @@ export function WishesFormSection() {
                                     {wishElements.map((element, index) => (
                                         <Draggable key={element.id} draggableId={element.id} index={index}>
                                             {(provided) => (
-                                                <div
-                                                    ref={provided.innerRef}
-                                                    {...provided.draggableProps}
-                                                    className={classes.singleWish}
-                                                >
-                                                    <div {...provided.dragHandleProps} className="flexCenter">
-                                                        <DragLines />
+                                                <div>
+                                                    <div
+                                                        ref={provided.innerRef}
+                                                        {...provided.draggableProps}
+                                                        className={classes.singleWish}
+                                                    >
+                                                        <div
+                                                            {...provided.dragHandleProps}
+                                                            className="flexCenter"
+                                                        >
+                                                            <DragLines />
+                                                        </div>
+                                                        <div>
+                                                            {" "}
+                                                            {getWishForm(element.name, { ...element })}
+                                                            <button
+                                                                className={classes.deleteButton}
+                                                                onClick={() => deleteElement(element.id)}
+                                                            >
+                                                                Usuń ten element{" "}
+                                                                <img src="/icons/trash.png" alt="delete" />{" "}
+                                                            </button>
+                                                        </div>
                                                     </div>
-                                                    <div> {getWishForm(element.name, { ...element })}</div>
                                                 </div>
                                             )}
                                         </Draggable>
