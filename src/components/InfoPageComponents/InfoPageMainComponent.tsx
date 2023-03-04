@@ -26,7 +26,7 @@ export function InfoPageMainComponent() {
                 <p>
                     Idealne stworzenie takiej kartki może nie być początkowo proste. Trzeba być ostrożnym w
                     aspektach kolorystycznych. Aby lepiej zobrazować możliwości Party Card przygotowaliśmy
-                    kilka przykładowych użyć dostępnych pod tym linkiem.
+                    kilka przykładowych użyć.
                 </p>
             </div>
         </>

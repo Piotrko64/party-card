@@ -1,10 +1,30 @@
-import { BackgroundStore } from "types/stores/BackgroundStore";
+import { BackgroundStore, BackgroundStoreWithoutFunctions } from "types/stores/BackgroundStore";
 import { create } from "zustand";
 import { initialValueBackground } from "./initialValueBackground";
-import { actionsBackgroundStore } from "./actionsBackgroundStore";
 
-export const useBackgroundStore = create<BackgroundStore>((set, get) => ({
-    ...initialValueBackground,
+import produce from "immer";
+import { createJSONStorage, persist } from "zustand/middleware";
 
-    ...actionsBackgroundStore(set),
-}));
+export const useBackgroundStore = create(
+    persist<BackgroundStore>(
+        (set) => ({
+            ...initialValueBackground,
+
+            setEntireBackgroundStore: (newState: BackgroundStoreWithoutFunctions) => {
+                set((state: BackgroundStore) => ({ ...state, ...newState }));
+            },
+
+            changeValue: (inputNameProperty: string, newValue: string | boolean, lastProperty: string) =>
+                set(
+                    produce((state: BackgroundStore) => {
+                        //@ts-ignore
+                        state[inputNameProperty][lastProperty] = newValue;
+                    })
+                ),
+        }),
+        {
+            name: "background-storage",
+            storage: createJSONStorage(() => localStorage),
+        }
+    )
+);

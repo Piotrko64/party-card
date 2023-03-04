@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next";
 import classes from "./describePart.module.scss";
 
 export function DescribePart() {
+    const { t } = useTranslation("home");
+    console.log(t("description"));
     return (
         <p className={classes.describe}>
             Bądź oryginalny w kwestii życzeń.

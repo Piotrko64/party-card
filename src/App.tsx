@@ -3,7 +3,7 @@ import { QueryClientProvider } from "react-query";
 import { QueryClient } from "react-query";
 import { RouterProvider, useParams } from "react-router-dom";
 import "./App.scss";
-
+import "./i18n.ts";
 const queryClient = new QueryClient();
 
 function App() {

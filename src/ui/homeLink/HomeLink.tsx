@@ -5,7 +5,6 @@ export function HomeLink() {
     return (
         <div className={classes.backToHome}>
             <Link to="/">
-                {" "}
                 <img src="/icons/leftArrow.png" /> Wróć do strony głównej{" "}
             </Link>
         </div>

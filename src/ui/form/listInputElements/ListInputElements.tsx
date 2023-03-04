@@ -2,13 +2,7 @@ import { DragDropContext, Draggable, Droppable, DropResult } from "@hello-pangea
 import { DragLines } from "components/generatorPage/form/sections/wishesFormSection/dragLines/DragLines";
 import { ChangeEvent } from "react";
 import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
-import {
-    ListTexts,
-    SingleText,
-    UnionWishElements,
-    UnionWishElementsWithTexts,
-} from "types/stores/WishesSectionStore";
-import { clone } from "lodash";
+import { ListTexts } from "types/stores/WishesSectionStore";
 import classes from "./listInputElements.module.scss";
 
 type Props = { idElement: string; texts: ListTexts };
@@ -72,7 +66,7 @@ export function ListInputElement({ idElement, texts }: Props) {
                                                 className={classes.input}
                                             />
                                             <div className={classes.lines}>
-                                                <DragLines more />
+                                                <DragLines />
                                             </div>
                                         </div>
                                     )}

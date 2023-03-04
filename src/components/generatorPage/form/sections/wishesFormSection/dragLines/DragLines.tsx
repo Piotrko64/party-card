@@ -1,14 +1,12 @@
 import classes from "./dragLines.module.scss";
 import cx from "classnames";
 
-type Props = { more?: true };
-
-export function DragLines({ more }: Props) {
+export function DragLines() {
     return (
         <div className={classes.lines}>
             <div className={cx(classes.line, classes.first)}></div>
 
-            <div className={cx(classes.line, classes.first)}></div>
+            <div className={cx(classes.line, classes.second)}></div>
 
             <div className={cx(classes.line, classes.first)}></div>
         </div>

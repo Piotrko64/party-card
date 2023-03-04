@@ -1,5 +1,4 @@
 import { fontsToChoice } from "data/fonts/fontsToChoice";
-
 import { NamesFont } from "types/typesForStyles/NamesFont";
 import classes from "./fontChoosingPanel.module.scss";
 import cx from "classnames";
