@@ -8,7 +8,8 @@ export type UnionWishElements = TagCloudType | WallWishType | ImageURLType | Tex
 
 export type UnionWishElementsWithTexts = TagCloudType | WallWishType;
 
-export type ListTexts = Array<{ id: string; content: string }>;
+export type SingleText = { id: string; content: string };
+export type ListTexts = Array<SingleText>;
 
 export type TagCloudType = {
     name: "tagCloud";
@@ -52,6 +53,7 @@ export type TextType = {
 
 export type WishesSectionStore = {
     elements: Array<UnionWishElements>;
+    moveSingleInputElement: (idElement: string, sourceIndex: number, destinationIndex: number) => void;
     deleteElement: (id: string) => void;
     addElementWish: (el: UnionWishElements) => void;
     changeWishValue: (nameProperty: string, newValue: string | Array<string>, id: string) => void;

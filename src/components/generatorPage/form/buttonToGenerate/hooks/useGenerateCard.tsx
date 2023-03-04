@@ -18,8 +18,6 @@ export function useGenerateCard() {
         backgroundSection: JSON.parse(JSON.stringify(background)),
     };
 
-    console.log(JSON.stringify(objCardForDatabase));
-
     return async (id: string) => {
         await writeNewData(objCardForDatabase, id);
     };

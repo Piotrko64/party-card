@@ -18,6 +18,7 @@ export function FontChoosingPanel({ callback, nameSection, font, isHeader }: Pro
             <div className={classes.fonts}>
                 {fontsToChoice.map(({ fullName, name }) => (
                     <div
+                        key={name}
                         className={cx(classes.font, font === name && classes.thisFont)}
                         style={{ fontFamily: fullName }}
                         onClick={() => callback(nameSection, name, "font")}

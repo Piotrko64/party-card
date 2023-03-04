@@ -18,6 +18,7 @@ export function OrdinaryColors({ changeColor, withoutLabel, selectedColor }: Pro
             <div className={classes.colors}>
                 {colors.map((color) => (
                     <div
+                        key={color}
                         className={cx(classes.singleColor, selectedColor === color && classes.selectedColor)}
                         style={{ backgroundColor: color }}
                         onClick={() => changeColor(color)}

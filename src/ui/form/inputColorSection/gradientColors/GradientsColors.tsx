@@ -32,6 +32,7 @@ export function GradientColors({ changeColor, selectedColor }: Props) {
             <div className={classes.colors}>
                 {gradientColors.map((color) => (
                     <div
+                        key={color}
                         className={cx(classes.singleColor, selectedColor === color && classes.selectedColor)}
                         style={{ background: color }}
                         onClick={() => {

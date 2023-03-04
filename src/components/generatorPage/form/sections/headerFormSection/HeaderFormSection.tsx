@@ -28,8 +28,10 @@ export function HeaderFormSection() {
             />
             {isActive ? (
                 <>
-                    {elementListHeaderForm.map((element) => (
-                        <div className="grayBlock">{element}</div>
+                    {elementListHeaderForm.map((element, index) => (
+                        <div className="grayBlock" key={index}>
+                            {element}
+                        </div>
                     ))}
                 </>
             ) : (

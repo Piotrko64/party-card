@@ -31,6 +31,7 @@ export function TagCloudForm({ color, id: idElement, texts, font }: TagCloudType
                         className={cx(classes.font, font === name && classes.thisFont)}
                         style={{ fontFamily: fullName }}
                         onClick={() => changeFont(name)}
+                        key={fullName}
                     >
                         {name}
                     </div>

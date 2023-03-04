@@ -6,6 +6,7 @@ import {
 } from "types/stores/WishesSectionStore";
 import { create } from "zustand";
 import { v4 } from "uuid";
+import { clone } from "lodash";
 
 export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
     elements: [],
@@ -30,6 +31,26 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
                 if (findText) {
                     findText.content = newValue;
                 }
+            })
+        ),
+
+    moveSingleInputElement: (idElement: string, sourceIndex: number, destinationIndex: number) =>
+        set(
+            produce((state: WishesSectionStore) => {
+                const cloneArrayElement = clone(state.elements);
+
+                const thisWishElement = cloneArrayElement.find(
+                    (element) => element.id === idElement
+                ) as UnionWishElementsWithTexts;
+
+                const texts = (thisWishElement as UnionWishElementsWithTexts).texts;
+                const findSingleInput = texts.find((_text, index) => index === sourceIndex)!;
+
+                texts.splice(sourceIndex, 1);
+
+                texts.splice(destinationIndex, 0, findSingleInput);
+
+                state.elements = cloneArrayElement;
             })
         ),
 
@@ -76,7 +97,6 @@ export const useWishesSectionStore = create<WishesSectionStore>((set) => ({
         set(
             produce((state: WishesSectionStore) => {
                 state.elements = newElements;
-                console.log(newElements, state.elements);
             })
         );
     },

@@ -25,6 +25,7 @@ export function WishWallForm({ id: idElement, font, color, texts }: WallWishType
             <div className={classes.fonts}>
                 {fontsToChoice.map(({ fullName, name }) => (
                     <div
+                        key={fullName}
                         className={cx(classes.font, font === name && classes.thisFont)}
                         style={{ fontFamily: fullName }}
                         onClick={() => changeFont(name)}

@@ -1,9 +1,5 @@
 import { TextType } from "types/stores/WishesSectionStore";
 import { InputRange } from "ui/form/inputRange/InputRange";
-import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
-import { ChangeEvent } from "react";
-import { FontChoosingPanel } from "ui/form/fontChoosingPanel/FontChoosingPanel";
-import { NamesFont } from "types/typesForStyles/NamesFont";
 import { fontsToChoice } from "data/fonts/fontsToChoice";
 import cx from "classnames";
 import classes from "./textForm.module.scss";
