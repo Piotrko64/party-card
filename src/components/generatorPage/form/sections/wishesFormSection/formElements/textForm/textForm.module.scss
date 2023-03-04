@@ -41,7 +41,7 @@
         display: flex;
         gap: 8px;
         flex-wrap: wrap;
-
+        justify-content: left;
         .font {
             background-color: var(--gray);
             width: fit-content;
@@ -63,14 +63,12 @@
             &.thisFont {
                 color: black;
                 background-color: white;
-                transform: translateY(-10px);
             }
         }
     }
 }
 @media (max-width: 720px) {
     .fonts {
-        justify-content: center;
         .font {
             width: fit-content;
             padding: 5px 7px;
@@ -86,7 +84,6 @@
                 border-top-right-radius: 6px;
             }
             &.thisFont {
-                transform: translateY(-5px);
             }
         }
     }
