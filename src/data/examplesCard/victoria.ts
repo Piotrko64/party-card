@@ -1,8 +1,3 @@
-import { BackgroundStore } from "types/stores/BackgroundStore";
-import { HeaderSection } from "types/stores/HeaderSection";
-import { WishesSectionStore } from "types/stores/WishesSectionStore";
-import { WishesSection } from "./../../components/cardComponent/wishesSection/WishesSection";
-
 export const victoriaExampleCard = {
     id: "viki",
     headerSection: {
@@ -59,7 +54,7 @@ export const victoriaExampleCard = {
         confetti: {
             onStart: true,
             buttonConfetti: true,
-            amountConfetti: "1083.2",
+            amountConfetti: 1083.2,
             isActive: true,
         },
         backgroundDecorations: {
@@ -70,7 +65,7 @@ export const victoriaExampleCard = {
         },
         fireworks: {
             isFireworks: true,
-            intensity: "8.3",
+            intensity: 8.3,
         },
     },
 
@@ -115,8 +110,8 @@ export const victoriaExampleCard = {
             color: "linear-gradient(110deg, #ff0000 0%, #bc10e7 50%, #5e92d0 100%)",
             backgroundColor: "#fff",
             font: "Oswald",
-            marginTop: "45.9",
-            marginBottom: "237.8",
+            marginTop: 45.9,
+            marginBottom: 237.8,
             isGradient: true,
             size: "medium",
         },

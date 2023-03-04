@@ -33,7 +33,7 @@ export function ButtonConfetti() {
                 <Confetti
                     width={window.innerWidth}
                     height={getHeightWindow()}
-                    numberOfPieces={amountConfetti}
+                    numberOfPieces={+amountConfetti}
                     gravity={0.25}
                     recycle={false}
                     style={{ pointerEvents: "none" }}
