@@ -24,7 +24,7 @@ export function QRPageMainComponent() {
 
     function createImage() {
         domtoimage.toBlob(qrCard.current!).then(function (blob) {
-            saveAs(blob, "my-node.png");
+            saveAs(blob, "QR_CODE.png");
         });
     }
 
@@ -46,14 +46,12 @@ export function QRPageMainComponent() {
                     <div className={classes.buttons}>
                         <button onClick={createImage} className={classes.download}>
                             Pobierz powyższy kod QR jako zdjęcie
-                        </button>{" "}
+                        </button>
                         <button onClick={copyLink} className={classes.copy}>
-                            {" "}
-                            Skopiuj link do kartki{" "}
+                            Skopiuj link do kartki
                         </button>
                         <Link to={link} className={classes.goToCard}>
-                            {" "}
-                            Przejdź do kartki{" "}
+                            Przejdź do kartki
                         </Link>
                     </div>
                 </div>

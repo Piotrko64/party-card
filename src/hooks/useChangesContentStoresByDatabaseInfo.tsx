@@ -25,7 +25,7 @@ export function useChangesContentStoresByDatabaseInfo() {
                 setEntireHeaderStore(data.headerSection);
             })
             .catch((err) => {
-                throw new Error(err);
+                throw new Error("ERROR:", err);
             });
     }
 

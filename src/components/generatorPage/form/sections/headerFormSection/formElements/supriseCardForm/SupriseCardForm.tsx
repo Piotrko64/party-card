@@ -2,7 +2,7 @@ import { FontChoosingPanel } from "ui/form/fontChoosingPanel/FontChoosingPanel";
 import { InputColorSection } from "ui/form/inputColorSection/InputColorSection";
 import { InputText } from "ui/form/inputText/InputText";
 import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggleButton";
-import { useHeaderSectionStore } from "./../../../../../../../stores/HeaderSectionStore/HeaderSectionStore";
+import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
 
 export function SupriseCardForm() {
     const { isActive, color, backgroundColor, font, text } = useHeaderSectionStore(
@@ -35,13 +35,16 @@ export function SupriseCardForm() {
                         placeholder="Napisz coś co zaskoczy 😏!"
                     />
                     <FontChoosingPanel callback={changeValueInput} font={font} nameSection="supriseCard" />
+
                     <h4> Ustaw kolor dla napisów </h4>
+
                     <InputColorSection
                         withoutGradient
                         thisColor={color}
                         nameSection="supriseCard"
                         callback={changeValueInput}
                     />
+
                     <h4> Ustaw kolor dla tła </h4>
 
                     <InputColorSection

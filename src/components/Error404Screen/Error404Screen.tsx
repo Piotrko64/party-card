@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import classes from "./error404Screen.module.scss";
 
-const TIME_TO_REDIRECT = 8000;
+const TIME_TO_REDIRECT = 7500;
 
 export function Error404Screen() {
     const navigate = useNavigate();

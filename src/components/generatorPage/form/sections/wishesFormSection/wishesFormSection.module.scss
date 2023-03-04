@@ -1,9 +1,13 @@
 .container {
     margin-top: 40px;
     border-radius: 2px;
-    // border: 2px solid rgba(255, 255, 255, 0.5);
+
     background-color: rgba(255, 255, 255, 0.233);
     padding: 0;
+    .maxWidth {
+        width: 100%;
+        margin-right: 15px;
+    }
 }
 
 .deleteButton {

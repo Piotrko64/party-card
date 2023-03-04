@@ -12,10 +12,6 @@ export function useObserver(htmlElement: RefObject<HTMLElement>) {
         }, basicObserverConfig);
 
         if (htmlElement) observer.observe(htmlElement.current!);
-
-        return () => {
-            // observer.unobserve(htmlElement.current!);
-        };
     }, [htmlElement]);
 
     return isActive;

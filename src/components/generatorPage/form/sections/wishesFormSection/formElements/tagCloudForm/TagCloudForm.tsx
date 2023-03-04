@@ -1,12 +1,8 @@
-import { ChangeEvent } from "react";
 import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
 import { TagCloudType } from "types/stores/WishesSectionStore";
 import { OrdinaryColors } from "ui/form/inputColorSection/ordinaryColors/OrdinaryColors";
-import { DragDropContext, Draggable, Droppable, DropResult } from "@hello-pangea/dnd";
 import classes from "./tagCloudForm.module.scss";
-import { DragLines } from "../../dragLines/DragLines";
 import { ListInputElement } from "ui/form/listInputElements/ListInputElements";
-import { FontChoosingPanel } from "ui/form/fontChoosingPanel/FontChoosingPanel";
 import { NamesFont } from "types/typesForStyles/NamesFont";
 import { fontsToChoice } from "data/fonts/fontsToChoice";
 import cx from "classnames";

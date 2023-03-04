@@ -1,7 +1,7 @@
 import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import Fireworks from "@fireworks-js/react";
 export function FireworksComponent() {
-    const { fireworks, background } = useBackgroundStore((state) => state);
+    const { fireworks } = useBackgroundStore((state) => state);
     const { intensity, isFireworks } = fireworks;
 
     return (

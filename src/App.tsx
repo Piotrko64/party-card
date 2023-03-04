@@ -1,4 +1,6 @@
+import { LoadingScreen } from "components/LoadingScreen/LoadingScreen";
 import { mainRouter } from "data/routing/mainRouter";
+import { Suspense } from "react";
 import { QueryClientProvider } from "react-query";
 import { QueryClient } from "react-query";
 import { RouterProvider, useParams } from "react-router-dom";
@@ -9,7 +11,9 @@ const queryClient = new QueryClient();
 function App() {
     return (
         <QueryClientProvider client={queryClient}>
-            <RouterProvider router={mainRouter} />
+            <Suspense fallback={<LoadingScreen />}>
+                <RouterProvider router={mainRouter} />
+            </Suspense>
         </QueryClientProvider>
     );
 }

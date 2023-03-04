@@ -1,6 +1,4 @@
 import classes from "./gifSection.module.scss";
-import GifPicker from "gif-picker-react";
-import { tenorKey } from "config/tenorKey";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
 import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggleButton";
 
@@ -27,18 +25,7 @@ export function GifSectionHeader() {
                 isChecked={gif.isShow}
                 callback={toggleActiveGif}
             />
-            {gif.isShow && (
-                <GifSection url={gif.url} changeGif={changeGif} />
-                // <div className={classes.row}>
-                //     <div>
-                //         <GifPicker tenorApiKey={tenorKey} onGifClick={changeGif} />
-                //     </div>
-                //     <div className={classes.selectedGif}>
-                //         <h4> Wybrany gif: </h4>
-                //         {gif.url ? <img src={gif.url} alt="gif" /> : "Nic nie wybrano"}{" "}
-                //     </div>
-                // </div>
-            )}
+            {gif.isShow && <GifSection url={gif.url} changeGif={changeGif} />}
         </div>
     );
 }

@@ -1,64 +1,70 @@
-.textAreaContainer {
-    display: flex;
-    flex-direction: column;
-    position: relative;
+.container {
+    max-height: 380px;
+    overflow-y: scroll;
+    width: 100%;
 
-    .textArea {
-        background-color: #575555;
-        border-radius: 8px;
-        padding: 5px 8px;
-        color: white;
-        font-size: 1rem;
-        border: none;
-        width: 100%;
-        border: solid 0.5px transparent;
-        transition: border 0.3s ease-in-out;
-        font-family: "Jost";
-        font-size: 1rem;
-        margin-bottom: 20px;
-        resize: vertical;
-        min-height: 150px;
-        &::placeholder {
-            color: #b5b5b5;
-        }
-        &:focus {
-            border-color: white;
+    .textAreaContainer {
+        display: flex;
+        flex-direction: column;
+        position: relative;
 
-            outline: none;
+        .textArea {
+            background-color: #575555;
+            border-radius: 8px;
+            padding: 5px 8px;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            width: 100%;
+            border: solid 0.5px transparent;
+            transition: border 0.3s ease-in-out;
+            font-family: "Jost";
+            font-size: 1rem;
+            margin-bottom: 20px;
+            resize: vertical;
+            min-height: 150px;
+            &::placeholder {
+                color: #b5b5b5;
+            }
+            &:focus {
+                border-color: white;
+
+                outline: none;
+            }
         }
     }
-}
 
-.fonts {
-    border-radius: 8px;
-    // overflow-x: hidden;
-    width: fit-content;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-
-    .font {
-        background-color: var(--gray);
+    .fonts {
+        border-radius: 8px;
+        // overflow-x: hidden;
         width: fit-content;
-        padding: 4px 5px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 120px;
-        transition: all 0.3s ease-in-out;
-        cursor: pointer;
-        &:first-child {
-            border-bottom-left-radius: 8px;
-            border-top-left-radius: 8px;
-        }
-        &:last-child {
-            border-bottom-right-radius: 8px;
-            border-top-right-radius: 8px;
-        }
-        &.thisFont {
-            color: black;
-            background-color: white;
-            transform: translateY(-10px);
+        gap: 8px;
+        flex-wrap: wrap;
+
+        .font {
+            background-color: var(--gray);
+            width: fit-content;
+            padding: 4px 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 120px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            &:first-child {
+                border-bottom-left-radius: 8px;
+                border-top-left-radius: 8px;
+            }
+            &:last-child {
+                border-bottom-right-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+            &.thisFont {
+                color: black;
+                background-color: white;
+                transform: translateY(-10px);
+            }
         }
     }
 }

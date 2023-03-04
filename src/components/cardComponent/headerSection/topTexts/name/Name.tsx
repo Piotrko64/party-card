@@ -1,5 +1,4 @@
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
-
 import classes from "./name.module.scss";
 import cx from "classnames";
 import { getCorrectObjectForFont } from "helpers/styles/getCorrectObjectForFont";

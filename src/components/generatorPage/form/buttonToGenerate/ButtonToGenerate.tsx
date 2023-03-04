@@ -44,13 +44,11 @@ export function ButtonToGenerate() {
 
             <h2 className={classes.localMode}> Tryb lokalny </h2>
             <p>
-                {" "}
                 W razie problemów lub chęci pokazania kartki natychmiastowo bez generowania kodu QR możesz
                 włączyć tryb lokalny. Przeniesie Cię on do zrobionej kartki. Jest to dobra funckja jeżeli
                 chciałbyś pokazać kartkę znajomemu z poziomu swojego telefonu bez tworzenia kodu bądź linku.{" "}
             </p>
             <Link to="/localMode" className={classes.localModeButton}>
-                {" "}
                 Przejdź do trybu lokalnego{" "}
             </Link>
         </>

@@ -2,7 +2,6 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set, onValue } from "firebase/database";
 import { DataToWrite } from "types/firebase/DataToWrite";
-import { v4 } from "uuid";
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_apiKey,

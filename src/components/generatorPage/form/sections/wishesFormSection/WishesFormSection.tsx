@@ -38,7 +38,7 @@ export function WishesFormSection() {
                                 <div className="list" {...provided.droppableProps} ref={provided.innerRef}>
                                     {wishElements.map((element, index) => (
                                         <Draggable key={element.id} draggableId={element.id} index={index}>
-                                            {(provided, snapshot) => (
+                                            {(provided) => (
                                                 <div>
                                                     <div
                                                         ref={provided.innerRef}
@@ -52,7 +52,7 @@ export function WishesFormSection() {
                                                             <DragLines />
                                                         </div>
 
-                                                        <div>
+                                                        <div className={classes.maxWidth}>
                                                             {getWishForm(element.name, { ...element })}
 
                                                             <button

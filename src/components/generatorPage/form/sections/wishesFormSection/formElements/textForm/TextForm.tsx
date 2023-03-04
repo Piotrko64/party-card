@@ -32,7 +32,7 @@ export function TextForm({
     } = useGetTextFormFunctions({ id, isFullWidth });
 
     return (
-        <>
+        <div className={classes.container}>
             <h3> Własny tekst </h3>
 
             <div className={classes.textAreaContainer}>
@@ -55,6 +55,10 @@ export function TextForm({
                     </div>
                 ))}
             </div>
+
+            <h4> Dobierz rozmiar</h4>
+            <SizePanel idElement={id} sizeTitle={size} />
+
             <h4> Odstęp górny </h4>
             <InputRange intensity={marginTop} callback={changeMarginTop} max="250" />
 
@@ -71,9 +75,6 @@ export function TextForm({
 
             <h4> Kolor tła</h4>
             <OrdinaryColors changeColor={changeColorBackground} selectedColor={backgroundColor} />
-
-            <h4> Dobierz rozmiar</h4>
-            <SizePanel idElement={id} sizeTitle={size} />
-        </>
+        </div>
     );
 }
