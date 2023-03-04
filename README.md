@@ -7,13 +7,13 @@
 
 <br />
 
-<p align="center"> Party Card is app to creating website-card with wishes. Firstly you can  </p>
+<p align="center">Party Card is app to creating website-card with wishes. Firstly you can  see examples card. Next you can create your own, generate code QR or link and send this card your close person  </p>
 
 <br />
 
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/77500425/161312332-1842468e-46e2-4dc6-8996-4b4cc28bc4fd.png" alt="html5" height="50"  align="center" title="HTML" />
+
 
 <img src="https://user-images.githubusercontent.com/77500425/161311954-e03613e7-54b2-4d1b-ac2e-559f8c1e9f2d.png" alt="typescript" height="50"  align="center" title="TS"/>
 <img src="https://user-images.githubusercontent.com/77500425/161312615-f3961568-28bb-48fa-9d95-93ecd61337b3.png" alt="react"  height="50" align="center"/>
@@ -42,14 +42,9 @@
 
 # Instalation
 - Download files by **git clone _repository-name_**
-- Use **npm i**
+- Use **npm i** 
 - Use **npm start**
 
-
-
-### You need to complete the **.env** file with the following variables:
-- **MONGODB**: "your_connection_string"
-- **API_KEY**: "paths_to_API"
 
 <br />
 
