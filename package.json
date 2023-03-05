@@ -18,11 +18,9 @@
         "@types/uuid": "^9.0.1",
         "classnames": "^2.3.2",
         "dom-to-image": "^2.6.0",
-        "dotenv": "^16.0.3",
         "emoji-picker-react": "^4.4.7",
         "file-saver": "^2.0.5",
         "firebase": "^9.17.1",
-        "framer-motion": "^9.0.1",
         "gif-picker-react": "^1.1.0",
         "i18next": "^22.4.10",
         "i18next-browser-languagedetector": "^7.0.1",
@@ -39,7 +37,6 @@
         "react-qr-code": "^2.0.11",
         "react-query": "^3.39.3",
         "react-router-dom": "^6.8.1",
-        "react-use": "^17.4.0",
         "zustand": "^4.3.2"
     },
     "devDependencies": {

@@ -1,13 +1,9 @@
 .container {
     margin-top: 40px;
     border-radius: 2px;
-
+    // border: 2px solid rgba(255, 255, 255, 0.5);
     background-color: rgba(255, 255, 255, 0.233);
     padding: 0;
-    .maxWidth {
-        width: 100%;
-        margin-right: 15px;
-    }
 }
 
 .deleteButton {
@@ -18,7 +14,7 @@
     align-items: center;
     background-color: var(--backMainColor);
     color: var(--red);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: "Jost";
     border: 2px solid var(--red);
     border-radius: 5px;
@@ -37,6 +33,4 @@
     margin: 10px auto;
     background-color: var(--secondBackColor);
     display: flex;
-    transition: all 0.3s ease-in-out;
-    transform-origin: left;
 }

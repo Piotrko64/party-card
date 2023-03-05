@@ -4,9 +4,14 @@ import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionSt
 import { ComponentNames } from "types/stores/WishesSectionStore";
 import classes from "./listAvailableWish.module.scss";
 
-export function ListAvailableWish() {
+export function ListAvailableWish({ afterDrop }: { afterDrop: () => void }) {
     const addComponentToStore = useAddWishForm();
     const wishElements = useWishesSectionStore((state) => state.elements);
+
+    function addNewElement(title: ComponentNames) {
+        afterDrop();
+        addComponentToStore(title);
+    }
 
     return (
         <div className={classes.listComponents}>
@@ -16,7 +21,7 @@ export function ListAvailableWish() {
                 componentsToAdd.map((component) => (
                     <button
                         key={component.title}
-                        onClick={() => addComponentToStore(component.title as ComponentNames)}
+                        onClick={() => addNewElement(component.title as ComponentNames)}
                     >
                         {component.plName} +
                     </button>
