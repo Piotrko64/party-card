@@ -11,7 +11,7 @@ export function NameFormSection() {
 
     return (
         <>
-            <h3> {t("name")} </h3>
+            <h3 className="name"> {t("name")} </h3>
             <InputText
                 namePropertyToChange="name"
                 callback={changeValueInput}

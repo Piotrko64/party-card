@@ -7,7 +7,7 @@ export function AnchornsPart() {
     return (
         <div className={cx("flexCenter", classes.anchorns)}>
             {anchornsStartPage.map((anchor) => (
-                <SingleAnchor {...anchor} />
+                <SingleAnchor {...anchor} key={anchor.textEN} />
             ))}
         </div>
     );

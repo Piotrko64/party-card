@@ -12,7 +12,7 @@ export function WishesFormSection() {
 
     return (
         <>
-            <h2> Sekcja z życzeniami </h2>
+            <h2 className="wishes"> Sekcja z życzeniami </h2>
             <p>
                 Tutaj możesz popisać się kreatywnością, dodawaj dowolne sekcje dostępne poniżej. Kolejność
                 każdej takiej sekcji możesz zmieniać przeciągnięciami{" "}

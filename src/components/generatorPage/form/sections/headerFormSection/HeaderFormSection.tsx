@@ -10,7 +10,7 @@ export function HeaderFormSection() {
     const { t } = useTranslation("generate");
 
     return (
-        <>
+        <div className="headerSection">
             <h2>{t("headerSection")}</h2>
 
             <p>{t("headerDescription")}</p>
@@ -26,6 +26,6 @@ export function HeaderFormSection() {
             ) : (
                 <h3 className={classes.alert}> Sekcja została wyłączona </h3>
             )}
-        </>
+        </div>
     );
 }

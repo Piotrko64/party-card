@@ -2,12 +2,15 @@ import { BackgroundForm } from "./formElements/backgroundColorForm/BackgroundFor
 import { FireworksManage } from "./formElements/fireworksManage/FireworksManage";
 import { ConfettiManage } from "./formElements/confettiManage/ConfettiManage";
 import { DecorationPanel } from "./formElements/decorationsPanel/DecorationsPanel";
+import { useTranslation } from "react-i18next";
 
 export function BackgroundFormSection() {
+    const { t } = useTranslation("generate");
+
     return (
-        <>
-            <h2>Tło i poboczne efekty</h2>
-            <p>Nadaj koloru oraz wykaż się kreatywnością poprzez nasz panel w którym zadbasz o efekt WoW!</p>
+        <div>
+            <h2 className="background">{t("backgroundSectionTitle")}</h2>
+
             <div className="grayBlock">
                 <BackgroundForm />
             </div>
@@ -20,6 +23,6 @@ export function BackgroundFormSection() {
             <div className="grayBlock">
                 <DecorationPanel />
             </div>
-        </>
+        </div>
     );
 }

@@ -11,7 +11,7 @@ export function MainGeneratorComponent() {
         <div className={classes.container}>
             <div className={classes.generator}>
                 <HomeLink />
-                <h1> {t("mainTitle")} 🥳</h1>
+                <h1 className="end"> {t("mainTitle")} 🥳</h1>
                 <MainForm />
             </div>
 

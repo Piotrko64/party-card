@@ -13,5 +13,9 @@
     "isGif": "Dodać śmiesznego gifa?",
     "downText": "Tekst na samym dole sekcji",
     "supriseCard": "Kartka niespodzianka!",
-    "write": "Napisz coś co zaskoczy! 😏"
+    "write": "Napisz coś co zaskoczy! 😏",
+    "backgroundSectionTitle": "Tło i poboczne efekty",
+    "backColor": "Kolor tła",
+    "fireworks": "Fajerwerki",
+    "isFireworks": "Chcesz Fajerwerki na stronie?"
 }
