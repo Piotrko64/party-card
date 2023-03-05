@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
 import classes from "./singleAnchor.module.scss";
+import { useTranslation } from "react-i18next";
 
 type Props = {
     color: string;
     text: string;
     href: string;
+    textEN: string;
 };
 
-export function SingleAnchor({ text, color, href }: Props) {
+export function SingleAnchor({ text, color, href, textEN }: Props) {
+    const { i18n } = useTranslation();
+
     return (
         <Link
             style={{
@@ -17,7 +21,7 @@ export function SingleAnchor({ text, color, href }: Props) {
             to={href}
             className={classes.anchor}
         >
-            {text}
+            {i18n.language.includes("pl") ? text : textEN}
         </Link>
     );
 }

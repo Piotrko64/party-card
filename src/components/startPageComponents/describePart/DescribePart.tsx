@@ -1,15 +1,17 @@
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import classes from "./describePart.module.scss";
 
 export function DescribePart() {
-    const { t } = useTranslation("home");
-    console.log(t("description"));
+    const { t } = useTranslation("startPage");
+
     return (
         <p className={classes.describe}>
-            Bądź oryginalny w kwestii życzeń.
-            <br />
-            Stwórz internetową kartkę okolicznościową dla swoich najbliższych <br /> - z okazji urodzin lub
-            innych okazji!
+            <Trans i18nKey="description" t={t}>
+                Bądź oryginalny w kwestii życzeń.
+                <br></br>
+                Stwórz internetową kartkę okolicznościową dla swoich najbliższych <br></br> - z okazji urodzin
+                lub innych okazji!
+            </Trans>
         </p>
     );
 }

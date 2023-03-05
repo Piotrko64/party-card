@@ -9,11 +9,14 @@ import { useChangesContentStoresByDatabaseInfo } from "./../../hooks/useChangesC
 import { useQuery } from "react-query";
 import { LoadingScreen } from "components/LoadingScreen/LoadingScreen";
 import { ErrorScreen } from "components/ErrorScreen/ErrorScreen";
+import { useTranslation } from "react-i18next";
 
 export function QRPageMainComponent() {
     let { id } = useParams();
     const changeStores = useChangesContentStoresByDatabaseInfo();
     const { isError, isLoading } = useQuery("qr" + id, () => changeStores(id!));
+
+    const { t } = useTranslation("qrPage");
 
     const link = window.location.origin + "/card/" + id;
     const qrCard = useRef<HTMLDivElement>(null);
@@ -36,22 +39,22 @@ export function QRPageMainComponent() {
                 <ErrorScreen />
             ) : (
                 <div className={classes.page}>
-                    <h1> Kod został wygenerowany! </h1>
+                    <h1> {t("mainTitle")} </h1>
 
                     <div ref={qrCard} className={classes.card}>
-                        <h2> Zeskanuj poniższy kod QR </h2>
+                        <h2> {t("aboveCode")} </h2>
                         <QRCode size={256} value={link} viewBox={`0 0 256 256`} className={classes.qrCode} />
-                        <p> Czeka tam na Ciebie miła niespodzianka</p>
+                        <p> {t("underCode")}</p>
                     </div>
                     <div className={classes.buttons}>
                         <button onClick={createImage} className={classes.download}>
-                            Pobierz powyższy kod QR jako zdjęcie
+                            {t("qrImageButton")}
                         </button>
                         <button onClick={copyLink} className={classes.copy}>
-                            Skopiuj link do kartki
+                            {t("linkButton")}
                         </button>
                         <Link to={link} className={classes.goToCard}>
-                            Przejdź do kartki
+                            {t("goToCard")}
                         </Link>
                     </div>
                 </div>

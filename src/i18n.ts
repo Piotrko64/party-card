@@ -1,8 +1,12 @@
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-import translationEN from "./locales/en/translationEN.json";
-import translationPL from "./locales/pl/translationPL.json";
+import qrPageEN from "./locales/en/qrPageEN.json";
+import qrPagePL from "./locales/pl/qrPagePL.json";
+import footerPL from "./locales/pl/footerPL.json";
+import footerEN from "./locales/en/footerEN.json";
+import startPagePL from "./locales/pl/startPagePL.json";
+import startPageEN from "./locales/en/startPageEN.json";
 
 i18next
     .use(initReactI18next)
@@ -12,10 +16,16 @@ i18next
         fallbackLng: "en",
         resources: {
             en: {
-                home: translationEN,
+                // home: translationEN,
+                qrPage: qrPageEN,
+                footer: footerEN,
+                startPage: startPageEN,
             },
             pl: {
-                home: translationPL,
+                // home: translationPL,
+                qrPage: qrPagePL,
+                startPage: startPagePL,
+                footer: footerPL,
             },
         },
     });
