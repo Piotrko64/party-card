@@ -5,10 +5,13 @@ import { ListAvailableWish } from "./listAvailableWish/ListAvailableWish";
 import cx from "classnames";
 import classes from "./wishesFormSection.module.scss";
 import { DragLines } from "./dragLines/DragLines";
+import { useTranslation } from "react-i18next";
 
 export function WishesFormSection() {
     const wishElements = useWishesSectionStore((store) => store.elements);
     const { deleteElement, setWishesElements, elements } = useWishesSectionStore();
+
+    const { t } = useTranslation("ui");
 
     function dragElement(result: DropResult) {
         if (!result.destination) return;
@@ -59,7 +62,7 @@ export function WishesFormSection() {
                                                                 className={classes.deleteButton}
                                                                 onClick={() => deleteElement(element.id)}
                                                             >
-                                                                Usuń ten element
+                                                                {t("delete")}
                                                                 <img src="/icons/trash.png" alt="delete" />
                                                             </button>
                                                         </div>

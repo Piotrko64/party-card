@@ -2,6 +2,7 @@ import classes from "./ordinaryColors.module.scss";
 import cx from "classnames";
 import { isNotGradientAndNotColorInArray } from "utils/isGradient";
 import { ordinaryColors } from "../../../../data/colors/colors";
+import { useTranslation } from "react-i18next";
 
 type Props = {
     changeColor: (color: string) => void;
@@ -10,9 +11,11 @@ type Props = {
 };
 
 export function OrdinaryColors({ changeColor, withoutLabel, selectedColor }: Props) {
+    const { t } = useTranslation("ui");
+
     return (
         <>
-            {!withoutLabel && <h5> Zwykłe kolory </h5>}
+            {!withoutLabel && <h5> {t("colors")} </h5>}
             <div className={classes.colors}>
                 {ordinaryColors.map((color) => (
                     <div
@@ -38,7 +41,7 @@ export function OrdinaryColors({ changeColor, withoutLabel, selectedColor }: Pro
                         onChange={(e) => changeColor(e.target.value)}
                         value={selectedColor}
                     />
-                    Wybierz własny kolor
+                    {t("selectColor")}
                 </label>
             </div>
         </>

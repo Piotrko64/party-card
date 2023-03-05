@@ -4,5 +4,13 @@
     "backToGenerator": "Back to generator",
     "confetti": "Click for more confetti",
     "click": "Click here",
-    "examples": "Examples"
+    "examples": "Examples",
+    "fonts": "Select font",
+    "activateSection": "Enable this section?",
+    "colors": "Ordinary colors",
+    "gradients": "Gradient colors",
+    "selectColor": "Select own color",
+    "selectGradients": "Create own gradient color",
+    "hidePicker": "Hide Picker",
+    "delete": "Delete this element"
 }

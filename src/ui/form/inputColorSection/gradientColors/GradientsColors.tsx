@@ -4,6 +4,7 @@ import { useState } from "react";
 import cx from "classnames";
 import { isGradientAndNotColorInArray } from "utils/isGradient";
 import { gradientColors } from "data/colors/colors";
+import { useTranslation } from "react-i18next";
 
 type Props = {
     changeColor: (color: string, isGradient: true) => void;
@@ -12,6 +13,8 @@ type Props = {
 
 export function GradientColors({ changeColor, selectedColor }: Props) {
     const [isActivePicker, setActivePicker] = useState(false);
+
+    const { t } = useTranslation("ui");
 
     function toggleActive() {
         setActivePicker((prevState) => !prevState);
@@ -23,7 +26,7 @@ export function GradientColors({ changeColor, selectedColor }: Props) {
 
     return (
         <>
-            <h5> Kolory Gradientowe </h5>
+            <h5> {t("gradients")} </h5>
             <div className={classes.colors}>
                 {gradientColors.map((color) => (
                     <div
@@ -43,7 +46,7 @@ export function GradientColors({ changeColor, selectedColor }: Props) {
                 )}
             </div>
             <button className={classes.label} onClick={toggleActive}>
-                {isActivePicker ? "Schowaj picker" : "Stwórz własny gradient"}
+                {isActivePicker ? t("hidePicker") : t("selectGradients")}
             </button>
             {isActivePicker && <ColorPicker value={selectedColor} onChange={handleChange} />}
         </>

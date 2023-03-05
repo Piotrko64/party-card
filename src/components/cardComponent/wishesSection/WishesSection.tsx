@@ -6,9 +6,10 @@ export function WishesSection() {
 
     return (
         <main>
-            {wishElements.map((element) => (
-                <div key={element.id}>{getWishComponent(element.name, { ...element })} </div>
-            ))}
+            {wishElements &&
+                wishElements.map((element) => (
+                    <div key={element.id}>{getWishComponent(element.name, { ...element })} </div>
+                ))}
         </main>
     );
 }
