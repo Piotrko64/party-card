@@ -4,7 +4,7 @@ import { ComponentNames, UnionWishElements } from "types/stores/WishesSectionSto
 import { v4 } from "uuid";
 
 export function useAddWishForm() {
-    const { addElementWish, elements } = useWishesSectionStore();
+    const { addElementWish } = useWishesSectionStore();
 
     function addWishToForm(nameWish: ComponentNames) {
         const findComponentObject = componentsToAdd.find(

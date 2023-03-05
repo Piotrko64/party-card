@@ -1,4 +1,4 @@
-import { BackgroundStore, BackgroundStoreWithoutFunctions } from "types/stores/BackgroundStore";
+import { BackgroundStoreWithoutFunctions } from "types/stores/BackgroundStore";
 import { HeaderSection } from "types/stores/HeaderSection";
 import { UnionWishElements } from "types/stores/WishesSectionStore";
 
