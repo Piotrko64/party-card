@@ -70,8 +70,7 @@ If you are a creative person this website app can be for you! PARY CARD has a ge
 
 ATTENTION: Some examples are in Polish language version because Party Card have English and Polish translation. 
 
-<br />
-<p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222951361-3c48b1f9-5c8f-49e5-887c-244517adabdf.png"/><p>
+
 
 
 <br />
@@ -87,8 +86,10 @@ When you create your card you can share other people by using QR Code or link. I
 
 
 
-<br />
+
 # Examples
+
+
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222951361-3c48b1f9-5c8f-49e5-887c-244517adabdf.png"/><p>
   <br />
