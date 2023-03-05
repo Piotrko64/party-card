@@ -34,6 +34,8 @@
 
 * [Inspiration](#inspiration)
 
+* [Examples](#examples)
+
 
 
 <br />
@@ -68,19 +70,30 @@ If you are a creative person this website app can be for you! PARY CARD has a ge
 
 ATTENTION: Some examples are in Polish language version because Party Card have English and Polish translation. 
 
-<br />
-<p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222951361-3c48b1f9-5c8f-49e5-887c-244517adabdf.png"/><p>
+
+
 
 <br />
+
+The perfect creation of such a card may not be easy at first. You need to be careful with the color aspects. In order to better illustrate the possibilities of Party Card we have prepared some example uses. Hovewer, remember that the appearance of the card can be observed on the fly as you complete the form. I recommend doing this as often as possible. There are three sections to customize: Background, Main section and Wishes section. At the end of the form you will see a button with the generation of a QR code and a link that you can send to the person you want to gift
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222978011-3be179d8-06da-4b2a-a2e0-2a8343a30cba.png"/><p>
+
+
+When you create your card you can share other people by using QR Code or link. I used **Firebase** to create simple database to storage any cards. If you have any problem with sharing you can also use local mode to generate the card form.
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222967100-e180f7d0-4912-444b-bd14-577e6ac374d3.png"/><p>
 
 
-When you create your card you can share other people by using QR Code or link. I used Firebase to create simple database to storage any cards. If you have any problem with sharing you can also use local mode to generate the card form.
+
+
+# Examples
 
 
 
-<br />
+<p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222951361-3c48b1f9-5c8f-49e5-887c-244517adabdf.png"/><p>
+  <br />
+  <p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222978339-dedd12f2-1733-4e5f-b1aa-6af78585205d.png"/><p>
 
 
 
