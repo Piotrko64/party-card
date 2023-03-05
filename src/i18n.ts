@@ -11,6 +11,8 @@ import infoPagePL from "./locales/pl/infoPagePL.json";
 import infoPageEN from "./locales/en/infoPageEN.json";
 import uiPL from "./locales/pl/uiPL.json";
 import uiEN from "./locales/en/uiEN.json";
+import generatePL from "./locales/pl/generatePL.json";
+import generateEN from "./locales/en/generateEN.json";
 
 i18next
     .use(initReactI18next)
@@ -29,6 +31,7 @@ i18next
                 startPage: startPageEN,
                 infoPage: infoPageEN,
                 ui: uiEN,
+                generate: generateEN,
             },
             pl: {
                 // home: translationPL,
@@ -37,6 +40,7 @@ i18next
                 footer: footerPL,
                 infoPage: infoPagePL,
                 ui: uiPL,
+                generate: generatePL,
             },
         },
     });

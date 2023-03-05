@@ -1,6 +1,7 @@
 import { PossiblePropertySectionToChange } from "types/stores/HeaderSection";
 import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggleButton";
 import { OrdinaryColors } from "../ordinaryColors/OrdinaryColors";
+import { useTranslation } from "react-i18next";
 
 type Props = {
     callback: (
@@ -13,19 +14,21 @@ type Props = {
 };
 
 export function StrokeManage({ callback, isStroke, selectedColor }: Props) {
+    const { t } = useTranslation("generate");
+
     return (
         <div>
-            <h4> Obrys </h4>
+            <h4> {t("stroke")} </h4>
             <div>
                 <TextWithToggleButton
                     callback={(isCheck: boolean) => callback("name", isCheck, "isStrokeColor")}
                     isChecked={isStroke}
-                    text="Czy zastosować kolorowy obrys?"
+                    text={t("isStroke")}
                 />
 
                 {isStroke && (
                     <>
-                        <h5> Wybierz kolor dla obrysu</h5>
+                        <h5> {t("strokeColor")}</h5>
 
                         <OrdinaryColors
                             selectedColor={selectedColor}

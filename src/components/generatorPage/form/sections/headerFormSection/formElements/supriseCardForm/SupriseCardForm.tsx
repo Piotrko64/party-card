@@ -3,6 +3,7 @@ import { InputColorSection } from "ui/form/inputColorSection/InputColorSection";
 import { InputText } from "ui/form/inputText/InputText";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
 import { ToggleActiveSection } from "../../toggleActiveSection/ToggleActiveSection";
+import { useTranslation } from "react-i18next";
 
 export function SupriseCardForm() {
     const { isActive, color, backgroundColor, font, text } = useHeaderSectionStore(
@@ -10,19 +11,19 @@ export function SupriseCardForm() {
     );
 
     const { changeValueInput } = useHeaderSectionStore();
+    const { t } = useTranslation("generate");
 
     return (
         <>
-            <h3> Kartka niespodzianka </h3>
+            <h3> {t("supriseCard")} </h3>
             <ToggleActiveSection nameSection="supriseCard" isActive={isActive}>
                 <>
                     <InputText
-                        labelText="Dodaj tekst do kartki niespodzianki"
                         callback={changeValueInput}
                         valueInput={text}
                         namePropertyToChange="supriseCard"
                         maxLength={300}
-                        placeholder="Napisz coś co zaskoczy 😏!"
+                        placeholder={t("write")!}
                     />
                     <FontChoosingPanel callback={changeValueInput} font={font} nameSection="supriseCard" />
 

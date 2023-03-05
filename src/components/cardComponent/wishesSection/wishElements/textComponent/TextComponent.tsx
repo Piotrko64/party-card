@@ -1,6 +1,5 @@
 import { TextType } from "types/stores/WishesSectionStore";
 import classes from "./textComponent.module.scss";
-import { getCorrectObjectForFont } from "helpers/styles/getCorrectObjectForFont";
 import { getStyleFontObject } from "helpers/styles/toFonts/getStyleFontObject";
 
 export function TextComponent({

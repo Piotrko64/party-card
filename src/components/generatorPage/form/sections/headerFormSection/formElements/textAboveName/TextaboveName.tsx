@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
 import { FontChoosingPanel } from "ui/form/fontChoosingPanel/FontChoosingPanel";
 import { InputColorSection } from "ui/form/inputColorSection/InputColorSection";
@@ -7,9 +8,11 @@ import { ToggleActiveSection } from "../../toggleActiveSection/ToggleActiveSecti
 export function TextAboveName() {
     const { changeValueInput, textAboveName } = useHeaderSectionStore();
 
+    const { t } = useTranslation("generate");
+
     return (
         <>
-            <h3> Tekst nad imieniem </h3>
+            <h3> {t("aboveName")} </h3>
 
             <ToggleActiveSection nameSection="textAboveName" isActive={textAboveName.isActive}>
                 <div>

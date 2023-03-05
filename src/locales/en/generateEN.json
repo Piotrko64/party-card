@@ -1,1 +1,17 @@
-{ "mainTitle": "Let's create a nice card!" }
+{
+    "mainTitle": "Let's create a nice card!",
+    "headerSection": "Header Section",
+    "headerDescription": "This is the part of the card that the person will see first. Remember that the appearance of the card can be observed on the fly as you complete the form. This section, as well as the greetings section, can be turned off, so if you feel that this section is unnecessary, you can turn it off with the switch at the top.",
+    "name": "Name",
+    "enable": "Display header section?",
+    "stroke": "Outline",
+    "isStroke": "Is the outline to be made?",
+    "colorStroke": "Choose a color for the outline",
+    "underName": "Text under name and gif section",
+    "aboveName": "Text above name",
+    "isGif": "Add funny gif?",
+    "downText": "Text at bottom of section",
+    "supriseCard": "Suprise Card",
+    "write": "Write something to Suprise Card",
+    "backgroundTitle": ""
+}

@@ -87,9 +87,11 @@ export function ListInputElement({ idElement, texts }: Props) {
                     )}
                 </Droppable>
             </DragDropContext>
-            <button onClick={addEmptyInput} className={classes.newText}>
-                Dodaj nowe pole +
-            </button>
+            {texts.length < 30 && (
+                <button onClick={addEmptyInput} className={classes.newText}>
+                    Dodaj nowe pole +
+                </button>
+            )}
         </>
     );
 }

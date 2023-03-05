@@ -1,10 +1,9 @@
 import EmojiPicker, { Theme, EmojiStyle } from "emoji-picker-react";
 import { ChangeEvent, FocusEvent, MouseEvent, useId, useRef, useState } from "react";
-import { PossiblePropertySectionToChange } from "types/stores/HeaderSection";
 import classes from "./inputText.module.scss";
 
 type Props = {
-    labelText: string;
+    labelText?: string;
     callback: (inputNameProperty: string, newValue: string, lastProperty: "text") => void;
     namePropertyToChange: string;
     valueInput: string;
@@ -13,7 +12,7 @@ type Props = {
 };
 
 export function InputText({
-    labelText,
+    labelText = "",
     callback,
     namePropertyToChange,
     valueInput,

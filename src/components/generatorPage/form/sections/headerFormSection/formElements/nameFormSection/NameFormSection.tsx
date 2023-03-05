@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
 import { FontChoosingPanel } from "ui/form/fontChoosingPanel/FontChoosingPanel";
 import { InputColorSection } from "ui/form/inputColorSection/InputColorSection";
@@ -6,17 +7,17 @@ import { InputText } from "ui/form/inputText/InputText";
 
 export function NameFormSection() {
     const { changeValueInput, name } = useHeaderSectionStore();
+    const { t } = useTranslation("generate");
 
     return (
         <>
-            <h3> Imię Jubilata </h3>
+            <h3> {t("name")} </h3>
             <InputText
-                labelText="Napisz imię wybranej osoby"
                 namePropertyToChange="name"
                 callback={changeValueInput}
                 valueInput={name.text}
                 maxLength={40}
-                placeholder=""
+                placeholder={t("name")!}
             />
             <FontChoosingPanel callback={changeValueInput} nameSection={"name"} font={name.font} isHeader />
             <InputColorSection callback={changeValueInput} nameSection={"name"} thisColor={name.color} />

@@ -1,1 +1,17 @@
-{ "mainTitle": "Stwórzmy ładną kartkę!" }
+{
+    "mainTitle": "Stwórzmy ładną kartkę!",
+    "headerSection": "Sekcja główna",
+    "headerDescription": "Jest to część kartki którą jubilat zobaczy jako pierwszą. Pamiętaj że wygląd kartki możesz obserwować na bieżącą wraz z uzupełnianiem formularza. Tą sekcję jak i sekcję z życzeniami możesz wyłączyć, więc jeśli uważasz że ta sekcja jest zbędna to możesz ją wyłączyć przełącznikiem u góry",
+    "name": "Imię Jubilata",
+    "enable": "Wyświetlić sekcje główną?",
+    "stroke": "Obrys",
+    "isStroke": "Czy obrys ma być wykonany?",
+    "colorStroke": "Wybierz kolor dla obrysu",
+
+    "underName": "Tekst pod imieniem",
+    "aboveName": "Tekst nad imieniem",
+    "isGif": "Dodać śmiesznego gifa?",
+    "downText": "Tekst na samym dole sekcji",
+    "supriseCard": "Kartka niespodzianka!",
+    "write": "Napisz coś co zaskoczy! 😏"
+}
