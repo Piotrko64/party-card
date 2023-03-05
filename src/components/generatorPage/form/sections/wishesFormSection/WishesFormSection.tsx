@@ -1,37 +1,14 @@
 import { DragDropContext, Draggable, Droppable, DropResult } from "@hello-pangea/dnd";
-
 import { getWishForm } from "helpers/wishesSection/getWishForm";
-import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
-import { useAddWishForm } from "./../../../../../hooks/form/wishes/useAddWishForm";
 import { ListAvailableWish } from "./listAvailableWish/ListAvailableWish";
 import cx from "classnames";
 import classes from "./wishesFormSection.module.scss";
-
 import { DragLines } from "./dragLines/DragLines";
-import { useAutoAnimate } from "@formkit/auto-animate/react";
-import { useTranslation } from "react-i18next";
+import { useWishesFormSectionManage } from "./hooks/useWishesFormSectionManage";
 
 export function WishesFormSection() {
-    const { deleteElement, setWishesElements, elements } = useWishesSectionStore();
-    const wishElements = useWishesSectionStore((store) => store.elements);
-    const [parent, enableAnimations] = useAutoAnimate();
-
-    const { t } = useTranslation("ui");
-    function dragElement(result: DropResult) {
-        enableAnimations(false);
-        if (!result.destination) return;
-
-        const cloneArrayElement = [...elements];
-        const [chooseElement] = cloneArrayElement.splice(result.source.index, 1);
-        cloneArrayElement.splice(result.destination.index, 0, chooseElement);
-
-        setWishesElements(cloneArrayElement);
-    }
-
-    function deleteSection(id: string) {
-        enableAnimations(true);
-        deleteElement(id);
-    }
+    const { afterDropElement, deleteSection, dragElement, t, parent, wishElements } =
+        useWishesFormSectionManage();
 
     return (
         <>
@@ -41,7 +18,7 @@ export function WishesFormSection() {
                 każdej takiej sekcji możesz zmieniać przeciągnięciami{" "}
             </p>
 
-            <ListAvailableWish afterDrop={() => enableAnimations(true)} />
+            <ListAvailableWish afterDrop={afterDropElement} />
             {wishElements.length > 0 && (
                 <div className={cx(classes.container)}>
                     <DragDropContext onDragEnd={dragElement}>
