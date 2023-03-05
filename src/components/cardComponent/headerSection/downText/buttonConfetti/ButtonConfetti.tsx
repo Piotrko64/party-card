@@ -7,6 +7,7 @@ import classes from "./buttonConfetti.module.scss";
 import Confetti from "react-confetti";
 import { getHeightWindow } from "helpers/getHeightWindow";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export function ButtonConfetti() {
     const { textAboveName } = useHeaderSectionStore();
@@ -17,6 +18,8 @@ export function ButtonConfetti() {
 
     const [isConfetti, setConfetti] = useState(false);
 
+    const { t } = useTranslation("ui");
+
     return (
         <>
             {buttonConfetti && (
@@ -26,7 +29,7 @@ export function ButtonConfetti() {
                     className={cx(classes.button, isConfetti ? classes.inActive : "")}
                     onClick={() => setConfetti(true)}
                 >
-                    Kliknij tu po więcej Confetti!
+                    {t("confetti")}
                 </button>
             )}
             {isConfetti && (

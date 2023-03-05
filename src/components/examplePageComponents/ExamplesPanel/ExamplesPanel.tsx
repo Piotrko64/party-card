@@ -10,9 +10,11 @@ import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import { BackgroundStoreWithoutFunctions } from "types/stores/BackgroundStore";
 import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
 import { UnionWishElements } from "types/stores/WishesSectionStore";
+import { useTranslation } from "react-i18next";
 
 export function ExamplesPanel() {
     const { id } = useParams();
+    const { t } = useTranslation("ui");
     const { setEntireHeaderStore } = useHeaderSectionStore();
     const { setEntireBackgroundStore } = useBackgroundStore();
     const { setWishesElements } = useWishesSectionStore();
@@ -54,7 +56,7 @@ export function ExamplesPanel() {
                         );
                     })}
                 </div>
-                <div className={classes.title}> Przykłady </div>
+                <div className={classes.title}> {t("examples")} </div>
             </div>
             <Link to="/">
                 <img src="/icons/leftArrow.png" className={classes.img} />
