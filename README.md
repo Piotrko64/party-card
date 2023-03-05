@@ -66,6 +66,7 @@ If you are a creative person this website app can be for you! PARY CARD has a ge
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222951348-05def778-efaf-4768-a6b9-70483516cde2.png"/><p>
 
+ATTENTION: Some examples are in Polish language version because Party Card have English and Polish translation. 
 
 <br />
 <p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222951361-3c48b1f9-5c8f-49e5-887c-244517adabdf.png"/><p>
