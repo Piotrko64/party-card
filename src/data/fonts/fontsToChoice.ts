@@ -18,4 +18,8 @@ export const fontsToChoice: FontsArray = [
         name: "Kaushan",
         fullName: "'Kaushan Script', cursive",
     },
+    {
+        name: "Playfair",
+        fullName: "'Playfair Display', serif",
+    },
 ];
