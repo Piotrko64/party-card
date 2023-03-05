@@ -8,7 +8,12 @@ export function GifSection({ url, changeGif }: Props) {
     return (
         <div className={classes.row}>
             <div>
-                <GifPicker tenorApiKey={import.meta.env.VITE_TENOR_KEY!} onGifClick={changeGif} width={300} />
+                <GifPicker
+                    tenorApiKey={import.meta.env.VITE_TENOR_KEY!}
+                    onGifClick={changeGif}
+                    width={300}
+                    autoFocusSearch={false}
+                />
             </div>
             <div className={classes.selectedGif}>
                 <h4> Wybrany gif: </h4>

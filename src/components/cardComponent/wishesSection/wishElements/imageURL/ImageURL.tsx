@@ -7,7 +7,7 @@ export function ImageURL({ url, isBorder, backgroundColor }: Props) {
     return url ? (
         <div
             className={cx(classes.containerImg, isBorder && classes.withBorder)}
-            style={{ backgroundColor: backgroundColor }}
+            style={{ backgroundColor: isBorder ? backgroundColor : "transparent" }}
         >
             <img src={url} alt="photo" />
         </div>
