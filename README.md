@@ -7,7 +7,7 @@
 
 <br />
 
-<p align="center">Party Card is app to creating website-card with wishes. Firstly you can  see examples card. Next you can create your own, generate code QR or link and send this card your close person  </p>
+<p align="center">Party Card is the app for creating a website card with wishes. Firstly you can see the example card. Next, you can create your own, generate a code QR or link and send this card to your close person  </p>
 
 <br />
 
@@ -34,9 +34,7 @@
 
 * [Inspiration](#inspiration)
 
-* [Major Updates](#Updates)
 
-* [What have I learned from this project](#what-have-i-learned-from-this-project)
 
 <br />
 
@@ -45,46 +43,54 @@
 - Use **npm i** 
 - Use **npm start**
 
+## You need also to create a .env file with variables:
+
+- VITE_TENOR_KEY=key to tenor
+
+### To the next variables you need to check the FIREBASE configuration:
+
+- VITE_apikey=apikey
+- VITE_authDomain=authDomain
+- VITE_databaseURL=databaseUrl
+- VITE_projectId=projectId
+- VITE_storageBucket=storageBucket
+- VITE_messagingSenderId=messagingSenderID
+- VITE_appId=appId
+
 
 <br />
 
 # About 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a justo eget elit aliquam aliquet. Nullam dictum mauris libero, in finibus leo suscipit at. Etiam bibendum ex ac imperdiet accumsan. In at neque vitae odio vehicula pulvinar sed nec velit. Donec pulvinar semper libero non cursus. Vivamus imperdiet lorem enim, a euismod mauris facilisis eu. Nulla sapien ante, laoreet eget diam id, dapibus pharetra nibh. Quisque bibendum justo elit, sed sagittis nisl mattis quis.
+If you are a creative person this website app can be for you! PARY CARD has a generator that allows creating of a variety of cards with wishes. Here are some examples:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222951348-05def778-efaf-4768-a6b9-70483516cde2.png"/><p>
+
+
+<br />
+<p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222951361-3c48b1f9-5c8f-49e5-887c-244517adabdf.png"/><p>
 
 <br />
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/77500425/164990774-eb31b66c-6166-46f5-ada9-3c0875dce883.png"/><p>
+When you create your card you can share other people by using QR Code or link. 
+
+
+If you have any problem with sharing you can also use local mode to generate the card form.
 
 <br />
 
-In this section you can writing about project. For example about its destiny or how it works. You can also put screenshots like I am now.
+
 
 <br />
 
 # Inspiration
 
-My inspiration to create this project was [this README](https://github.com/Piotrko64/react-sound-architecture/edit/master/README.md)
+Last time when my girlfriend has a birthday I create for her this website:
 
-<br />
+<p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222951544-bcaa3d55-7882-4ff1-a474-39a16a83a882.png"/><p>
 
-# Updates
-
-### **v1.0.3** 05/05/2022
-
-> -   **Super function** is ready!'
+This wish card was a great idea so I thought about writing a website to generate wish cards for everyone!
 
 
-### **v1.0.1** 04/04/2022
-
-> -   Add *Formik* liblary
-> -   Writing example updates
-
-<br />
-
-# What have I learned from this project
-
-> - How to create interesting README files
-> - Present projects well
 
 
