@@ -45,7 +45,7 @@ export function WishesFormSection() {
                                                             >
                                                                 <DragLines />
                                                             </div>
-                                                            <div>
+                                                            <div className={classes.maxWidth}>
                                                                 {getWishForm(element.name, { ...element })}
                                                                 <button
                                                                     className={classes.deleteButton}

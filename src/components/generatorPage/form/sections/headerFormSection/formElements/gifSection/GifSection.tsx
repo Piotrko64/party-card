@@ -3,6 +3,7 @@ import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionSt
 import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggleButton";
 
 import { GifSection } from "ui/form/gifSection/GifSection";
+import { ToggleActiveSection } from "../../toggleActiveSection/ToggleActiveSection";
 
 export type objectGif = { preview: { url: string } };
 
