@@ -2,11 +2,13 @@ import { InputRange } from "ui/form/inputRange/InputRange";
 import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggleButton";
 import { useBackgroundStore } from "./../../../../../../../stores/BackgroundStore/BackgroundStore";
 import { ChangeEvent } from "react";
+import { useTranslation } from "react-i18next";
 
 const MAX_AMOUNT = "1200";
 
 export function ConfettiManage() {
     const { confetti, changeValue } = useBackgroundStore();
+    const { t } = useTranslation("generate");
 
     function toggleConfetti() {
         changeValue("confetti", !confetti.onStart, "onStart");
@@ -25,18 +27,18 @@ export function ConfettiManage() {
             <h3> Confetti </h3>
 
             <TextWithToggleButton
-                text="Uruchomić confetti przy starcie?"
+                text={t("startConfetti")}
                 callback={toggleConfetti}
                 isChecked={confetti.onStart}
             />
             <TextWithToggleButton
-                text="Dodać przycisk do confetti do sekcji głównej?"
+                text={t("buttonConfetti")}
                 callback={toggleButtonConfetti}
                 isChecked={confetti.buttonConfetti}
             />
             {(confetti.onStart || confetti.buttonConfetti) && (
                 <>
-                    <h4> Dobierz intensywność confetti </h4>
+                    <h4>{t("intensityConfetti")} </h4>
                     <InputRange
                         max={MAX_AMOUNT}
                         callback={changeAmountConfetti}

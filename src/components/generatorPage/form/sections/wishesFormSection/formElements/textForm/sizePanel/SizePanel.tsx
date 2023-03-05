@@ -3,6 +3,8 @@ import { sizes } from "data/fonts/sizes";
 import classes from "./sizePanel.module.scss";
 import cx from "classnames";
 
+import { useTranslation } from "react-i18next";
+
 type Props = {
     idElement: string;
     sizeTitle: string;
@@ -10,6 +12,7 @@ type Props = {
 
 export function SizePanel({ idElement, sizeTitle }: Props) {
     const { changePropertyValue } = useWishesSectionStore();
+    const { i18n } = useTranslation();
 
     function changeSize(size: string) {
         changePropertyValue(size, idElement, "size");
@@ -17,13 +20,13 @@ export function SizePanel({ idElement, sizeTitle }: Props) {
 
     return (
         <div className={classes.sizes}>
-            {sizes.map((size) => (
+            {sizes.map(({ originalTitle, plTitle }) => (
                 <div
-                    key={size.originalTitle}
-                    onClick={() => changeSize(size.originalTitle)}
-                    className={cx(classes.size, size.originalTitle === sizeTitle && classes.select)}
+                    key={originalTitle}
+                    onClick={() => changeSize(originalTitle)}
+                    className={cx(classes.size, originalTitle === sizeTitle && classes.select)}
                 >
-                    {size.plTitle}
+                    {i18n.language.includes("pl") ? plTitle : originalTitle}
                 </div>
             ))}
         </div>

@@ -1,11 +1,12 @@
 import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggleButton";
 import { useBackgroundStore } from "./../../../../../../../stores/BackgroundStore/BackgroundStore";
-import { ChangeEvent } from "react";
 import { ListDecorations } from "./listDecorations/ListDecorations";
 import { InputColorSection } from "ui/form/inputColorSection/InputColorSection";
+import { useTranslation } from "react-i18next";
 
 export function DecorationPanel() {
     const { backgroundDecorations: decorations, changeValue } = useBackgroundStore();
+    const { t } = useTranslation("generate");
 
     function toggleDecorations() {
         changeValue("backgroundDecorations", !decorations.isDecorations, "isDecorations");
@@ -13,9 +14,9 @@ export function DecorationPanel() {
 
     return (
         <>
-            <h3> Dodatkowe dekoracje w tle </h3>
+            <h3> {t("decorationTitle")} </h3>
             <TextWithToggleButton
-                text="Dodać dekoracje w tle? "
+                text={t("addDecoration")}
                 callback={toggleDecorations}
                 isChecked={decorations.isDecorations}
             />

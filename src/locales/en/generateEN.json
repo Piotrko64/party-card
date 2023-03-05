@@ -13,5 +13,17 @@
     "downText": "Text at bottom of section",
     "supriseCard": "Suprise Card",
     "write": "Write something to Suprise Card",
-    "backgroundSectionTitle": "BAckground and effects"
+    "backgroundSectionTitle": "Background and effects",
+    "backColor": "Background Color",
+    "fireworks": "Fireworks",
+    "isFireworks": "Do you want fireworks on the page?",
+    "intensityFireworks": "Choose the intensity of fireworks",
+    "intensityConfetti": "Choose the intensity of confetti",
+    "startConfetti": "Start confetti on page load?",
+    "buttonConfetti": "Add a button for confetti?",
+    "decorationTitle": "Additional background decorations",
+    "addDecoration": "Add background decorations?",
+    "selectIcon": "Select icon for decoration",
+    "wishesSection": "Wishes Section",
+    "wishesDescribe": "Here you can show off your creativity by adding any of the sections available below. You can change the order of each section by dragging and dropping."
 }

@@ -17,5 +17,14 @@
     "backgroundSectionTitle": "Tło i poboczne efekty",
     "backColor": "Kolor tła",
     "fireworks": "Fajerwerki",
-    "isFireworks": "Chcesz Fajerwerki na stronie?"
+    "isFireworks": "Chcesz Fajerwerki na stronie?",
+    "intensityFireworks": " Dobierz intensywność fajerwerek",
+    "intensityConfetti": " Dobierz intensywność confetti",
+    "startConfetti": "Uruchomić confetti przy starcie?",
+    "buttonConfetti": "Dodać przycisk do confetti?",
+    "decorationTitle": "Dodatkowe dekoracje w tle",
+    "addDecoration": "Dodać dekoracje w tle?",
+    "selectIcon": "Wybierz ikone do dekoracji",
+    "wishesSection": "Sekcja z życzeniami",
+    "wishesDescribe": "Tutaj możesz popisać się kreatywnością, dodawaj dowolne sekcje dostępne poniżej. Kolejność każdej takiej sekcji możesz zmieniać przeciągnięciami"
 }

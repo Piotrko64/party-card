@@ -5,18 +5,18 @@ import cx from "classnames";
 import classes from "./wishesFormSection.module.scss";
 import { DragLines } from "./dragLines/DragLines";
 import { useWishesFormSectionManage } from "./hooks/useWishesFormSectionManage";
+import { useTranslation } from "react-i18next";
 
 export function WishesFormSection() {
     const { afterDropElement, deleteSection, dragElement, t, parent, wishElements } =
         useWishesFormSectionManage();
 
+    const { t: wishTranslation } = useTranslation("generate");
+
     return (
         <>
-            <h2 className="wishes"> Sekcja z życzeniami </h2>
-            <p>
-                Tutaj możesz popisać się kreatywnością, dodawaj dowolne sekcje dostępne poniżej. Kolejność
-                każdej takiej sekcji możesz zmieniać przeciągnięciami{" "}
-            </p>
+            <h2 className="wishes"> {wishTranslation("wishesSection")} </h2>
+            <p>{wishTranslation("wishesDescribe")}</p>
 
             <ListAvailableWish afterDrop={afterDropElement} />
             {wishElements.length > 0 && (

@@ -2,9 +2,11 @@ import { dataTypeIcon } from "data/background/dataTypeIcon";
 import classes from "./listDecorations.module.scss";
 import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import cx from "classnames";
+import { useTranslation } from "react-i18next";
 
 export function ListDecorations() {
     const { backgroundDecorations: decorations, changeValue, background } = useBackgroundStore();
+    const { t } = useTranslation("generate");
 
     const iconProps = {
         left: "0",
@@ -18,7 +20,7 @@ export function ListDecorations() {
 
     return (
         <>
-            <h4>Wybierz ikone do dekoracji</h4>
+            <h4>{t("selectIcon")}</h4>
             <div className={classes.container}>
                 {dataTypeIcon(iconProps).map((icon) => (
                     <div

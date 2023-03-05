@@ -1,4 +1,3 @@
-import { UnionWishElements } from "types/stores/WishesSectionStore";
 import { v4 as uuidv4 } from "uuid";
 
 export const componentsToAdd = [
