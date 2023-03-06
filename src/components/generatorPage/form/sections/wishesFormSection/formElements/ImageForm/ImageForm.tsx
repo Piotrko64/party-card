@@ -41,7 +41,7 @@ export function ImageForm({ isBorder, backgroundColor, url, id }: Props) {
                     <div className={classes.counter}>{url.length + "/" + MAX_LENGTH_URL}</div>
                 </div>
             </div>
-            <TextWithToggleButton text={t("isStroke")} callback={toggleBorder} isChecked={isBorder} />
+            <TextWithToggleButton text={t("isStroke")} callbackToToggle={toggleBorder} isChecked={isBorder} />
             {isBorder && (
                 <>
                     <h5> {t("colorStroke")} </h5>

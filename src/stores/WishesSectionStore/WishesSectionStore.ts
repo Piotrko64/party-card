@@ -28,6 +28,7 @@ export const useWishesSectionStore = create(
                 set(
                     produce((state: WishesSectionStore) => {
                         const findComponent = state.elements.find((element) => element.id === idComponent);
+
                         const findText = (findComponent as UnionWishElementsWithTexts)?.texts.find(
                             (text) => text.id === textId
                         );

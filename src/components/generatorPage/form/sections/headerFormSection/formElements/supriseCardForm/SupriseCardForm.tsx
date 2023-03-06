@@ -19,13 +19,17 @@ export function SupriseCardForm() {
             <ToggleActiveSection nameSection="supriseCard" isActive={isActive}>
                 <>
                     <InputText
-                        callback={changeValueInput}
+                        callbackToChangeValueText={changeValueInput}
                         valueInput={text}
                         namePropertyToChange="supriseCard"
                         maxLength={300}
                         placeholder={t("write")!}
                     />
-                    <FontChoosingPanel callback={changeValueInput} font={font} nameSection="supriseCard" />
+                    <FontChoosingPanel
+                        callbackToSelectFont={changeValueInput}
+                        font={font}
+                        nameSection="supriseCard"
+                    />
 
                     <h4> {t("textColor")} </h4>
 
@@ -33,7 +37,7 @@ export function SupriseCardForm() {
                         withoutGradient
                         thisColor={color}
                         nameSection="supriseCard"
-                        callback={changeValueInput}
+                        callbackToChangeColor={changeValueInput}
                     />
 
                     <h4> {t("backColor")} </h4>
@@ -42,7 +46,7 @@ export function SupriseCardForm() {
                         withoutGradient
                         thisColor={backgroundColor}
                         nameSection="supriseCard"
-                        callback={changeValueInput}
+                        callbackToChangeColor={changeValueInput}
                         backgroundColorCase
                     />
                 </>

@@ -1,49 +1,34 @@
 import EmojiPicker, { Theme, EmojiStyle } from "emoji-picker-react";
-import { ChangeEvent, FocusEvent, MouseEvent, useId, useRef, useState } from "react";
+import { useRef } from "react";
+import { useInputText } from "./hooks/useInputText";
 import classes from "./inputText.module.scss";
-
 type Props = {
     labelText?: string;
-    callback: (inputNameProperty: string, newValue: string, lastProperty: "text") => void;
+    callbackToChangeValueText: (inputNameProperty: string, newValue: string, lastProperty: "text") => void;
     namePropertyToChange: string;
     valueInput: string;
     maxLength: number;
     placeholder?: string;
 };
-
 export function InputText({
     labelText = "",
-    callback,
+    callbackToChangeValueText,
     namePropertyToChange,
     valueInput,
     maxLength,
     placeholder = "",
 }: Props) {
-    const idInput = useId();
-    const [isActiveEmojiPicker, setActiveEmojiPicker] = useState(false);
     const input = useRef<HTMLInputElement>(null);
 
-    function togglePicker(e: MouseEvent) {
-        e.preventDefault();
-        setActiveEmojiPicker((prevState) => !prevState);
-    }
-
-    function onBlurPicker(event: FocusEvent<HTMLInputElement>) {
-        if (event.relatedTarget || !isActiveEmojiPicker) return;
-
-        setActiveEmojiPicker(false);
-    }
-
-    function clickEmoji({ emoji }: { emoji: string }) {
-        if (valueInput.length + 1 < maxLength) {
-            input.current!.value = input.current!.value + " " + emoji;
-            callback(namePropertyToChange, valueInput + " " + emoji, "text");
-        }
-    }
-
-    function changeValueByCallback(event: ChangeEvent) {
-        callback(namePropertyToChange, (event.target as HTMLInputElement).value, "text");
-    }
+    const {
+        changeValueByCallback,
+        clickEmoji,
+        onBlurPicker,
+        togglePicker,
+        idInput,
+        setActiveEmojiPicker,
+        isActiveEmojiPicker,
+    } = useInputText({ callbackToChangeValueText, namePropertyToChange, valueInput, maxLength, input });
 
     return (
         <div className={classes.inputContainer}>
@@ -71,7 +56,7 @@ export function InputText({
             <div className={classes.counter}>
                 {valueInput.length}/{maxLength.toString()}
             </div>
-            {/* <EmojiProposal /> */}
+
             {isActiveEmojiPicker && (
                 <div onBlur={onBlurPicker} className={classes.picker} tabIndex={0}>
                     <EmojiPicker

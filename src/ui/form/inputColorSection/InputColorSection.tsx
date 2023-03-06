@@ -2,7 +2,7 @@ import { GradientColors } from "./gradientColors/GradientsColors";
 import { OrdinaryColors } from "./ordinaryColors/OrdinaryColors";
 
 type Props = {
-    callback: (
+    callbackToChangeColor: (
         nameSection: string,
         newValue: string | boolean,
         lastProperty: "color" | "isGradient" | "backgroundColor"
@@ -14,16 +14,15 @@ type Props = {
 };
 
 export function InputColorSection({
-    callback,
+    callbackToChangeColor,
     nameSection,
     thisColor,
     withoutGradient,
     backgroundColorCase,
 }: Props) {
     function handleChangeColor(newValue: string | boolean, isGradient?: true) {
-        callback(nameSection, newValue, backgroundColorCase ? "backgroundColor" : "color");
-
-        isGradient ? callback(nameSection, true, "isGradient") : callback(nameSection, false, "isGradient");
+        callbackToChangeColor(nameSection, newValue, backgroundColorCase ? "backgroundColor" : "color");
+        callbackToChangeColor(nameSection, !!isGradient, "isGradient");
     }
 
     return (

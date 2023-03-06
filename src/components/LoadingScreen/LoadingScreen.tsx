@@ -5,10 +5,8 @@ export function LoadingScreen() {
     const { t } = useTranslation("ui");
 
     return (
-        <>
-            <div className={classes.screen}>
-                <h1>{t("loading")}</h1>
-            </div>
-        </>
+        <div className={classes.screen}>
+            <h1>{t("loading")}</h1>
+        </div>
     );
 }

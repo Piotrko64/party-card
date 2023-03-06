@@ -22,7 +22,11 @@ export function ToggleActiveSection({ children, nameSection, isActive }: PropsWi
 
     return (
         <div ref={parent}>
-            <TextWithToggleButton callback={toggleActive} text={t("activateSection")} isChecked={isActive} />
+            <TextWithToggleButton
+                callbackToToggle={toggleActive}
+                text={t("activateSection")}
+                isChecked={isActive}
+            />
             {isActive && children}
         </div>
     );

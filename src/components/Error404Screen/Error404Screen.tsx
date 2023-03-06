@@ -1,23 +1,9 @@
-import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import classes from "./error404Screen.module.scss";
-
-const TIME_TO_REDIRECT = 7500;
+import { useError404Screen } from "./hooks/useError404Screen";
 
 export function Error404Screen() {
-    const navigate = useNavigate();
-    const { t } = useTranslation("page404");
-
-    useEffect(() => {
-        let timer = setTimeout(() => {
-            navigate("/");
-        }, TIME_TO_REDIRECT);
-
-        return () => {
-            clearTimeout(timer);
-        };
-    }, []);
+    const { t } = useError404Screen();
 
     return (
         <div className={classes.screen}>

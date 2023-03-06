@@ -23,14 +23,14 @@ export function OrdinaryColors({ changeColor, withoutLabel, selectedColor }: Pro
                         className={cx(classes.singleColor, selectedColor === color && classes.selectedColor)}
                         style={{ backgroundColor: color }}
                         onClick={() => changeColor(color)}
-                    ></div>
+                    />
                 ))}
 
                 {isNotGradientAndNotColorInArray(selectedColor, ordinaryColors) && (
                     <div
                         className={cx(classes.singleColor, classes.selectedColor)}
                         style={{ backgroundColor: selectedColor }}
-                    ></div>
+                    />
                 )}
             </div>
             <div>

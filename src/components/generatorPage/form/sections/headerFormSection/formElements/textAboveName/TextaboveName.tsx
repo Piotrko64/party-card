@@ -19,18 +19,18 @@ export function TextAboveName() {
                     <InputText
                         labelText="Wymyśl jakiś tekst"
                         namePropertyToChange="textAboveName"
-                        callback={changeValueInput}
+                        callbackToChangeValueText={changeValueInput}
                         valueInput={textAboveName.text}
                         maxLength={120}
                         placeholder="Może 'Wszystkiego najlepszego' "
                     />
                     <FontChoosingPanel
-                        callback={changeValueInput}
+                        callbackToSelectFont={changeValueInput}
                         nameSection={"textAboveName"}
                         font={textAboveName.font}
                     />
                     <InputColorSection
-                        callback={changeValueInput}
+                        callbackToChangeColor={changeValueInput}
                         nameSection={"textAboveName"}
                         thisColor={textAboveName.color}
                     />

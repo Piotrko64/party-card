@@ -21,7 +21,11 @@ export function GifSectionHeader() {
     return (
         <div className={classes.container}>
             <h4> Gif </h4>
-            <TextWithToggleButton text={t("isGif")} isChecked={gif.isShow} callback={toggleActiveGif} />
+            <TextWithToggleButton
+                text={t("isGif")}
+                isChecked={gif.isShow}
+                callbackToToggle={toggleActiveGif}
+            />
             {gif.isShow && <GifSection url={gif.url} changeGif={changeGif} />}
         </div>
     );

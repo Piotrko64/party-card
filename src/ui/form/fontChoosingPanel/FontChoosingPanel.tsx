@@ -5,13 +5,13 @@ import cx from "classnames";
 import { useTranslation } from "react-i18next";
 
 type Props = {
-    callback: (nameSection: string, newValue: NamesFont, lastProperty: "font") => void;
+    callbackToSelectFont: (nameSection: string, newValue: NamesFont, lastProperty: "font") => void;
     nameSection: string;
     font: NamesFont;
     isHeader?: true;
 };
 
-export function FontChoosingPanel({ callback, nameSection, font, isHeader }: Props) {
+export function FontChoosingPanel({ callbackToSelectFont, nameSection, font, isHeader }: Props) {
     const { t } = useTranslation("ui");
 
     return (
@@ -23,7 +23,7 @@ export function FontChoosingPanel({ callback, nameSection, font, isHeader }: Pro
                         key={name}
                         className={cx(classes.font, font === name && classes.thisFont)}
                         style={{ fontFamily: fullName }}
-                        onClick={() => callback(nameSection, name, "font")}
+                        onClick={() => callbackToSelectFont(nameSection, name, "font")}
                     >
                         {name}
                     </div>

@@ -1,4 +1,4 @@
-import { LoadingScreen } from "components/LoadingScreen/LoadingScreen";
+import { LoadingScreen } from "components/loadingScreen/LoadingScreen";
 import { mainRouter } from "data/routing/mainRouter";
 import { Suspense } from "react";
 import { QueryClientProvider } from "react-query";

@@ -18,17 +18,17 @@ export function TextUnderName() {
             <ToggleActiveSection nameSection="textUnderName" isActive={textUnderName.isActive}>
                 <InputText
                     namePropertyToChange="textUnderName"
-                    callback={changeValueInput}
+                    callbackToChangeValueText={changeValueInput}
                     valueInput={textUnderName.text}
                     maxLength={300}
                 />
                 <FontChoosingPanel
-                    callback={changeValueInput}
+                    callbackToSelectFont={changeValueInput}
                     nameSection={"textUnderName"}
                     font={textUnderName.font}
                 />
                 <InputColorSection
-                    callback={changeValueInput}
+                    callbackToChangeColor={changeValueInput}
                     nameSection={"textUnderName"}
                     thisColor={textUnderName.color}
                 />

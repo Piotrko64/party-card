@@ -70,7 +70,7 @@ export function TextForm({
             <TextWithToggleButton
                 text={t("isFullWidth")}
                 isChecked={isFullWidth}
-                callback={toggleFullWidth}
+                callbackToToggle={toggleFullWidth}
             />
             <h4> {t("textColor")} </h4>
             <OrdinaryColors changeColor={changeColorFont} selectedColor={color} />

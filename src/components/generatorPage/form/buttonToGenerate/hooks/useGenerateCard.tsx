@@ -1,7 +1,7 @@
 import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
 import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
-import { DataToWrite } from "types/firebase/DataToWrite";
+import { DataToWriteToDataBaseType } from "types/firebase/DataToWrite";
 import { writeNewData } from "./../../../../../firebase/initialFirebase";
 
 export function useGenerateCard() {
@@ -9,7 +9,7 @@ export function useGenerateCard() {
     const wishes = useWishesSectionStore((state) => state.elements);
     const background = useBackgroundStore();
 
-    const objCardForDatabase: DataToWrite = {
+    const objCardForDatabase: DataToWriteToDataBaseType = {
         date: new Date().toISOString(),
         nameAuthor: "",
         idAuthor: "",

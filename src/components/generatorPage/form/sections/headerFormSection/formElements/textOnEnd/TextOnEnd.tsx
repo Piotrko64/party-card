@@ -16,16 +16,20 @@ export function TextOnEnd() {
             <ToggleActiveSection nameSection="endText" isActive={endText.isActive}>
                 <InputText
                     namePropertyToChange="endText"
-                    callback={changeValueInput}
+                    callbackToChangeValueText={changeValueInput}
                     valueInput={endText.text}
                     maxLength={80}
                     placeholder=""
                 />
 
-                <FontChoosingPanel callback={changeValueInput} nameSection={"endText"} font={endText.font} />
+                <FontChoosingPanel
+                    callbackToSelectFont={changeValueInput}
+                    nameSection={"endText"}
+                    font={endText.font}
+                />
 
                 <InputColorSection
-                    callback={changeValueInput}
+                    callbackToChangeColor={changeValueInput}
                     nameSection={"endText"}
                     thisColor={endText.color}
                     withoutGradient

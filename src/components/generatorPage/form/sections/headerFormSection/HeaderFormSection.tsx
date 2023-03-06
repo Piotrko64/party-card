@@ -14,7 +14,11 @@ export function HeaderFormSection() {
             <h2 className="headerSection">{t("headerSection")}</h2>
 
             <p>{t("headerDescription")}</p>
-            <TextWithToggleButton isChecked={isActive} callback={toggleActiveHeader} text={t("enable")} />
+            <TextWithToggleButton
+                isChecked={isActive}
+                callbackToToggle={toggleActiveHeader}
+                text={t("enable")}
+            />
             {isActive ? (
                 <>
                     {elementListHeaderForm.map((element, index) => (

@@ -16,12 +16,16 @@ type Props = {
 export function StrokeManage({ callback, isStroke, selectedColor }: Props) {
     const { t } = useTranslation("generate");
 
+    function toggleStroke() {
+        callback("name", !isStroke, "isStrokeColor");
+    }
+
     return (
         <div>
             <h4> {t("stroke")} </h4>
             <div>
                 <TextWithToggleButton
-                    callback={(isCheck: boolean) => callback("name", isCheck, "isStrokeColor")}
+                    callbackToToggle={toggleStroke}
                     isChecked={isStroke}
                     text={t("isStroke")}
                 />

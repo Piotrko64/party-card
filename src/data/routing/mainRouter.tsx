@@ -6,8 +6,6 @@ import { StartPage } from "pages/StartPage";
 import { QRPage } from "./../../pages/QRPage";
 import { InfoPage } from "pages/InfoPage";
 import { LocalMode } from "pages/LocaLmode";
-
-import { ErrorScreen } from "./../../components/ErrorScreen/ErrorScreen";
 import { Footer } from "components/footer/Footer";
 import { Page404 } from "pages/Page404";
 import { ExamplePage } from "./../../pages/ExamplesPage";

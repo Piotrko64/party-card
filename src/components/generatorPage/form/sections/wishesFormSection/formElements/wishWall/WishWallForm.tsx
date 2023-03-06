@@ -22,7 +22,6 @@ export function WishWallForm({ id: idElement, font, color, texts }: WallWishType
 
     return (
         <>
-            {" "}
             <h3> {t("wishWall")}</h3>
             <div className={classes.fonts}>
                 {fontsToChoice.map(({ fullName, name }) => (

@@ -4,7 +4,6 @@ import classes from "./examplesPanel.module.scss";
 import cx from "classnames";
 import { useEffect } from "react";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
-
 import { HeaderSection } from "types/stores/HeaderSection";
 import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import { BackgroundStoreWithoutFunctions } from "types/stores/BackgroundStore";

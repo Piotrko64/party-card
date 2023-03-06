@@ -2,7 +2,7 @@ import { BackgroundStoreWithoutFunctions } from "types/stores/BackgroundStore";
 import { HeaderSection } from "types/stores/HeaderSection";
 import { UnionWishElements } from "types/stores/WishesSectionStore";
 
-export type DataToWrite = {
+export type DataToWriteToDataBaseType = {
     date?: string;
     nameAuthor: string;
     idAuthor: string;

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import classes from "./errorScreen.module.scss";
 
 export function ErrorScreen() {
-    const { t, i18n } = useTranslation("errorScreen");
-    console.log(t("goWrong"), i18n.language, t("goToHome"));
+    const { t } = useTranslation("errorScreen");
+
     return (
         <>
             <div className={classes.screen}>

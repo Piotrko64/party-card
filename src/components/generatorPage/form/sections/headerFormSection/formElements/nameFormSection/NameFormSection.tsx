@@ -14,13 +14,22 @@ export function NameFormSection() {
             <h3 className="name"> {t("name")} </h3>
             <InputText
                 namePropertyToChange="name"
-                callback={changeValueInput}
+                callbackToChangeValueText={changeValueInput}
                 valueInput={name.text}
                 maxLength={40}
                 placeholder={t("name")!}
             />
-            <FontChoosingPanel callback={changeValueInput} nameSection={"name"} font={name.font} isHeader />
-            <InputColorSection callback={changeValueInput} nameSection={"name"} thisColor={name.color} />
+            <FontChoosingPanel
+                callbackToSelectFont={changeValueInput}
+                nameSection={"name"}
+                font={name.font}
+                isHeader
+            />
+            <InputColorSection
+                callbackToChangeColor={changeValueInput}
+                nameSection={"name"}
+                thisColor={name.color}
+            />
             <StrokeManage
                 callback={changeValueInput}
                 isStroke={name.isStrokeColor}

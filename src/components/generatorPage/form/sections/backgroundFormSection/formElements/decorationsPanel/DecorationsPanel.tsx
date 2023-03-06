@@ -17,7 +17,7 @@ export function DecorationPanel() {
             <h3> {t("decorationTitle")} </h3>
             <TextWithToggleButton
                 text={t("addDecoration")}
-                callback={toggleDecorations}
+                callbackToToggle={toggleDecorations}
                 isChecked={decorations.isDecorations}
             />
             {decorations.isDecorations && (
@@ -26,7 +26,7 @@ export function DecorationPanel() {
                     <InputColorSection
                         withoutGradient
                         nameSection="backgroundDecorations"
-                        callback={changeValue}
+                        callbackToChangeColor={changeValue}
                         thisColor={decorations.color}
                     />{" "}
                 </>

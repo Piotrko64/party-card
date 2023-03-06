@@ -1,39 +1,16 @@
-import { DragDropContext, Draggable, Droppable, DropResult } from "@hello-pangea/dnd";
+import { DragDropContext, Draggable, Droppable } from "@hello-pangea/dnd";
 import { DragLines } from "components/generatorPage/form/sections/wishesFormSection/dragLines/DragLines";
-import { ChangeEvent } from "react";
-import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
 import { ListTexts } from "types/stores/WishesSectionStore";
 import classes from "./listInputElements.module.scss";
-import { useAutoAnimate } from "@formkit/auto-animate/react";
-import { useTranslation } from "react-i18next";
+import { useListInputElement } from "./hooks/useListInputElement";
 
 type Props = { idElement: string; texts: ListTexts };
 
+const MAX_AMOUNT_INPUTS = 30;
+
 export function ListInputElement({ idElement, texts }: Props) {
-    const { changeValueText, deleteTextInput, addTextInput, moveSingleInputElement } =
-        useWishesSectionStore();
-    const [parent, enableAnimations] = useAutoAnimate();
-    const { t } = useTranslation("generate");
-
-    function handleChangeValue(value: string, idText: string) {
-        changeValueText(idElement, idText, value);
-    }
-
-    function deleteElement(textId: string) {
-        enableAnimations(true);
-        deleteTextInput(idElement, textId);
-    }
-
-    function addEmptyInput() {
-        addTextInput(idElement);
-        enableAnimations(true);
-    }
-
-    function dragSingleInput(result: DropResult) {
-        if (!result.destination) return;
-        enableAnimations(false);
-        moveSingleInputElement(idElement, result.source.index, result.destination.index);
-    }
+    const { dragSingleInput, addEmptyInput, deleteElement, handleChangeValue, t, parent } =
+        useListInputElement(idElement);
 
     return (
         <>
@@ -68,11 +45,8 @@ export function ListInputElement({ idElement, texts }: Props) {
 
                                                 <input
                                                     value={text.content}
-                                                    onChange={(event: ChangeEvent) =>
-                                                        handleChangeValue(
-                                                            (event.target as HTMLInputElement).value,
-                                                            text.id
-                                                        )
+                                                    onChange={(event) =>
+                                                        handleChangeValue(event.target.value, text.id)
                                                     }
                                                     className={classes.input}
                                                 />
@@ -89,7 +63,7 @@ export function ListInputElement({ idElement, texts }: Props) {
                     )}
                 </Droppable>
             </DragDropContext>
-            {texts.length < 30 && (
+            {texts.length < MAX_AMOUNT_INPUTS && (
                 <button onClick={addEmptyInput} className={classes.newText}>
                     {t("addNew")} +
                 </button>

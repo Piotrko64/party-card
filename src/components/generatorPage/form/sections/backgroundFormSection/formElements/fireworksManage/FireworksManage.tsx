@@ -23,7 +23,7 @@ export function FireworksManage() {
             <h3>{t("fireworks")}</h3>
             <TextWithToggleButton
                 text={t("isFireworks")}
-                callback={toggleFireworks}
+                callbackToToggle={toggleFireworks}
                 isChecked={fireworks.isFireworks}
             />
             {fireworks.isFireworks && (
