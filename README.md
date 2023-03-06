@@ -32,6 +32,8 @@
 
 * [About project](#about)
 
+* [What I used](#technologies)
+
 * [Inspiration](#inspiration)
 
 * [Examples](#examples)
@@ -68,21 +70,36 @@ If you are a creative person this website app can be for you! PARY CARD has a ge
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222951348-05def778-efaf-4768-a6b9-70483516cde2.png"/><p>
 
-ATTENTION: Some examples are in Polish language version because Party Card have English and Polish translation. 
+ATTENTION: Some examples are in the Polish language version because Party Card have English and Polish translation. 
 
 
 
 
 <br />
 
-The perfect creation of such a card may not be easy at first. You need to be careful with the color aspects. In order to better illustrate the possibilities of Party Card we have prepared some example uses. Hovewer, remember that the appearance of the card can be observed on the fly as you complete the form. I recommend doing this as often as possible. There are three sections to customize: Background, Main section and Wishes section. At the end of the form you will see a button with the generation of a QR code and a link that you can send to the person you want to gift
+The perfect creation of such a card may not be easy at first. You need to be careful with the color aspects. In order to better illustrate the possibilities of Party Card we have prepared some example uses. However, remember that the appearance of the card can be observed on the fly as you complete the form. I recommend doing this as often as possible. There are three sections to customize: Background, Main section, and Wishes section. At the end of the form, you will see a button with the generation of a QR code and a link that you can send to the person you want to gift
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222978011-3be179d8-06da-4b2a-a2e0-2a8343a30cba.png"/><p>
 
 
-When you create your card you can share other people by using QR Code or link. I used **Firebase** to create simple database to storage any cards. If you have any problem with sharing you can also use local mode to generate the card form.
+When you create your card you can share other people by using QR Code or link. I used **Firebase** to create a simple database to store any cards. If you have any problem with sharing you can also use local mode to generate the card form.
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222967100-e180f7d0-4912-444b-bd14-577e6ac374d3.png"/><p>
+
+# Technologies
+
+I used:
+- React with Typescript and Reat Router
+- React Query
+- Zustand (with persist middleware to store some data in local storage)
+- react-qr-code
+- Firebase (Database)
+- Scss modules
+- React JoyRide (to create a quick tutorial in the form section)
+- i18n with language detector (this app have polish and English language version)
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/77500425/223087597-62d43786-952f-4ea9-909c-de9162969826.png"/><p>
+
 
 
 
