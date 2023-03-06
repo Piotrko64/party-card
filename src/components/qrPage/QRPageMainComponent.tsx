@@ -2,7 +2,6 @@ import QRCode from "react-qr-code";
 import { Link, useParams } from "react-router-dom";
 import { copyToClipboard } from "./../../utils/copyToClipboard";
 import { saveAs } from "file-saver";
-import domtoimage from "dom-to-image";
 import { useRef } from "react";
 import classes from "./qrPageMainComponent.module.scss";
 import { useChangesContentStoresByDatabaseInfo } from "./../../hooks/useChangesContentStoresByDatabaseInfo";
@@ -10,6 +9,7 @@ import { useQuery } from "react-query";
 import { LoadingScreen } from "components/LoadingScreen/LoadingScreen";
 import { ErrorScreen } from "components/ErrorScreen/ErrorScreen";
 import { useTranslation } from "react-i18next";
+import html2canvas from "html2canvas";
 
 export function QRPageMainComponent() {
     let { id } = useParams();
@@ -26,8 +26,8 @@ export function QRPageMainComponent() {
     }
 
     function createImage() {
-        domtoimage.toBlob(qrCard.current!).then(function (blob) {
-            saveAs(blob, "QR_CODE.png");
+        html2canvas(qrCard.current!).then((canvas) => {
+            saveAs(canvas.toDataURL(), "QR_CODE.png");
         });
     }
 
