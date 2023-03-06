@@ -32,6 +32,8 @@
 
 * [About project](#about)
 
+* [What I used](#technologies)
+
 * [Inspiration](#inspiration)
 
 * [Examples](#examples)
@@ -83,6 +85,21 @@ The perfect creation of such a card may not be easy at first. You need to be car
 When you create your card you can share other people by using QR Code or link. I used **Firebase** to create simple database to storage any cards. If you have any problem with sharing you can also use local mode to generate the card form.
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/77500425/222967100-e180f7d0-4912-444b-bd14-577e6ac374d3.png"/><p>
+
+# Technologies
+
+I used:
+- React with Typescript and Reat Router
+- React Query
+- Zustand (with persist middleware to storage some data in local storage)
+- react-qr-code
+- Firebase (Database)
+- Scss modules
+- React JoyRide (to create quick tutorial in form section)
+- i18n with language detector (this app have polish and english language version)
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/77500425/223087597-62d43786-952f-4ea9-909c-de9162969826.png"/><p>
+
 
 
 
