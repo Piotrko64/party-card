@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import { useTranslation } from "react-i18next";
 import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
 import { OrdinaryColors } from "ui/form/inputColorSection/ordinaryColors/OrdinaryColors";
 import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggleButton";
@@ -10,6 +11,7 @@ const MAX_LENGTH_URL = "2048";
 
 export function ImageForm({ isBorder, backgroundColor, url, id }: Props) {
     const { changePropertyValue } = useWishesSectionStore();
+    const { t } = useTranslation("generate");
 
     function changeURL(newValue: ChangeEvent) {
         changePropertyValue((newValue.target as HTMLInputElement).value, id, "url");
@@ -25,13 +27,13 @@ export function ImageForm({ isBorder, backgroundColor, url, id }: Props) {
 
     return (
         <>
-            <h3>Dodaj zdjęcie za pomocą adresu URL</h3>
+            <h3>{t("imgUrl")}</h3>
 
             <div className={classes.inputContainer}>
                 <div className="flexCenter">
                     <input
                         className={classes.input}
-                        placeholder="Podaj adres ULR zdjęcia do kartki"
+                        placeholder={t("writeUrl")!}
                         onChange={changeURL}
                         maxLength={+MAX_LENGTH_URL}
                         value={url}
@@ -39,14 +41,10 @@ export function ImageForm({ isBorder, backgroundColor, url, id }: Props) {
                     <div className={classes.counter}>{url.length + "/" + MAX_LENGTH_URL}</div>
                 </div>
             </div>
-            <TextWithToggleButton
-                text="Zastosować obramowanie?"
-                callback={toggleBorder}
-                isChecked={isBorder}
-            />
+            <TextWithToggleButton text={t("isStroke")} callback={toggleBorder} isChecked={isBorder} />
             {isBorder && (
                 <>
-                    <h5> Wybierz kolor dla obramownia </h5>
+                    <h5> {t("colorStroke")} </h5>
                     <OrdinaryColors changeColor={changeBorderColor} selectedColor={backgroundColor} />
                 </>
             )}

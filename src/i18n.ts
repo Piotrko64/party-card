@@ -13,6 +13,10 @@ import uiPL from "./locales/pl/uiPL.json";
 import uiEN from "./locales/en/uiEN.json";
 import generatePL from "./locales/pl/generatePL.json";
 import generateEN from "./locales/en/generateEN.json";
+import page404PL from "./locales/pl/page404PL.json";
+import page404EN from "./locales/en/page404EN.json";
+import errorScreenPL from "./locales/pl/errorScreenPL.json";
+import errorScreenEN from "./locales/en/errorScreenEN.json";
 
 i18next
     .use(initReactI18next)
@@ -32,6 +36,8 @@ i18next
                 infoPage: infoPageEN,
                 ui: uiEN,
                 generate: generateEN,
+                page404: page404EN,
+                errorScreen: errorScreenPL,
             },
             pl: {
                 // home: translationPL,
@@ -41,6 +47,8 @@ i18next
                 infoPage: infoPagePL,
                 ui: uiPL,
                 generate: generatePL,
+                page404: page404PL,
+                errorScreen: errorScreenEN,
             },
         },
     });

@@ -8,6 +8,7 @@ import { OrdinaryColors } from "ui/form/inputColorSection/ordinaryColors/Ordinar
 import { GradientColors } from "ui/form/inputColorSection/gradientColors/GradientsColors";
 import { SizePanel } from "./sizePanel/SizePanel";
 import { useGetTextFormFunctions } from "./hooks/useGetTextFormFunctions";
+import { useTranslation } from "react-i18next";
 
 export function TextForm({
     marginTop,
@@ -31,9 +32,11 @@ export function TextForm({
         changeValueTextArea,
     } = useGetTextFormFunctions({ id, isFullWidth });
 
+    const { t } = useTranslation("generate");
+
     return (
         <div className={classes.container}>
-            <h3> Własny tekst </h3>
+            <h3> {t("ownText")} </h3>
 
             <div className={classes.textAreaContainer}>
                 <textarea
@@ -56,24 +59,24 @@ export function TextForm({
                 ))}
             </div>
 
-            <h4> Dobierz rozmiar</h4>
+            <h4> {t("getSize")}</h4>
             <SizePanel idElement={id} sizeTitle={size} />
 
-            <h4> Odstęp górny </h4>
+            <h4> {t("marginTop")}</h4>
             <InputRange intensity={marginTop} callback={changeMarginTop} max="250" />
 
-            <h4> Odstęp dolny </h4>
+            <h4> {t("marginBottom")} </h4>
             <InputRange intensity={marginBottom} callback={changeMarginBottom} max="250" />
             <TextWithToggleButton
-                text="Zastosować na całą szerokość? (brak zaokrągleń)"
+                text={t("isFullWidth")}
                 isChecked={isFullWidth}
                 callback={toggleFullWidth}
             />
-            <h4> Kolor tekstu </h4>
+            <h4> {t("textColor")} </h4>
             <OrdinaryColors changeColor={changeColorFont} selectedColor={color} />
             <GradientColors changeColor={changeColorFontGradient} selectedColor={color} />
 
-            <h4> Kolor tła</h4>
+            <h4> {t("backColor")}</h4>
             <OrdinaryColors changeColor={changeColorBackground} selectedColor={backgroundColor} />
         </div>
     );

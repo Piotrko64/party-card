@@ -12,5 +12,8 @@
     "selectGradients": "Stwórz własny gradient",
     "gradients": "Kolory Gradientowe",
     "hidePicker": "Schowaj Picker",
-    "delete": "Usuń ten element"
+    "delete": "Usuń ten element",
+    "selectedGif": "Wybrany Gif",
+    "noGif": "Nic nie wybrano",
+    "loading": "Ładowanie..."
 }

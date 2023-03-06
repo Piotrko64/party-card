@@ -6,9 +6,11 @@ import { ListInputElement } from "ui/form/listInputElements/ListInputElements";
 import classes from "./wishWall.module.scss";
 import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
 import { NamesFont } from "types/typesForStyles/NamesFont";
+import { useTranslation } from "react-i18next";
 
 export function WishWallForm({ id: idElement, font, color, texts }: WallWishType) {
     const { changeWishValue } = useWishesSectionStore();
+    const { t } = useTranslation("generate");
 
     function changeColorText(color: string) {
         changeWishValue("color", color, idElement);
@@ -21,7 +23,7 @@ export function WishWallForm({ id: idElement, font, color, texts }: WallWishType
     return (
         <>
             {" "}
-            <h3> Ściana życzeń</h3>
+            <h3> {t("wishWall")}</h3>
             <div className={classes.fonts}>
                 {fontsToChoice.map(({ fullName, name }) => (
                     <div

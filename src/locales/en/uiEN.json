@@ -12,5 +12,8 @@
     "selectColor": "Select own color",
     "selectGradients": "Create own gradient color",
     "hidePicker": "Hide Picker",
-    "delete": "Delete this element"
+    "delete": "Delete this element",
+    "selectedGif": "Selected Gif",
+    "noGif": "Nothing selected",
+    "loading": "Loading..."
 }
