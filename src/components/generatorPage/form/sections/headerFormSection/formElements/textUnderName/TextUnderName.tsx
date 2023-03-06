@@ -6,6 +6,8 @@ import { InputText } from "ui/form/inputText/InputText";
 import { ToggleActiveSection } from "../../toggleActiveSection/ToggleActiveSection";
 import { GifSectionHeader } from "../gifSection/GifSection";
 
+const MAX_INPUT_LENGTH = 200;
+
 export function TextUnderName() {
     const { changeValueInput, textUnderName } = useHeaderSectionStore();
 
@@ -20,7 +22,7 @@ export function TextUnderName() {
                     namePropertyToChange="textUnderName"
                     callbackToChangeValueText={changeValueInput}
                     valueInput={textUnderName.text}
-                    maxLength={300}
+                    maxLength={MAX_INPUT_LENGTH}
                 />
                 <FontChoosingPanel
                     callbackToSelectFont={changeValueInput}

@@ -5,6 +5,8 @@ import { InputColorSection } from "ui/form/inputColorSection/InputColorSection";
 import { StrokeManage } from "ui/form/inputColorSection/strokeManage/StrokeManage";
 import { InputText } from "ui/form/inputText/InputText";
 
+const MAX_INPUT_LENGTH = 40;
+
 export function NameFormSection() {
     const { changeValueInput, name } = useHeaderSectionStore();
     const { t } = useTranslation("generate");
@@ -16,7 +18,7 @@ export function NameFormSection() {
                 namePropertyToChange="name"
                 callbackToChangeValueText={changeValueInput}
                 valueInput={name.text}
-                maxLength={40}
+                maxLength={MAX_INPUT_LENGTH}
                 placeholder={t("name")!}
             />
             <FontChoosingPanel

@@ -5,6 +5,8 @@ import { InputColorSection } from "ui/form/inputColorSection/InputColorSection";
 import { InputText } from "ui/form/inputText/InputText";
 import { ToggleActiveSection } from "../../toggleActiveSection/ToggleActiveSection";
 
+const MAX_LENGTH_INPUT = 40;
+
 export function TextAboveName() {
     const { changeValueInput, textAboveName } = useHeaderSectionStore();
     const { t } = useTranslation("generate");
@@ -20,7 +22,7 @@ export function TextAboveName() {
                         namePropertyToChange="textAboveName"
                         callbackToChangeValueText={changeValueInput}
                         valueInput={textAboveName.text}
-                        maxLength={120}
+                        maxLength={MAX_LENGTH_INPUT}
                         placeholder="Może 'Wszystkiego najlepszego' "
                     />
                     <FontChoosingPanel

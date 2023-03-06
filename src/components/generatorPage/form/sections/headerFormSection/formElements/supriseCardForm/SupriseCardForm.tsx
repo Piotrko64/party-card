@@ -5,6 +5,8 @@ import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionSt
 import { ToggleActiveSection } from "../../toggleActiveSection/ToggleActiveSection";
 import { useTranslation } from "react-i18next";
 
+const MAX_INPUT_LENGTH = 300;
+
 export function SupriseCardForm() {
     const { isActive, color, backgroundColor, font, text } = useHeaderSectionStore(
         (state) => state.supriseCard
@@ -22,7 +24,7 @@ export function SupriseCardForm() {
                         callbackToChangeValueText={changeValueInput}
                         valueInput={text}
                         namePropertyToChange="supriseCard"
-                        maxLength={300}
+                        maxLength={MAX_INPUT_LENGTH}
                         placeholder={t("write")!}
                     />
                     <FontChoosingPanel
