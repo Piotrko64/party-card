@@ -10,7 +10,7 @@ import {
     WallWishType,
 } from "types/stores/WishesSectionStore";
 import { ImageURL } from "components/cardComponent/wishesSection/wishElements/imageURL/ImageURL";
-import { GifWishComponent } from "./../../components/cardComponent/wishesSection/wishElements/GifWishComponent/GifWishComponent";
+import { GifWishComponent } from "../../components/cardComponent/wishesSection/wishElements/GifWishComponent/GifWishComponent";
 
 export function wishElementsData(props: UnionWishElements) {
     return [

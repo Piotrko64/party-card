@@ -3,8 +3,8 @@ import styles from "./singleWish.module.scss";
 import cx from "classnames";
 import { useObserver } from "hooks/observerApi/useObserver";
 import { NamesFont } from "types/typesForStyles/NamesFont";
-import { getCorrectObjectForFont } from "./../../../../../../helpers/styles/getCorrectObjectForFont";
-import { getStyleFontObject } from "./../../../../../../helpers/styles/toFonts/getStyleFontObject";
+import { getCorrectObjectForFont } from "../../../../../../helpers/styles/getCorrectObjectForFont";
+import { getStyleFontObject } from "../../../../../../helpers/styles/toFonts/getStyleFontObject";
 
 type Props = {
     text: string;

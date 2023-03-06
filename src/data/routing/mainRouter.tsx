@@ -1,14 +1,14 @@
 import { createBrowserRouter, Outlet, ScrollRestoration } from "react-router-dom";
 import { CardPage } from "pages/CardPage";
 import { GenerateCardPage } from "pages/GeneratorCardPage";
-import { PreviewCardPage } from "./../../pages/PreviewCard";
+import { PreviewCardPage } from "pages/PreviewCard";
 import { StartPage } from "pages/StartPage";
-import { QRPage } from "./../../pages/QRPage";
+import { QRPage } from "pages/QRPage";
 import { InfoPage } from "pages/InfoPage";
 import { LocalMode } from "pages/LocaLmode";
 import { Footer } from "components/footer/Footer";
 import { Page404 } from "pages/Page404";
-import { ExamplePage } from "./../../pages/ExamplesPage";
+import { ExamplePage } from "pages/ExamplesPage";
 
 function Layout() {
     return (

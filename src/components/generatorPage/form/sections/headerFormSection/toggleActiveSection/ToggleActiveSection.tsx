@@ -1,6 +1,6 @@
 import { PropsWithChildren, useEffect, useRef } from "react";
 import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggleButton";
-import { useHeaderSectionStore } from "./../../../../../../stores/HeaderSectionStore/HeaderSectionStore";
+import { useHeaderSectionStore } from "../../../../../../stores/HeaderSectionStore/HeaderSectionStore";
 import { useTranslation } from "react-i18next";
 
 import autoAnimate from "@formkit/auto-animate";

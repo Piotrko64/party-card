@@ -2,7 +2,7 @@ import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
 import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
 import { DataToWriteToDataBaseType } from "types/firebase/DataToWrite";
-import { writeNewData } from "./../../../../../firebase/initialFirebase";
+import { writeNewData } from "../../../../../firebase/initialFirebase";
 
 export function useGenerateCard() {
     const header = useHeaderSectionStore();

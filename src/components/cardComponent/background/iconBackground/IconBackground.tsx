@@ -2,7 +2,7 @@ import { ScrollParallax } from "react-just-parallax";
 import styles from "./iconBackground.module.scss";
 import { dataIconBackground } from "data/background/dataIconBackground";
 import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
-import { getIconBackground } from "./../../../../helpers/background/getIconBackground";
+import { getIconBackground } from "../../../../helpers/background/getIconBackground";
 
 export function IconBackground() {
     const { backgroundDecorations } = useBackgroundStore();

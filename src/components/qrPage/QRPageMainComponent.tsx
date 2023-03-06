@@ -1,6 +1,6 @@
 import QRCode from "react-qr-code";
 import { Link, useParams } from "react-router-dom";
-import { copyToClipboard } from "./../../utils/copyToClipboard";
+import { copyToClipboard } from "../../utils/copyToClipboard";
 import { saveAs } from "file-saver";
 import { useRef } from "react";
 import classes from "./qrPageMainComponent.module.scss";

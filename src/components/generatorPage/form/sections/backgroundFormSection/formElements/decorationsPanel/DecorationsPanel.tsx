@@ -1,5 +1,5 @@
 import { TextWithToggleButton } from "ui/form/textWithToggleButton/TextWithToggleButton";
-import { useBackgroundStore } from "./../../../../../../../stores/BackgroundStore/BackgroundStore";
+import { useBackgroundStore } from "../../../../../../../stores/BackgroundStore/BackgroundStore";
 import { ListDecorations } from "./listDecorations/ListDecorations";
 import { InputColorSection } from "ui/form/inputColorSection/InputColorSection";
 import { useTranslation } from "react-i18next";
