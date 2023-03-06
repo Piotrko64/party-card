@@ -79,7 +79,7 @@ export function useReactJoyRide() {
             });
         }
 
-        // localStorage.setItem("wasJoyride", "yes");
+        localStorage.setItem("wasJoyride", "yes");
     }, []);
 
     return { run, steps };

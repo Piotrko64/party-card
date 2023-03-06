@@ -1,0 +1,21 @@
+.container {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid white;
+    margin: 0 auto;
+    background-color: white;
+    .button {
+        color: white;
+        font-weight: 600;
+        font-size: 1.05rem;
+        padding: 5px 20px;
+        background-color: var(--mainBackColor);
+        border: 2px solid transparent;
+        font-family: "Jost";
+        &.selected {
+            color: var(--mainBackColor);
+
+            background-color: white;
+        }
+    }
+}
