@@ -6,9 +6,11 @@ import { ListInputElement } from "ui/form/listInputElements/ListInputElements";
 import { NamesFont } from "types/typesForStyles/NamesFont";
 import { fontsToChoice } from "data/fonts/fontsToChoice";
 import cx from "classnames";
+import { useTranslation } from "react-i18next";
 
 export function TagCloudForm({ color, id: idElement, texts, font }: TagCloudType) {
     const { changeWishValue } = useWishesSectionStore();
+    const { t } = useTranslation("generate");
 
     function changeColorText(color: string) {
         changeWishValue("color", color, idElement);
@@ -20,7 +22,7 @@ export function TagCloudForm({ color, id: idElement, texts, font }: TagCloudType
 
     return (
         <>
-            <h3> Chmura życzeń </h3>
+            <h3> {t("tagCloud")} </h3>
             <div className={classes.fonts}>
                 {fontsToChoice.map(({ fullName, name }) => (
                     <div

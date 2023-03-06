@@ -37,7 +37,7 @@ export function ListInputElement({ idElement, texts }: Props) {
 
     return (
         <>
-            <h4> Lista elementów</h4>
+            <h4> {t("elementList")}</h4>
             <DragDropContext onDragEnd={dragSingleInput}>
                 <Droppable droppableId="droppable">
                     {(provided) => (

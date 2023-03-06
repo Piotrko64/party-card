@@ -47,5 +47,6 @@
     "isFullWidth": "Apply to full width? (no rounding)",
     "maxLength": "Maximum number of elements exceeded",
     "noSelect": "No elements selected",
-    "addNew": "Add new field"
+    "addNew": "Add new field",
+    "elementList": "List element"
 }
