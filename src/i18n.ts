@@ -17,6 +17,8 @@ import page404PL from "./locales/pl/page404PL.json";
 import page404EN from "./locales/en/page404EN.json";
 import errorScreenPL from "./locales/pl/errorScreenPL.json";
 import errorScreenEN from "./locales/en/errorScreenEN.json";
+import joyRidePL from "./locales/pl/joyRidePL.json";
+import joyRideEN from "./locales/en/joyRideEN.json";
 
 i18next
     .use(initReactI18next)
@@ -29,7 +31,6 @@ i18next
         },
         resources: {
             en: {
-                // home: translationEN,
                 qrPage: qrPageEN,
                 footer: footerEN,
                 startPage: startPageEN,
@@ -38,9 +39,10 @@ i18next
                 generate: generateEN,
                 page404: page404EN,
                 errorScreen: errorScreenEN,
+                joyRide: joyRideEN,
             },
             pl: {
-                // home: translationPL,
+                joyRide: joyRidePL,
                 qrPage: qrPagePL,
                 startPage: startPagePL,
                 footer: footerPL,

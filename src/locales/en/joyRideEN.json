@@ -1,0 +1,14 @@
+{
+    "back": "Back",
+    "skip": "Skip",
+    "next": "Next",
+    "last": "Last",
+    "step1Heading": "Welcome to the Greeting Card Creator",
+    "step1": "The Greeting Card Creator has three sections, the first of which is optional.",
+    "step2": "In the first section, you can add the recipient's name and write a short message.",
+    "step3": "Remember, you can always check your progress at any time!",
+    "step4": "The second section concerns the background and special effects, where you can add fireworks and more!",
+    "step5": "The last section is the greetings section, where you can add various elements and showcase your creativity!",
+    "step6": "When you're finished, you can generate the card along with a link and QR code to it.",
+    "step7": "GOOD LUCK!"
+}
