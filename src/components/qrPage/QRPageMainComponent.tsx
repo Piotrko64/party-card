@@ -26,9 +26,9 @@ export function QRPageMainComponent() {
     }
 
     function createImage() {
-        // domtoimage.toBlob(qrCard.current!).then(function (blob) {
-        //     saveAs(blob, "QR_CODE.png");
-        // });
+        domtoimage.toBlob(qrCard.current!).then(function (blob) {
+            saveAs(blob, "QR_CODE.png");
+        });
     }
 
     return (
