@@ -21,15 +21,15 @@ export const initialValueHeaderStore: HeaderSection = {
         font: "Oswald",
     },
     textAboveName: {
-        isActive: false,
+        isActive: true,
         text: "Happy Birthday",
         color: "white",
         font: "Oswald",
         isGradient: false,
     },
     textUnderName: {
-        isActive: false,
-        text: "",
+        isActive: true,
+        text: "🥳 🥳 🥳",
         color: "white",
         font: "Noto Serif",
         isGradient: false,

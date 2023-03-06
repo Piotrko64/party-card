@@ -10,8 +10,8 @@ export function HeaderFormSection() {
     const { t } = useTranslation("generate");
 
     return (
-        <div className="headerSection">
-            <h2>{t("headerSection")}</h2>
+        <div>
+            <h2 className="headerSection">{t("headerSection")}</h2>
 
             <p>{t("headerDescription")}</p>
             <TextWithToggleButton isChecked={isActive} callback={toggleActiveHeader} text={t("enable")} />

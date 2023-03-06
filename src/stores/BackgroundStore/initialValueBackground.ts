@@ -9,8 +9,8 @@ export const initialValueBackground = {
         isActive: true,
     },
     backgroundDecorations: {
-        isDecorations: false,
-        kindDecorations: "heart",
+        isDecorations: true,
+        kindDecorations: "gift",
         color: "white",
     },
     fireworks: {
