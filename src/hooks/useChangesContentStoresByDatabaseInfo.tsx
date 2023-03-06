@@ -1,4 +1,4 @@
-import { onValue, ref, get, child } from "firebase/database";
+import { ref, get, child } from "firebase/database";
 import { db } from "firebase/initialFirebase";
 import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import { useHeaderSectionStore } from "./../stores/HeaderSectionStore/HeaderSectionStore";

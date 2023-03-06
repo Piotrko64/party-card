@@ -6,12 +6,8 @@ import { TextUnderName } from "components/generatorPage/form/sections/headerForm
 
 export const elementListHeaderForm = [
     <NameFormSection />,
-
     <TextAboveName />,
-
     <TextUnderName />,
-
     <TextOnEnd />,
-
     <SupriseCardForm />,
 ];

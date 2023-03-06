@@ -27,7 +27,7 @@ export function SupriseCardForm() {
                     />
                     <FontChoosingPanel callback={changeValueInput} font={font} nameSection="supriseCard" />
 
-                    <h4> Ustaw kolor dla napisów </h4>
+                    <h4> {t("textColor")} </h4>
 
                     <InputColorSection
                         withoutGradient
@@ -36,7 +36,7 @@ export function SupriseCardForm() {
                         callback={changeValueInput}
                     />
 
-                    <h4> Ustaw kolor dla tła </h4>
+                    <h4> {t("backColor")} </h4>
 
                     <InputColorSection
                         withoutGradient
