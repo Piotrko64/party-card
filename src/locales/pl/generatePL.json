@@ -47,5 +47,6 @@
     "errorGenerate": " Oops! Wygląda na to że coś poszło nie tak. Spróbuj później lub użyj trybu lokalnego znajdującego się poniżej",
     "isFullWidth": "Zastosować na całą szerokość? (brak zaokrągleń)",
     "maxLength": "Przekroczono maksymalną ilość elementów",
-    "noSelect": " Nie wybrano żadnych elementów "
+    "noSelect": " Nie wybrano żadnych elementów ",
+    "addNew": "Dodaj nowe pole"
 }

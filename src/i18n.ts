@@ -37,7 +37,7 @@ i18next
                 ui: uiEN,
                 generate: generateEN,
                 page404: page404EN,
-                errorScreen: errorScreenPL,
+                errorScreen: errorScreenEN,
             },
             pl: {
                 // home: translationPL,
@@ -48,7 +48,7 @@ i18next
                 ui: uiPL,
                 generate: generatePL,
                 page404: page404PL,
-                errorScreen: errorScreenEN,
+                errorScreen: errorScreenPL,
             },
         },
     });

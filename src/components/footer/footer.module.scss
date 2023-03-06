@@ -30,9 +30,12 @@
     .links {
         display: flex;
         flex-direction: column;
-        a {
+        a,
+        div {
             color: white;
             margin-bottom: 10px;
+            text-decoration: underline;
+            cursor: pointer;
             &:hover {
                 text-decoration: none;
             }

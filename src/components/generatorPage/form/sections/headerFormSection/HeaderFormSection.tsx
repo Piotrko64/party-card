@@ -24,7 +24,7 @@ export function HeaderFormSection() {
                     ))}
                 </>
             ) : (
-                <h3 className={classes.alert}> Sekcja została wyłączona </h3>
+                <h3 className={classes.alert}> {t("sectionDisabled")} </h3>
             )}
         </div>
     );

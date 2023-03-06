@@ -1,21 +1,24 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import classes from "./errorScreen.module.scss";
 
 export function ErrorScreen() {
+    const { t, i18n } = useTranslation("errorScreen");
+    console.log(t("goWrong"), i18n.language, t("goToHome"));
     return (
         <>
             <div className={classes.screen}>
                 <h1>Oops..!!</h1>
-                <h2> Coś poszło nie tak </h2>
+                <h2>{t("goWrong")} </h2>
 
                 <div className={classes.links}>
                     <Link to="/" className={classes.home}>
                         {" "}
-                        Przejdź do strony głównej
+                        {t("goToHome")}
                     </Link>
-                    <Link to="/GeneratePage" className={classes.generate}>
+                    <Link to="/generateCard" className={classes.generate}>
                         {" "}
-                        Przejdź do generatora kart{" "}
+                        {t("goToGenerator")}{" "}
                     </Link>
                 </div>
             </div>

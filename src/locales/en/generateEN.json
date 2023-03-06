@@ -46,5 +46,6 @@
     "errorGenerate": "Oops! Something went wrong. Please try again later or use the local mode below.",
     "isFullWidth": "Apply to full width? (no rounding)",
     "maxLength": "Maximum number of elements exceeded",
-    "noSelect": "No elements selected"
+    "noSelect": "No elements selected",
+    "addNew": "Add new field"
 }

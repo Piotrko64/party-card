@@ -5,6 +5,7 @@ import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionSt
 import { ListTexts } from "types/stores/WishesSectionStore";
 import classes from "./listInputElements.module.scss";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { useTranslation } from "react-i18next";
 
 type Props = { idElement: string; texts: ListTexts };
 
@@ -12,6 +13,7 @@ export function ListInputElement({ idElement, texts }: Props) {
     const { changeValueText, deleteTextInput, addTextInput, moveSingleInputElement } =
         useWishesSectionStore();
     const [parent, enableAnimations] = useAutoAnimate();
+    const { t } = useTranslation("generate");
 
     function handleChangeValue(value: string, idText: string) {
         changeValueText(idElement, idText, value);
@@ -89,7 +91,7 @@ export function ListInputElement({ idElement, texts }: Props) {
             </DragDropContext>
             {texts.length < 30 && (
                 <button onClick={addEmptyInput} className={classes.newText}>
-                    Dodaj nowe pole +
+                    {t("addNew")} +
                 </button>
             )}
         </>
