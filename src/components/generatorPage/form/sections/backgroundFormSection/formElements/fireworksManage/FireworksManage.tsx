@@ -31,7 +31,7 @@ export function FireworksManage() {
                     <h4> {t("intensityFireworks")} </h4>
                     <InputRange
                         max={MAX_INTENSITY}
-                        callback={handleChangeIntensity}
+                        callbackToChangeRangeValue={handleChangeIntensity}
                         intensity={fireworks.intensity}
                     />
                 </div>

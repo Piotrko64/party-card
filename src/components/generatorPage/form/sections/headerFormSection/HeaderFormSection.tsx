@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 
 export function HeaderFormSection() {
     const { toggleActiveHeader, isActive } = useHeaderSectionStore();
-
     const { t } = useTranslation("generate");
 
     return (

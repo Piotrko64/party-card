@@ -4,7 +4,7 @@ import { OrdinaryColors } from "../ordinaryColors/OrdinaryColors";
 import { useTranslation } from "react-i18next";
 
 type Props = {
-    callback: (
+    changeStrokeProperty: (
         nameSection: PossiblePropertySectionToChange,
         newValue: string | boolean,
         lastProperty: "strokeColor" | "isStrokeColor"
@@ -13,11 +13,11 @@ type Props = {
     selectedColor: string;
 };
 
-export function StrokeManage({ callback, isStroke, selectedColor }: Props) {
+export function StrokeManage({ changeStrokeProperty, isStroke, selectedColor }: Props) {
     const { t } = useTranslation("generate");
 
     function toggleStroke() {
-        callback("name", !isStroke, "isStrokeColor");
+        changeStrokeProperty("name", !isStroke, "isStrokeColor");
     }
 
     return (
@@ -37,7 +37,7 @@ export function StrokeManage({ callback, isStroke, selectedColor }: Props) {
                         <OrdinaryColors
                             selectedColor={selectedColor}
                             withoutLabel
-                            changeColor={(value) => callback("name", value, "strokeColor")}
+                            changeColor={(value) => changeStrokeProperty("name", value, "strokeColor")}
                         />
                     </>
                 )}

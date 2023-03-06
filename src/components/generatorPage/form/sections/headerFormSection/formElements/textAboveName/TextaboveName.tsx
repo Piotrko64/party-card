@@ -7,7 +7,6 @@ import { ToggleActiveSection } from "../../toggleActiveSection/ToggleActiveSecti
 
 export function TextAboveName() {
     const { changeValueInput, textAboveName } = useHeaderSectionStore();
-
     const { t } = useTranslation("generate");
 
     return (

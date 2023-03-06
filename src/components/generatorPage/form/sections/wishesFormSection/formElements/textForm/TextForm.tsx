@@ -63,10 +63,10 @@ export function TextForm({
             <SizePanel idElement={id} sizeTitle={size} />
 
             <h4> {t("marginTop")}</h4>
-            <InputRange intensity={marginTop} callback={changeMarginTop} max="250" />
+            <InputRange intensity={marginTop} callbackToChangeRangeValue={changeMarginTop} max="250" />
 
             <h4> {t("marginBottom")} </h4>
-            <InputRange intensity={marginBottom} callback={changeMarginBottom} max="250" />
+            <InputRange intensity={marginBottom} callbackToChangeRangeValue={changeMarginBottom} max="250" />
             <TextWithToggleButton
                 text={t("isFullWidth")}
                 isChecked={isFullWidth}

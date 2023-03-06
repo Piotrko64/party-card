@@ -31,7 +31,7 @@ export function NameFormSection() {
                 thisColor={name.color}
             />
             <StrokeManage
-                callback={changeValueInput}
+                changeStrokeProperty={changeValueInput}
                 isStroke={name.isStrokeColor}
                 selectedColor={name.strokeColor}
             />

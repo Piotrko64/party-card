@@ -3,14 +3,14 @@ import classes from "./inputRange.module.scss";
 
 type Props = {
     max: string;
-    callback: (event: ChangeEvent) => void;
+    callbackToChangeRangeValue: (event: ChangeEvent) => void;
     intensity: number;
 };
 
 const STEP_INPUT_RANGE = "0.1";
 const MIN_INPUT_RANGE = "0";
 
-export function InputRange({ max, callback, intensity }: Props) {
+export function InputRange({ max, callbackToChangeRangeValue, intensity }: Props) {
     return (
         <div className={classes.inputRange}>
             <input
@@ -18,7 +18,7 @@ export function InputRange({ max, callback, intensity }: Props) {
                 step={STEP_INPUT_RANGE}
                 min={MIN_INPUT_RANGE}
                 max={max}
-                onChange={callback}
+                onChange={callbackToChangeRangeValue}
                 value={intensity}
                 className={classes.input}
             />

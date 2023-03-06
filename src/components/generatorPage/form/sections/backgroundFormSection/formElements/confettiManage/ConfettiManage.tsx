@@ -25,7 +25,7 @@ export function ConfettiManage() {
                     <h4>{t("intensityConfetti")} </h4>
                     <InputRange
                         max={MAX_AMOUNT}
-                        callback={changeAmountConfetti}
+                        callbackToChangeRangeValue={changeAmountConfetti}
                         intensity={confetti.amountConfetti}
                     />
                 </>
