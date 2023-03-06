@@ -1,5 +1,5 @@
 import QRCode from "react-qr-code";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { copyToClipboard } from "./../../utils/copyToClipboard";
 import { saveAs } from "file-saver";
 import domtoimage from "dom-to-image";
@@ -26,9 +26,9 @@ export function QRPageMainComponent() {
     }
 
     function createImage() {
-        domtoimage.toBlob(qrCard.current!).then(function (blob) {
-            saveAs(blob, "QR_CODE.png");
-        });
+        // domtoimage.toBlob(qrCard.current!).then(function (blob) {
+        //     saveAs(blob, "QR_CODE.png");
+        // });
     }
 
     return (
