@@ -16,6 +16,7 @@ export function Footer() {
                 <Link to="/"> {t("goToMain")}</Link>
                 <Link to="/generateCard"> {t("goToGenerator")}</Link>
                 <Link to="/examples/2"> {t("goToExamples")}</Link>
+
                 <div onClick={toggleLanguage}> Przełącz język / Switch language</div>
             </div>
             <div className={classes.linkToPortfolio}>

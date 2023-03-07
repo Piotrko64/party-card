@@ -10,7 +10,6 @@ export function Error404Screen() {
             <h1>404</h1>
             <h2> {t("notFound")} </h2>
             <p>
-                {" "}
                 <Link to="/"> {t("click")}</Link> {t("wait")}
             </p>
         </div>

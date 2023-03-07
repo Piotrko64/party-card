@@ -13,11 +13,8 @@ export function ButtonConfetti() {
     const { textAboveName } = useHeaderSectionStore();
     const confetti = useBackgroundStore((state) => state.confetti);
     const { buttonConfetti, amountConfetti } = confetti;
-
     const styleObjectFont = { ...getStyleFontObject(getCorrectObjectForFont(textAboveName)) };
-
     const [isConfetti, setConfetti] = useState(false);
-
     const { t } = useTranslation("ui");
 
     return (

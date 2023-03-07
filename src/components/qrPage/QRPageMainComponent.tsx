@@ -1,27 +1,10 @@
 import QRCode from "react-qr-code";
-import { Link, useParams } from "react-router-dom";
-import { copyToClipboard } from "../../utils/copyToClipboard";
-import { saveAs } from "file-saver";
-import { useRef } from "react";
+import { Link } from "react-router-dom";
 import classes from "./qrPageMainComponent.module.scss";
-import { useTranslation } from "react-i18next";
-import html2canvas from "html2canvas";
+import { useQRPageMainComponent } from "./hooks/useQRPageMainComponent";
 
 export function QRPageMainComponent() {
-    const { id } = useParams();
-    const { t } = useTranslation("qrPage");
-    const link = window.location.origin + "/card/" + id;
-    const qrCard = useRef<HTMLDivElement>(null);
-
-    function copyLink() {
-        copyToClipboard(link);
-    }
-
-    function createImage() {
-        html2canvas(qrCard.current!).then((canvas) => {
-            saveAs(canvas.toDataURL(), "QR_CODE.png");
-        });
-    }
+    const { createImage, copyLink, t, qrCard, link } = useQRPageMainComponent();
 
     return (
         <div className={classes.page}>
