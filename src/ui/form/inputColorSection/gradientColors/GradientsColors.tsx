@@ -1,10 +1,9 @@
 import classes from "./gradientColors.module.scss";
 import ColorPicker from "react-best-gradient-color-picker";
-import { useState } from "react";
 import cx from "classnames";
 import { isGradientAndNotColorInArray } from "utils/isGradient";
 import { gradientColors } from "data/colors/colors";
-import { useTranslation } from "react-i18next";
+import { useGradientColors } from "./hooks/useGradientColors";
 
 type Props = {
     changeColor: (color: string, isGradient: true) => void;
@@ -12,17 +11,7 @@ type Props = {
 };
 
 export function GradientColors({ changeColor, selectedColor }: Props) {
-    const [isActivePicker, setActivePicker] = useState(false);
-
-    const { t } = useTranslation("ui");
-
-    function toggleActive() {
-        setActivePicker((prevState) => !prevState);
-    }
-
-    function handleChange(color: string) {
-        changeColor(color, true);
-    }
+    const { t, handleChange, toggleActive, isActivePicker } = useGradientColors(changeColor);
 
     return (
         <>
