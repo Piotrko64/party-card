@@ -7,6 +7,7 @@ export function useListInputElement(idElement: string) {
     const { changeValueText, deleteTextInput, addTextInput, moveSingleInputElement } =
         useWishesSectionStore();
     const [parent, enableAnimations] = useAutoAnimate();
+
     const { t } = useTranslation("generate");
 
     function handleChangeValue(value: string, idText: string) {
