@@ -20,9 +20,6 @@ export const useBackgroundStore = create(
             changeValue: (inputNameProperty: string, newValue: string | boolean, lastProperty: string) =>
                 set(
                     produce((state: BackgroundStore) => {
-                        console.log(
-                            typeof state[inputNameProperty as PossiblePropertySectionToChangeBackground]
-                        );
                         //@ts-ignore
                         state[inputNameProperty][lastProperty] = newValue;
                     })
