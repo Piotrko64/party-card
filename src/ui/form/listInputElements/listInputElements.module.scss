@@ -3,7 +3,7 @@
     border: 2px solid white;
     background-color: transparent;
     font-size: 1rem;
-    font-family: "Jost";
+    font-family: "Jost", sans-serif;
     padding: 5px 15px;
     border-radius: 5px;
     margin-top: 20px;
@@ -52,6 +52,7 @@
             border: none;
             height: 100%;
             transition: all 0.2s ease-in-out;
+
             &:hover {
                 background-color: transparent;
             }
