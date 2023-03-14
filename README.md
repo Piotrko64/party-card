@@ -22,6 +22,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png" alt="Sass" height="50"  align="center" title="Scss" />
 <img src="https://user-images.githubusercontent.com/77500425/222898367-766dc880-f7b0-47e9-877c-f3046f17e90b.png" alt="reactQR" height="50"  align="center" title="reactQR" />
 <img src="https://user-images.githubusercontent.com/77500425/186013478-fdf4ea21-8745-4c5d-9591-35e45e39c66f.png" title="i18n"  width="70" align="center"/>
+<img src="https://user-images.githubusercontent.com/77500425/225035862-23c482f7-063d-439f-8dce-b32f00af25c6.png" title="storybook"  width="70" align="center"/>
 
 </div>
 
@@ -37,6 +38,7 @@
 * [Inspiration](#inspiration)
 
 * [Examples](#examples)
+
 
 
 
@@ -101,8 +103,13 @@ I used:
 <p align="center"> <img src="https://user-images.githubusercontent.com/77500425/223087597-62d43786-952f-4ea9-909c-de9162969826.png"/><p>
 
 
+<br/>
 
+I also used Storybook to testing (mainly) form components
 
+<p align="center"> <img src="https://user-images.githubusercontent.com/77500425/225036590-8990ac2e-584e-464b-94b4-fa54629d7e66.png"/><p>
+
+You can use npm run storybook or yarn storybook to run this!
 
 # Examples
 
