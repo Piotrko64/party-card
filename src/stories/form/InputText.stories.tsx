@@ -2,6 +2,8 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { InputText } from "../../ui/form/inputText/InputText";
 import "../../App.scss";
 import { useHeaderSectionStore } from "../../stores/HeaderSectionStore/HeaderSectionStore";
+import { userEvent, within } from "@storybook/testing-library";
+import { expect } from "@storybook/jest";
 
 export default {
     title: "form/InputText",
@@ -31,4 +33,23 @@ Placeholder.args = {
     labelText: "Secondary label",
     valueInput: "",
     placeholder: "I am placeholder",
+};
+
+export const Typing = Template.bind({});
+Typing.args = {
+    labelText: "Interact",
+};
+
+Typing.play = async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const input = canvas.getByLabelText("Interact", {
+        selector: "input",
+    }) as HTMLInputElement;
+
+    userEvent.clear(input);
+
+    await userEvent.type(input, "Hello", { delay: 200 });
+
+    await expect(input.value).toBe("Hello");
 };

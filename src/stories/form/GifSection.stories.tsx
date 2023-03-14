@@ -3,6 +3,8 @@ import { objectGif } from "../../components/generatorPage/form/sections/headerFo
 import { useState } from "react";
 import "../../App.scss";
 import { GifSection } from "../../ui/form/gifSection/GifSection";
+import { userEvent, within } from "@storybook/testing-library";
+import { expect } from "@storybook/jest";
 
 export default {
     title: "form/GifSection",
@@ -24,3 +26,13 @@ export const Primary = Template.bind({});
 export const WithInitialGif = Template.bind({});
 
 WithInitialGif.args = { url: "https://media.tenor.com/KH6NJRDWZ6sAAAAM/nervous.gif" };
+
+export const IsThereGif = Template.bind({});
+IsThereGif.args = { url: "https://media.tenor.com/KH6NJRDWZ6sAAAAM/nervous.gif" };
+IsThereGif.play = async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const imgElement = canvas.getByAltText("gif");
+
+    expect(imgElement).toBeInTheDocument();
+};
