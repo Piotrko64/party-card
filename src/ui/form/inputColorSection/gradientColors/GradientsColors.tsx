@@ -17,7 +17,7 @@ export function GradientColors({ changeColor, selectedColor }: Props) {
         <>
             <h5> {t("gradients")} </h5>
             <div className={classes.colors}>
-                {gradientColors.map((color) => (
+                {gradientColors.map((color, index) => (
                     <div
                         key={color}
                         className={cx(classes.singleColor, selectedColor === color && classes.selectedColor)}
@@ -25,6 +25,7 @@ export function GradientColors({ changeColor, selectedColor }: Props) {
                         onClick={() => {
                             changeColor(color, true);
                         }}
+                        data-testId={index}
                     ></div>
                 ))}
                 {isGradientAndNotColorInArray(selectedColor, gradientColors) && (
