@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 type Props = {
     changeColor: (color: string) => void;
-    withoutLabel?: true;
+    withoutLabel?: boolean;
     selectedColor: string;
 };
 
@@ -30,6 +30,7 @@ export function OrdinaryColors({ changeColor, withoutLabel, selectedColor }: Pro
                     <div
                         className={cx(classes.singleColor, classes.selectedColor)}
                         style={{ backgroundColor: selectedColor }}
+                        data-testid={"lastColor"}
                     />
                 )}
             </div>
@@ -40,6 +41,7 @@ export function OrdinaryColors({ changeColor, withoutLabel, selectedColor }: Pro
                         className={classes.input}
                         onChange={(e) => changeColor(e.target.value)}
                         value={selectedColor}
+                        data-testid={"input"}
                     />
                     {t("selectColor")}
                 </label>
