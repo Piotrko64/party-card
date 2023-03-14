@@ -3,12 +3,15 @@ import "../../App.scss";
 import { useEffect, useState } from "react";
 import { FontChoosingPanel } from "ui/form/fontChoosingPanel/FontChoosingPanel";
 import { NamesFont } from "types/typesForStyles/NamesFont";
+import { userEvent, within } from "@storybook/testing-library";
+import { expect } from "@storybook/jest";
 
 export default {
     title: "form/FontPanel",
     component: FontChoosingPanel,
     argTypes: {
         isHeader: { control: "boolean" },
+        nameSection: { control: "none" },
     },
 } as ComponentMeta<typeof FontChoosingPanel>;
 
@@ -36,3 +39,14 @@ const Template: ComponentStory<typeof FontChoosingPanel> = ({ isHeader, font: in
 };
 
 export const Primary = Template.bind({});
+export const CheckIsWhiteBackground = Template.bind({});
+
+CheckIsWhiteBackground.play = async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const fontOswaldElement = canvas.getByText("Oswald");
+
+    await userEvent.click(fontOswaldElement);
+
+    expect(fontOswaldElement.classList.length).toBe(2);
+};
