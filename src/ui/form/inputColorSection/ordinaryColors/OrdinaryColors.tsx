@@ -1,7 +1,7 @@
 import classes from "./ordinaryColors.module.scss";
 import cx from "classnames";
+import { ordinaryColors } from "data/colors/colors";
 import { isNotGradientAndNotColorInArray } from "utils/isGradient";
-import { ordinaryColors } from "../../../../data/colors/colors";
 import { useTranslation } from "react-i18next";
 
 type Props = {

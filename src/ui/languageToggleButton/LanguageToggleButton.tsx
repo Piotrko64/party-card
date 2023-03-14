@@ -15,6 +15,7 @@ export function LanguageToggleButton() {
         <div className={classes.container}>
             {langButtons.map((lang) => (
                 <button
+                    key={lang}
                     className={cx(classes.button, i18n.language.includes(lang) && classes.selected)}
                     onClick={() => changeLanguage(lang)}
                 >

@@ -4,6 +4,7 @@ import { userEvent, waitFor, within } from "@storybook/testing-library";
 import { useTranslation } from "react-i18next";
 import "../../App.scss";
 import { LanguageToggleButton } from "../../ui/languageToggleButton/LanguageToggleButton";
+import { useEffect } from "react";
 
 export default {
     title: "startPage/SwitchLanguageButton",
@@ -12,6 +13,10 @@ export default {
 
 const Template: ComponentStory<typeof LanguageToggleButton> = () => {
     const { i18n } = useTranslation();
+
+    useEffect(() => {
+        i18n.changeLanguage("en-us");
+    }, []);
 
     return (
         <>
@@ -30,7 +35,7 @@ CheckLanguage.play = async ({ canvasElement }) => {
         selector: "button",
     });
 
-    await userEvent.click(buttonPL);
+    userEvent.click(buttonPL);
 
     await waitFor(() => {
         expect(
