@@ -7,7 +7,7 @@ export const fontsToChoice: FontsArray = [
     { name: "Noto Serif", fullName: "'Noto Serif', serif" },
     {
         name: "Jost",
-        fullName: "'Jost', sans-serif",
+        fullName: '"Jost", sans-serif',
     },
     {
         name: "Aboreto",
@@ -16,7 +16,7 @@ export const fontsToChoice: FontsArray = [
 
     {
         name: "Kaushan",
-        fullName: "'Kaushan Script', cursive",
+        fullName: '"Kaushan Script", cursive',
     },
     {
         name: "Playfair",
