@@ -17,6 +17,22 @@ export const globalTypes = {
     },
 };
 
+export const parameters = {
+    backgrounds: {
+        default: "dark",
+        values: [
+            {
+                name: "dark",
+                value: "#1a1919",
+            },
+            {
+                name: "light",
+                value: "#f0efff",
+            },
+        ],
+    },
+};
+
 i18n.on("languageChanged", (locale) => {
     const direction = i18n.dir(locale);
     document.dir = direction;
