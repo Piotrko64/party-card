@@ -1,4 +1,4 @@
-import { ChangeEvent, FocusEvent, MouseEvent, RefObject, useId, useRef, useState } from "react";
+import { ChangeEvent, FocusEvent, MouseEvent, RefObject, useId, useState } from "react";
 
 type Props = {
     valueInput: string;

@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { SingleAnchor } from "../../../components/startPageComponents/anchorns/SingleAnchor/SingleAnchor";
+import { SingleAnchor } from "../../components/startPageComponents/anchorns/SingleAnchor/SingleAnchor";
 import { withRouter } from "storybook-addon-react-router-v6";
 
 export default {
@@ -16,8 +16,10 @@ const Template: ComponentStory<typeof SingleAnchor> = (args) => <SingleAnchor {.
 export const Primary = Template.bind({});
 
 Primary.args = {
-    text: "Test",
+    text: "Test PL",
     color: "red",
+    textEN: "Test EN",
+    href: "/test",
 };
 
 export const Secondary = Template.bind({});
@@ -26,4 +28,5 @@ Secondary.args = {
     text: "Polish Text",
     color: "violet",
     textEN: "English Text",
+    href: "/secondaryTest",
 };

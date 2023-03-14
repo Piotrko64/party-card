@@ -2,6 +2,9 @@ import EmojiPicker, { Theme, EmojiStyle } from "emoji-picker-react";
 import { useRef } from "react";
 import { useInputText } from "./hooks/useInputText";
 import classes from "./inputText.module.scss";
+
+const DEFAULT_MAX_LENGTH = 100;
+
 type Props = {
     labelText?: string;
     callbackToChangeValueText: (inputNameProperty: string, newValue: string, lastProperty: "text") => void;
@@ -15,7 +18,7 @@ export function InputText({
     callbackToChangeValueText,
     namePropertyToChange,
     valueInput,
-    maxLength,
+    maxLength = DEFAULT_MAX_LENGTH,
     placeholder = "",
 }: Props) {
     const input = useRef<HTMLInputElement>(null);

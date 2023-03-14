@@ -5,7 +5,6 @@ module.exports = {
         "@storybook/addon-essentials",
         "@storybook/addon-interactions",
         "storybook-addon-react-router-v6",
-        "storybook-react-i18next",
     ],
     staticDirs: ["../public"],
     framework: "@storybook/react",

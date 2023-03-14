@@ -10,7 +10,7 @@ type Props = {
 };
 
 export function SingleAnchor({ text, color, href, textEN }: Props) {
-    const { i18n, t } = useTranslation("ui");
+    const { i18n } = useTranslation("ui");
 
     return (
         <Link
@@ -22,7 +22,6 @@ export function SingleAnchor({ text, color, href, textEN }: Props) {
             className={classes.anchor}
         >
             {i18n.language?.includes("pl") ? text : textEN}
-            {t("colors")}
         </Link>
     );
 }
