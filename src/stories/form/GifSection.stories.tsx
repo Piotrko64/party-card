@@ -3,7 +3,7 @@ import { objectGif } from "../../components/generatorPage/form/sections/headerFo
 import { useState } from "react";
 import "../../App.scss";
 import { GifSection } from "../../ui/form/gifSection/GifSection";
-import { userEvent, within } from "@storybook/testing-library";
+import { within } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
 
 export default {
