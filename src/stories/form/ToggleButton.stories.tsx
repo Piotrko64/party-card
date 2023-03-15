@@ -14,7 +14,6 @@ export default {
 } as ComponentMeta<typeof ToggleButton>;
 
 const Template: ComponentStory<typeof ToggleButton> = ({ isChecked }) => {
-    console.log(isChecked);
     const [active, setActive] = useState<boolean>(isChecked);
 
     function toggleButton() {
@@ -33,7 +32,7 @@ Primary.args = { isChecked: false };
 Primary.play = async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
-    const toggleElement = (await canvas.getByText("", { selector: "input" })) as HTMLInputElement;
+    const toggleElement = canvas.getByText("", { selector: "input" }) as HTMLInputElement;
 
     await userEvent.click(toggleElement);
 

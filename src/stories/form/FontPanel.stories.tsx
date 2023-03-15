@@ -23,18 +23,11 @@ const Template: ComponentStory<typeof FontChoosingPanel> = ({ isHeader, font: in
     }
 
     useEffect(() => {
-        setFont(font);
-    }, [font]);
+        setFont(initialFont);
+    }, [initialFont]);
 
     return (
-        <>
-            <FontChoosingPanel
-                font={font}
-                nameSection=""
-                callbackToSelectFont={changeFont}
-                isHeader={isHeader}
-            />
-        </>
+        <FontChoosingPanel font={font} nameSection="" callbackToSelectFont={changeFont} isHeader={isHeader} />
     );
 };
 
