@@ -20,7 +20,7 @@ const Template: ComponentStory<typeof ListInputElement> = () => {
     }, []);
 
     const wishWallTextElement = (elements[0] as UnionWishElementsWithTexts)?.texts;
-    console.log(wishWallTextElement);
+
     return <ListInputElement idElement="test" texts={wishWallTextElement} />;
 };
 

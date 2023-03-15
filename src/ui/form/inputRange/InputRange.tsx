@@ -22,7 +22,7 @@ export function InputRange({ max, callbackToChangeRangeValue, intensity }: Props
                 value={intensity}
                 className={classes.input}
             />
-            {((intensity / +max) * 100).toFixed(0) + "/100"}
+            {`${((intensity / +max) * 100).toFixed(0)}/100`}
         </div>
     );
 }

@@ -8,8 +8,8 @@ export function DescribePart() {
         <p className={classes.describe}>
             <Trans i18nKey="description" t={t}>
                 Bądź oryginalny w kwestii życzeń.
-                <br></br>
-                Stwórz internetową kartkę okolicznościową dla swoich najbliższych <br></br> - z okazji urodzin
+                <br />
+                Stwórz internetową kartkę okolicznościową dla swoich najbliższych <br /> - z okazji urodzin
                 lub innych okazji!
             </Trans>
         </p>

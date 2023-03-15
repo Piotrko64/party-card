@@ -21,7 +21,7 @@ export function Footer() {
             </div>
             <div className={classes.linkToPortfolio}>
                 <p>
-                    {t("realization")} <br></br>
+                    {t("realization")} <br />
                     <a href="http://piotrkolodziejczyk.vercel.app" target="_blank">
                         Piotr Kołodziejczyk
                     </a>

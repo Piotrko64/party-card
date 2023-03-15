@@ -1,6 +1,6 @@
 export function getHeightWindow() {
-    const body = document.body,
-        html = document.documentElement;
+    const body = document.body;
+    const html = document.documentElement;
 
     return Math.max(
         body.scrollHeight,

@@ -26,13 +26,14 @@ export function GradientColors({ changeColor, selectedColor }: Props) {
                             changeColor(color, true);
                         }}
                         data-testId={index}
-                    ></div>
+                    />
                 ))}
+
                 {isGradientAndNotColorInArray(selectedColor, gradientColors) && (
                     <div
                         className={cx(classes.singleColor, classes.selectedColor)}
                         style={{ background: selectedColor }}
-                    ></div>
+                    />
                 )}
             </div>
             <button className={classes.label} onClick={toggleActive}>

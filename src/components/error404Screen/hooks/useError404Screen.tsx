@@ -9,7 +9,7 @@ export function useError404Screen() {
     const { t } = useTranslation("page404");
 
     useEffect(() => {
-        let timer = setTimeout(() => {
+        const timer = setTimeout(() => {
             navigate("/");
         }, TIME_TO_REDIRECT);
 

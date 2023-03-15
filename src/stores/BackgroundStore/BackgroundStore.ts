@@ -1,8 +1,4 @@
-import {
-    BackgroundStore,
-    BackgroundStoreWithoutFunctions,
-    PossiblePropertySectionToChangeBackground,
-} from "types/stores/BackgroundStore";
+import { BackgroundStore, BackgroundStoreWithoutFunctions } from "types/stores/BackgroundStore";
 import { create } from "zustand";
 import { initialValueBackground } from "./initialValueBackground";
 import produce from "immer";

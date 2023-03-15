@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 export function QRPage() {
     const { id } = useParams();
     const changeStores = useChangesContentStoresByDatabaseInfo();
-    const { isError, isLoading } = useQuery("qr" + id, () => changeStores(id!));
+    const { isError, isLoading } = useQuery(`qr${id}`, () => changeStores(id!));
 
     if (isLoading) {
         return <LoadingScreen />;

@@ -9,11 +9,9 @@ type Props = {
 
 export function TextWithToggleButton({ callbackToToggle, text, isChecked }: Props) {
     return (
-        <>
-            <div className={classes.row}>
-                {text}
-                <ToggleButton onChecked={callbackToToggle} isChecked={isChecked} />
-            </div>
-        </>
+        <div className={classes.row}>
+            {text}
+            <ToggleButton onChecked={callbackToToggle} isChecked={isChecked} />
+        </div>
     );
 }

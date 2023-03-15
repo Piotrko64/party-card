@@ -1,5 +1,5 @@
 import { listExamplesCard } from "data/examplesCard/listExamplesCard";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import classes from "./examplesPanel.module.scss";
 import cx from "classnames";
 import { useExamplesPanel } from "./hooks/useExamplesPanel";
@@ -17,7 +17,7 @@ export function ExamplesPanel() {
                         return (
                             <Link
                                 key={example.id}
-                                to={"/examples/" + numberOfExample}
+                                to={`/examples/${numberOfExample}`}
                                 className={cx(
                                     classes.exampleButton,
                                     +id! === numberOfExample && classes.selected

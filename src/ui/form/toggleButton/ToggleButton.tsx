@@ -22,7 +22,7 @@ export function ToggleButton({ onChecked, isChecked }: Props) {
                     checked={isChecked}
                 />
 
-                <span className={cx(classes.slider, classes.round)}></span>
+                <span className={cx(classes.slider, classes.round)} />
             </label>
             {isChecked}
         </>

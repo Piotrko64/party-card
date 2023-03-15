@@ -36,7 +36,7 @@ LongText.play = async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
     const toggleElement = (await canvas.getByText("", { selector: "input" })) as HTMLInputElement;
-    await console.log(toggleElement);
+
     await userEvent.click(toggleElement);
 
     expect(toggleElement.checked).toBe(true);
