@@ -31,7 +31,7 @@ export function ExamplesPanel() {
                 <div className={classes.title}> {t("examples")} </div>
             </div>
             <Link to="/">
-                <img src="/icons/leftArrow.png" className={classes.img} />
+                <img src="/icons/leftArrow.png" className={classes.img} alt="leftArrow" />
             </Link>
         </>
     );

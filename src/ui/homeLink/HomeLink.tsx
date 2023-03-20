@@ -8,7 +8,7 @@ export function HomeLink() {
     return (
         <div className={classes.backToHome}>
             <Link to="/">
-                <img src="/icons/leftArrow.png" /> {t("back")}{" "}
+                <img src="/icons/leftArrow.png" alt="leftArrow" /> {t("back")}{" "}
             </Link>
         </div>
     );
