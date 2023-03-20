@@ -24,7 +24,7 @@ export function ListInputElement({ idElement, texts }: Props) {
                             ref={provided.innerRef}
                         >
                             <div ref={parent}>
-                                {texts.map((text, index) => (
+                                {texts?.map((text, index) => (
                                     <Draggable key={text.id} draggableId={text.id} index={index}>
                                         {(provided) => (
                                             <div
@@ -63,7 +63,7 @@ export function ListInputElement({ idElement, texts }: Props) {
                     )}
                 </Droppable>
             </DragDropContext>
-            {texts.length < MAX_AMOUNT_INPUTS && (
+            {texts?.length < MAX_AMOUNT_INPUTS && (
                 <button onClick={addEmptyInput} className={classes.newText}>
                     {t("addNew")} +
                 </button>
