@@ -33,33 +33,31 @@ export function WishesFormSection() {
                                                 index={index}
                                             >
                                                 {(provided) => (
-                                                    <>
+                                                    <div
+                                                        ref={provided.innerRef}
+                                                        {...provided.draggableProps}
+                                                        className={classes.singleWish}
+                                                    >
                                                         <div
-                                                            ref={provided.innerRef}
-                                                            {...provided.draggableProps}
-                                                            className={classes.singleWish}
+                                                            {...provided.dragHandleProps}
+                                                            className="flexCenter"
                                                         >
-                                                            <div
-                                                                {...provided.dragHandleProps}
-                                                                className="flexCenter"
-                                                            >
-                                                                <DragLines />
-                                                            </div>
-                                                            <div className={classes.maxWidth}>
-                                                                {getWishForm(element.name, { ...element })}
-                                                                <button
-                                                                    className={classes.deleteButton}
-                                                                    onClick={() => deleteSection(element.id)}
-                                                                >
-                                                                    {t("delete")}
-                                                                    <img
-                                                                        src="/icons/trash.png"
-                                                                        alt="delete"
-                                                                    />{" "}
-                                                                </button>
-                                                            </div>
+                                                            <DragLines />
                                                         </div>
-                                                    </>
+                                                        <div className={classes.maxWidth}>
+                                                            {getWishForm(element.name, { ...element })}
+                                                            <button
+                                                                className={classes.deleteButton}
+                                                                onClick={() => deleteSection(element.id)}
+                                                            >
+                                                                {t("delete")}
+                                                                <img
+                                                                    src="/icons/trash.png"
+                                                                    alt="delete"
+                                                                />{" "}
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                 )}
                                             </Draggable>
                                         ))}
