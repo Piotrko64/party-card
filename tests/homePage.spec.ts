@@ -1,7 +1,18 @@
-import { test } from "@playwright/test";
+import { test, expect } from "@playwright/test";
 
-test("should contain english describe", async ({ page }) => {
-    await page.goto("https://party-card.vercel.app/");
-    await page.getByRole("button", { name: "EN" }).click();
-    page.getByText("Be original when it comes to greetings. Create an online greeting card for your ");
+test.describe("check toggling languages", () => {
+    test("should contain english describe", async ({ page }) => {
+        //Arange
+        const urlPage = "https://party-card.vercel.app/";
+        const nameButton = "EN";
+        const englishDescribe = `Be original when it comes to greetings.
+        Create an online greeting card for your loved ones
+        - for birthdays or other occasions!`;
+        //Act
+        await page.goto(urlPage);
+        await page.getByRole("button", { name: nameButton }).dblclick();
+
+        //Assert
+        await expect(page.getByTestId("homeDescribe")).toHaveText(englishDescribe);
+    });
 });
