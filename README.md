@@ -20,6 +20,7 @@
 <img src="https://user-images.githubusercontent.com/77500425/222898367-766dc880-f7b0-47e9-877c-f3046f17e90b.png" alt="reactQR" height="50"  align="center" title="reactQR" />
 <img src="https://user-images.githubusercontent.com/77500425/186013478-fdf4ea21-8745-4c5d-9591-35e45e39c66f.png" title="i18n"  width="70" align="center"/>
 <img src="https://user-images.githubusercontent.com/77500425/225035862-23c482f7-063d-439f-8dce-b32f00af25c6.png" title="storybook"  width="70" align="center"/>
+<img src="https://user-images.githubusercontent.com/77500425/226908142-1d7f9ad7-7422-43d8-a9fa-190f6267aa8c.svg" title="playwright"  width="70" align="center"/>
 
 </div>
 
