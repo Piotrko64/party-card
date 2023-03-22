@@ -5,7 +5,7 @@ export function DescribePart() {
     const { t } = useTranslation("startPage");
 
     return (
-        <p className={classes.describe}>
+        <p className={classes.describe} data-testid="homeDescribe">
             <Trans i18nKey="description" t={t}>
                 Bądź oryginalny w kwestii życzeń.
                 <br />
