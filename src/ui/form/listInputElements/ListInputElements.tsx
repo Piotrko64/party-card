@@ -29,7 +29,9 @@ export function ListInputElement({ idElement, texts }: Props) {
                                         {(provided) => (
                                             <div
                                                 key={text.id}
-                                                style={{ padding: "20px" }}
+                                                style={{
+                                                    padding: "20px",
+                                                }}
                                                 ref={provided.innerRef}
                                                 {...provided.draggableProps}
                                                 {...provided.dragHandleProps}
