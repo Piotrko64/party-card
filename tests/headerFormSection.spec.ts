@@ -40,19 +40,15 @@ test.describe("checking header form section", () => {
     });
 
     test.only("supriseCard should have text - 'suprise'", async ({ page }) => {
-        const expectedTest = "suprise";
+        const expectedText = "suprise";
 
         await page.getByRole("button", { name: "Skip" }).click();
-        await page
-            .locator("div")
-            .filter({ hasText: "Suprise Card Enable this section?" })
-            .getByLabel("")
-            .getByRole("checkbox")
-            .click({ force: true });
+        await page.getByTestId("supriseCard").locator("input").click({ force: true });
         await page.getByPlaceholder("Write something to Suprise Card").click();
         await page.getByPlaceholder("Write something to Suprise Card").fill("suprise");
         await page.getByRole("link", { name: "View preview" }).click();
+        await page.getByRole("button", { name: "Click here" }).click();
 
-        // expect(isStrokeValue).toBe(true);
+        expect(page.getByText(expectedText)).toBeInViewport();
     });
 });
