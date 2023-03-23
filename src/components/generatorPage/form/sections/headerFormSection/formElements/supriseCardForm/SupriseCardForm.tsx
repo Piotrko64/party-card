@@ -53,6 +53,6 @@ export function SupriseCardForm() {
                     />
                 </>
             </ToggleActiveSection>
-        <div/>
+        </div>
     );
 }
