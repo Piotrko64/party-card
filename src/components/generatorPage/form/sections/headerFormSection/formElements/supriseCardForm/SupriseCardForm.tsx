@@ -16,7 +16,7 @@ export function SupriseCardForm() {
     const { t } = useTranslation("generate");
 
     return (
-        <>
+        <div data-tesid="supriseCard">
             <h3> {t("supriseCard")} </h3>
             <ToggleActiveSection nameSection="supriseCard" isActive={isActive}>
                 <>
@@ -53,6 +53,6 @@ export function SupriseCardForm() {
                     />
                 </>
             </ToggleActiveSection>
-        </>
+        <div/>
     );
 }
