@@ -33,7 +33,7 @@ export default defineConfig({
     /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
     use: {
         actionTimeout: 0,
-
+        baseURL: "https://party-card.vercel.app/",
         trace: "retain-on-failure",
     },
 

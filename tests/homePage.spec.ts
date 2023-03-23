@@ -1,7 +1,5 @@
 import { test, expect } from "@playwright/test";
 
-const urlPage = "https://party-card.vercel.app/";
-
 test.describe("check toggling languages", () => {
     const englishDescribe = `Be original when it comes to greetings.
         Create an online greeting card for your loved ones
@@ -12,7 +10,7 @@ test.describe("check toggling languages", () => {
         const nameButton = "EN";
 
         //Act
-        await page.goto(urlPage);
+        await page.goto("/");
         await page.getByRole("button", { name: nameButton }).dblclick();
 
         //Assert
@@ -26,7 +24,7 @@ test.describe("check toggling languages", () => {
         const whiteColor = "rgb(255, 255, 255)";
 
         //Act
-        await page.goto(urlPage);
+        await page.goto("/");
         await plButton.dblclick();
         const color = await plButton.evaluate((btn) => {
             return window.getComputedStyle(btn).getPropertyValue("background-color");
@@ -43,7 +41,7 @@ test.describe("checking routing starting from homepage", () => {
         const urlFragment = "examples/2";
 
         //Act
-        await page.goto(urlPage);
+        await page.goto("/");
         await page.getByRole("button", { name: "EN" }).click();
         await page.getByRole("link", { name: "See examples" }).click();
         await page.getByRole("link", { name: "2" }).click();
@@ -58,7 +56,7 @@ test.describe("checking routing starting from homepage", () => {
         const urlFragment = "previewCard";
 
         //Act
-        await page.goto(urlPage);
+        await page.goto("/");
         await page.getByRole("link", { name: "Create new card" }).click();
         await page.getByRole("button", { name: "Next" }).click();
         await page.getByRole("button", { name: "Skip" }).click();
