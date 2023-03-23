@@ -121,9 +121,9 @@ Helpful commands:
 -   record tests for given site  
     `npx playwright codegen https://party-card.vercel.app/`
 -   run tests without browser GUI:  
-    `npx playwright test`
+    `npx playwright test` or `yarn test`
 -   run test with browser GUI:  
-    `npx playwright test --headed`
+    `npx playwright test --headed` or `yarn test:headed`
 -   viewing report  
     `npx playwright show-report`
 

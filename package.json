@@ -9,7 +9,8 @@
         "preview": "vite preview",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
-        "run-e2e-test": ""
+        "test": "npx playwright test",
+        "test:headed": "npx playwright test --headed"
     },
     "dependencies": {
         "@fireworks-js/react": "^2.10.1",

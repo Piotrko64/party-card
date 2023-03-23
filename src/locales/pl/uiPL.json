@@ -15,5 +15,6 @@
     "delete": "Usuń ten element",
     "selectedGif": "Wybrany Gif",
     "noGif": "Nic nie wybrano",
-    "loading": "Ładowanie..."
+    "loading": "Ładowanie...",
+    "close": "Zamknij"
 }

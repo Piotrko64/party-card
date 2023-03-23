@@ -39,7 +39,7 @@ test.describe("checking header form section", () => {
         expect(isStrokeValue).toBe(true);
     });
 
-    test.only("supriseCard should have text - 'suprise'", async ({ page }) => {
+    test("supriseCard should have text - 'suprise'", async ({ page }) => {
         const expectedText = "suprise";
 
         await page.getByRole("button", { name: "Skip" }).click();
