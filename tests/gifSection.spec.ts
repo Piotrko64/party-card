@@ -27,7 +27,7 @@ test.describe("checking header form section", () => {
         expect(await page.getByRole("img", { name: "gif" }).getAttribute(nameTestingAttribute)).not.toBe("");
     });
 
-    test.only("gif should contain alt text - 'gif '", async ({ page }) => {
+    test("gif should contain alt text - 'gif '", async ({ page }) => {
         const nameTestingAttribute = "alt";
 
         await page.locator(".gpr-gif-list-column > button").first().click();

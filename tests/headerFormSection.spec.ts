@@ -3,14 +3,14 @@ import { test, expect } from "@playwright/test";
 test.describe("checking header form section", () => {
     test.beforeEach(async ({ page }) => {
         await page.goto("/");
+        await page.getByRole("button", { name: "EN" }).click();
+        await page.getByRole("link", { name: "Create new card" }).click();
     });
 
     test("should change name and font", async ({ page }) => {
         const newName = "Adam";
         const expectedFontFamily = "Jost, sans-serif";
 
-        await page.getByRole("button", { name: "EN" }).click();
-        await page.getByRole("link", { name: "Create new card" }).click();
         await page.getByRole("button", { name: "Next" }).click();
         await page.getByRole("button", { name: "Skip" }).click();
         await page.getByPlaceholder("Name").click();
@@ -29,8 +29,6 @@ test.describe("checking header form section", () => {
     test("should add stroke", async ({ page }) => {
         const defaultName = "Peter";
 
-        await page.getByRole("button", { name: "EN" }).click();
-        await page.getByRole("link", { name: "Create new card" }).click();
         await page.getByRole("button", { name: "Skip" }).click();
         await page.locator("div.grayBlock").first().getByRole("checkbox").click({ force: true });
         await page.getByRole("link", { name: "View preview" }).click();
@@ -39,5 +37,22 @@ test.describe("checking header form section", () => {
         });
 
         expect(isStrokeValue).toBe(true);
+    });
+
+    test.only("supriseCard should have text - 'suprise'", async ({ page }) => {
+        const expectedTest = "suprise";
+
+        await page.getByRole("button", { name: "Skip" }).click();
+        await page
+            .locator("div")
+            .filter({ hasText: "Suprise Card Enable this section?" })
+            .getByLabel("")
+            .getByRole("checkbox")
+            .click({ force: true });
+        await page.getByPlaceholder("Write something to Suprise Card").click();
+        await page.getByPlaceholder("Write something to Suprise Card").fill("suprise");
+        await page.getByRole("link", { name: "View preview" }).click();
+
+        // expect(isStrokeValue).toBe(true);
     });
 });
