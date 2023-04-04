@@ -15,7 +15,7 @@
 <img src="https://user-images.githubusercontent.com/77500425/161311954-e03613e7-54b2-4d1b-ac2e-559f8c1e9f2d.png" alt="typescript" height="50"  align="center" title="TS"/>
 <img src="https://user-images.githubusercontent.com/77500425/161312615-f3961568-28bb-48fa-9d95-93ecd61337b3.png" alt="react"  height="50" align="center"/>
 <img src="https://user-images.githubusercontent.com/77500425/165483039-a65ef61f-a3ae-4524-bfa5-04788dd894ea.png" alt="Firebase"  height="50" align="center"/>
-<img src="https://react-query-v3.tanstack.com/_next/static/images/emblem-light-628080660fddb35787ff6c77e97ca43e.svg" alt="React Query"  height="50" align="center"/>
+<img src="https://user-images.githubusercontent.com/77500425/227266135-8f970a07-a8b3-47a0-b92a-6cdc0fe9681d.png" alt="React Query"  height="50" align="center"/>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png" alt="Sass" height="50"  align="center" title="Scss" />
 <img src="https://user-images.githubusercontent.com/77500425/222898367-766dc880-f7b0-47e9-877c-f3046f17e90b.png" alt="reactQR" height="50"  align="center" title="reactQR" />
 <img src="https://user-images.githubusercontent.com/77500425/186013478-fdf4ea21-8745-4c5d-9591-35e45e39c66f.png" title="i18n"  width="70" align="center"/>
