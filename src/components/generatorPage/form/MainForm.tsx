@@ -4,9 +4,11 @@ import { ButtonToGenerate } from "./buttonToGenerate/ButtonToGenerate";
 import { BackgroundFormSection } from "./sections/backgroundFormSection/BackgroundFormSection";
 import { HeaderFormSection } from "./sections/headerFormSection/HeaderFormSection";
 import { WishesFormSection } from "./sections/wishesFormSection/WishesFormSection";
+import { useAICardGenerate } from "./sections/aiCardGenerate/hooks/useAICardGenerate";
 
 export function MainForm() {
     const { run, steps } = useReactJoyRide();
+    useAICardGenerate("Simon", "Bycie zabawnym człowiekiem", "Zadbaj o czarne tło i niebieski tekst");
 
     return (
         <>
