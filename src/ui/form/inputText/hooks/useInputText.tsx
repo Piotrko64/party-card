@@ -2,7 +2,7 @@ import { ChangeEvent, FocusEvent, MouseEvent, RefObject, useId, useState } from 
 
 type Props = {
     valueInput: string;
-    callbackToChangeValueText: (inputNameProperty: string, newValue: string, lastProperty: "text") => void;
+    callbackToChangeValueText?: (inputNameProperty: string, newValue: string, lastProperty: "text") => void;
     namePropertyToChange: string;
     maxLength: number;
     input: RefObject<HTMLInputElement>;
@@ -32,12 +32,12 @@ export function useInputText({
     function clickEmoji({ emoji }: { emoji: string }) {
         if (valueInput.length + 1 < maxLength) {
             input.current!.value = input.current!.value + " " + emoji;
-            callbackToChangeValueText(namePropertyToChange, valueInput + " " + emoji, "text");
+            callbackToChangeValueText?.(namePropertyToChange, valueInput + " " + emoji, "text");
         }
     }
 
     function changeValueByCallback(event: ChangeEvent) {
-        callbackToChangeValueText(namePropertyToChange, (event.target as HTMLInputElement).value, "text");
+        callbackToChangeValueText?.(namePropertyToChange, (event.target as HTMLInputElement).value, "text");
     }
     return {
         changeValueByCallback,

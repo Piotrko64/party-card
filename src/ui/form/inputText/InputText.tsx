@@ -7,19 +7,22 @@ const DEFAULT_MAX_LENGTH = 100;
 
 type Props = {
     labelText?: string;
-    callbackToChangeValueText: (inputNameProperty: string, newValue: string, lastProperty: "text") => void;
+    callbackToChangeValueText?: (inputNameProperty: string, newValue: string, lastProperty: "text") => void;
     namePropertyToChange: string;
-    valueInput: string;
+    valueInput?: string;
     maxLength: number;
     placeholder?: string;
+    isVisibleEmojiPicker?: boolean;
 };
+
 export function InputText({
     labelText = "",
     callbackToChangeValueText,
     namePropertyToChange,
-    valueInput,
+    valueInput="",
     maxLength = DEFAULT_MAX_LENGTH,
     placeholder = "",
+    isVisibleEmojiPicker = true,
 }: Props) {
     const input = useRef<HTMLInputElement>(null);
 
@@ -48,19 +51,21 @@ export function InputText({
                     onFocus={() => setActiveEmojiPicker(false)}
                     maxLength={maxLength}
                     value={valueInput}
+                    name={namePropertyToChange}
                 />
+                {isVisibleEmojiPicker &&
                 <img
                     src="/icons/happyIcon.png"
                     alt="emoji"
                     onMouseDown={togglePicker}
                     className={classes.img}
-                />
+                />}
             </div>
             <div className={classes.counter}>
                 {valueInput.length}/{maxLength.toString()}
             </div>
 
-            {isActiveEmojiPicker && (
+            {isVisibleEmojiPicker &&isActiveEmojiPicker && (
                 <div onBlur={onBlurPicker} className={classes.picker} tabIndex={0}>
                     <EmojiPicker
                         theme={Theme.DARK}

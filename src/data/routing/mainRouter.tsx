@@ -9,6 +9,7 @@ import { LocalMode } from "pages/LocaLmode";
 import { Footer } from "components/footer/Footer";
 import { Page404 } from "pages/Page404";
 import { ExamplePage } from "pages/ExamplesPage";
+import { AiGeneratePage } from "pages/AiGeneratePage";
 
 function Layout() {
     return (
@@ -60,6 +61,10 @@ export const mainRouter = createBrowserRouter([
             {
                 path: "/404",
                 element: <Page404 />,
+            },
+            {
+                path: "/aiGenerate",
+                element: <AiGeneratePage />,
             },
             {
                 path: "*",

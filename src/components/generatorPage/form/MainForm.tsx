@@ -8,7 +8,7 @@ import { useAICardGenerate } from "./sections/aiCardGenerate/hooks/useAICardGene
 
 export function MainForm() {
     const { run, steps } = useReactJoyRide();
-    useAICardGenerate("Simon", "Bycie zabawnym człowiekiem", "Zadbaj o czarne tło i niebieski tekst");
+    useAICardGenerate("Wrona mordo ty moja", "Człowiek sukcesu ", "Zadbaj o zabawne teksty o jego karierze frontend developera i pasji do programowania. Zastosuj kilka różnych form życzeń");
 
     return (
         <>
