@@ -45,39 +45,49 @@ export function AiGenerateCard() {
     <form onSubmit={handleSubmit} className={styles.container}>
       <h2>🎉 {t("aiGenerateCard")}</h2>
 
+      <p className={styles.description}>
+        Stwórz kartkę z życzeniami z... użyciem AI! Musisz mieć jednak swój
+        własny klucz API. Potem wystarcy już tylko dobrze uzupełnić propmty i
+        poczekać na wynik!
+      </p>
+
+      {t("tokenLabel")}
       <InputText
-        labelText="Twój token (ChatGPT / DeepSeek)"
         namePropertyToChange="token"
         valueInput={formData.token}
         callbackToChangeValueText={handleInputChange}
         maxLength={100}
         placeholder="sk-..."
       />
+      <p className={styles.helper}>{t("tokenHelper")}</p>
 
+      {t("modelLabel")}
       <InputText
-        labelText="Model językowy"
         namePropertyToChange="model"
         valueInput={formData.model}
         callbackToChangeValueText={handleInputChange}
         maxLength={40}
-        placeholder="np. gpt-4o"
+        placeholder={t("modelHelper")!}
       />
-
-      <InputText
-        labelText="Imię jubilata"
-        namePropertyToChange="recipient"
-        valueInput={formData.recipient}
-        callbackToChangeValueText={handleInputChange}
-        maxLength={60}
-        placeholder="np. Ania"
-      />
+      <p className={styles.helper}>{t("modelHelper")}</p>
 
       <label>
-        Opisz co ma być na kartce. Daj się ponieść kreatywności!
+        {t("recipientLabel")}
+        <InputText
+          namePropertyToChange="recipient"
+          valueInput={formData.recipient}
+          callbackToChangeValueText={handleInputChange}
+          maxLength={60}
+          placeholder={t("recipientLabel")!}
+        />
+      </label>
+
+      <label>
+        {t("promptLabel")}
         <div className={styles.textAreaContainer}>
           <textarea
             name="prompt"
-            placeholder="Napisz życzenia, wierszyk, żart lub opisz, jak ma wyglądać kartka"
+            placeholder={t("promptLabel")!}
             value={formData.prompt}
             onChange={(e) =>
               handleInputChange("prompt", e.target.value, "text")
@@ -89,7 +99,9 @@ export function AiGenerateCard() {
         </div>
       </label>
 
-      <button type="submit">Tworzymy!</button>
+      <button className={styles.createButton} type="submit">
+        {t("submitButton")}
+      </button>
     </form>
   );
 }

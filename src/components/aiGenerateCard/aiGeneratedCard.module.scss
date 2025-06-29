@@ -3,6 +3,37 @@
     margin-right: auto;
     max-width: 700px;
     margin-bottom: 100px;
+    h2{
+        margin-bottom: 40px;;
+    }
+    .description{
+        margin-bottom: 40px;
+        font-size: 18px;
+    }
+    .createButton{
+    
+    margin-top: 40px;
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 15px;
+    background-color: transparent;
+    color: var(--violet);
+    font-family: "Oswald";
+    border-radius: 5px;
+    border: 3px solid var(--violet);
+    transition: all 0.3s ease-out;
+    &:hover {
+        background-color: var(--violet);
+        color: black;
+    }
+
+    }
+    p.helper{
+        font-size: 14px;
+        margin-top: 0;
+        color: var(--secondBackColor);
+        margin-bottom: 32px;;
+    }
     .textAreaContainer {
         display: flex;
         flex-direction: column;
