@@ -1,0 +1,10 @@
+{
+    "aiGenerateCard": "Stwórz kartkę z AI",
+    "tokenLabel": "Twój token (ChatGPT / DeepSeek)",
+    "tokenHelper": "Nie przechowujemy Twojego klucza nigdzie — służy tylko do wygenerowania kartki. Możesz go uzyskać z platformy OpenAI lub DeepSeek API.",
+    "modelLabel": "Model językowy",
+    "modelHelper": "Np. deepseek-reasonal, deepseek-chat, gpt-4o",
+    "recipientLabel": "Imię jubilata",
+    "promptLabel": "Opisz, co ma być na kartce. Daj się ponieść kreatywności!",
+    "submitButton": "Tworzymy!"
+}

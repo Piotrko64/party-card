@@ -19,40 +19,44 @@ import errorScreenPL from "./locales/pl/errorScreenPL.json";
 import errorScreenEN from "./locales/en/errorScreenEN.json";
 import joyRidePL from "./locales/pl/joyRidePL.json";
 import joyRideEN from "./locales/en/joyRideEN.json";
+import aiPL from "./locales/pl/aiPL.json";
+import aiEN from "./locales/en/aiEN.json";
 
 i18next
-    .use(initReactI18next)
-    .use(LanguageDetector)
-    .init({
-        debug: true,
-        fallbackLng: "en",
-        interpolation: {
-            escapeValue: false,
-        },
-        resources: {
-            en: {
-                qrPage: qrPageEN,
-                footer: footerEN,
-                startPage: startPageEN,
-                infoPage: infoPageEN,
-                ui: uiEN,
-                generate: generateEN,
-                page404: page404EN,
-                errorScreen: errorScreenEN,
-                joyRide: joyRideEN,
-            },
-            pl: {
-                joyRide: joyRidePL,
-                qrPage: qrPagePL,
-                startPage: startPagePL,
-                footer: footerPL,
-                infoPage: infoPagePL,
-                ui: uiPL,
-                generate: generatePL,
-                page404: page404PL,
-                errorScreen: errorScreenPL,
-            },
-        },
-    });
+  .use(initReactI18next)
+  .use(LanguageDetector)
+  .init({
+    debug: true,
+    fallbackLng: "en",
+    interpolation: {
+      escapeValue: false,
+    },
+    resources: {
+      en: {
+        qrPage: qrPageEN,
+        footer: footerEN,
+        startPage: startPageEN,
+        infoPage: infoPageEN,
+        ui: uiEN,
+        generate: generateEN,
+        page404: page404EN,
+        errorScreen: errorScreenEN,
+        joyRide: joyRideEN,
+        ai: aiEN,
+      },
+      pl: {
+        joyRide: joyRidePL,
+        qrPage: qrPagePL,
+        startPage: startPagePL,
+        footer: footerPL,
+        infoPage: infoPagePL,
+        ui: uiPL,
+        generate: generatePL,
+        page404: page404PL,
+        errorScreen: errorScreenPL,
+        ai: aiPL,
+      },
+    },
+  });
 
 export default i18next;

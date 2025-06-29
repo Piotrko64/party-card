@@ -1,0 +1,10 @@
+{
+    "aiGenerateCard": "Generate an AI-Powered Card",
+    "tokenLabel": "Your token (ChatGPT / DeepSeek)",
+    "tokenHelper": "We do not store your API key—it's only used to generate the card. You can get it from OpenAI Platform or DeepSeek API.",
+    "modelLabel": "Language model",
+    "modelHelper": "E.g. deepseek-reasonal, chat, gpt-4o",
+    "recipientLabel": "Recipient’s name",
+    "promptLabel": "Describe what you want on the card. Let your creativity flow!",
+    "submitButton": "Create!"
+}

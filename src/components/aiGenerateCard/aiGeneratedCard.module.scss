@@ -1,0 +1,36 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    margin-bottom: 100px;
+    .textAreaContainer {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .textArea {
+            background-color: #575555;
+            border-radius: 8px;
+            padding: 5px 8px;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            width: 100%;
+            border: solid 0.5px transparent;
+            transition: border 0.3s ease-in-out;
+            font-family: "Jost";
+            font-size: 1rem;
+            margin-bottom: 20px;
+            resize: vertical;
+            min-height: 150px;
+            &::placeholder {
+                color: #b5b5b5;
+            }
+            &:focus {
+                border-color: white;
+
+                outline: none;
+            }
+        }
+    }
+}

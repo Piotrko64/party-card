@@ -1,8 +1,12 @@
 import { useAICardGenerate } from "components/generatorPage/form/sections/aiCardGenerate/hooks/useAICardGenerate";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { InputText } from "ui/form/inputText/InputText";
+import styles from "./aiGeneratedCard.module.scss";
 
 export function AiGenerateCard() {
+  const { t } = useTranslation("ai");
+
   const [formData, setFormData] = useState({
     token: "",
     model: "gpt-4o",
@@ -26,19 +30,20 @@ export function AiGenerateCard() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-
-    generateCard( formData.recipient,
-    formData.prompt,
-    formData.token,
-    formData.model);
+    generateCard(
+      formData.recipient,
+      formData.prompt,
+      formData.token,
+      formData.model
+    );
     alert(
       `Token: ${formData.token}\nModel: ${formData.model}\nImię jubilata: ${formData.recipient}\nPrompt:\n${formData.prompt}`
     );
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>🎉 Generator kartki urodzinowej</h2>
+    <form onSubmit={handleSubmit} className={styles.container}>
+      <h2>🎉 {t("aiGenerateCard")}</h2>
 
       <InputText
         labelText="Twój token (ChatGPT / DeepSeek)"
@@ -68,19 +73,23 @@ export function AiGenerateCard() {
       />
 
       <label>
-        Co chcesz napisać na kartce?
-        <textarea
-          name="prompt"
-          placeholder="Napisz życzenia, wierszyk, żart lub opisz, jak ma wyglądać kartka"
-          value={formData.prompt}
-          onChange={(e) =>
-            handleInputChange("prompt", e.target.value, "text")
-          }
-          required
-        />
+        Opisz co ma być na kartce. Daj się ponieść kreatywności!
+        <div className={styles.textAreaContainer}>
+          <textarea
+            name="prompt"
+            placeholder="Napisz życzenia, wierszyk, żart lub opisz, jak ma wyglądać kartka"
+            value={formData.prompt}
+            onChange={(e) =>
+              handleInputChange("prompt", e.target.value, "text")
+            }
+            required
+            className={styles.textArea}
+            maxLength={2000}
+          />
+        </div>
       </label>
 
-      <button type="submit">Wyślij</button>
+      <button type="submit">Tworzymy!</button>
     </form>
   );
 }
