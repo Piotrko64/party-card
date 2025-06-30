@@ -1,4 +1,3 @@
-import { useAICardGenerate } from "components/generatorPage/form/sections/aiCardGenerate/hooks/useAICardGenerate";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { InputText } from "ui/form/inputText/InputText";
@@ -6,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./aiGeneratedCard.module.scss";
 import { HomeLink } from "ui/homeLink/HomeLink";
 import cx from "classnames";
+import { useAICardGenerate } from "hooks/useAICardGenerate";
 
 export function AiGenerateCard() {
   const { t } = useTranslation("ai");

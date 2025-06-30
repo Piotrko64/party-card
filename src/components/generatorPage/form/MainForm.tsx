@@ -4,33 +4,33 @@ import { ButtonToGenerate } from "./buttonToGenerate/ButtonToGenerate";
 import { BackgroundFormSection } from "./sections/backgroundFormSection/BackgroundFormSection";
 import { HeaderFormSection } from "./sections/headerFormSection/HeaderFormSection";
 import { WishesFormSection } from "./sections/wishesFormSection/WishesFormSection";
-import { useAICardGenerate } from "./sections/aiCardGenerate/hooks/useAICardGenerate";
+import { MusicFormSection } from "./sections/musicFormSection/MusicFormSection";
 
 export function MainForm() {
-    const { run, steps } = useReactJoyRide();
-    useAICardGenerate("Wrona mordo ty moja", "Człowiek sukcesu ", "Zadbaj o zabawne teksty o jego karierze frontend developera i pasji do programowania. Zastosuj kilka różnych form życzeń");
+  const { run, steps } = useReactJoyRide();
 
-    return (
-        <>
-            <Joyride
-                continuous
-                hideCloseButton
-                run={run}
-                scrollToFirstStep
-                showProgress
-                showSkipButton
-                steps={steps}
-                styles={{
-                    options: {
-                        zIndex: 10000,
-                    },
-                }}
-            />
+  return (
+    <>
+      <Joyride
+        continuous
+        hideCloseButton
+        run={run}
+        scrollToFirstStep
+        showProgress
+        showSkipButton
+        steps={steps}
+        styles={{
+          options: {
+            zIndex: 10000,
+          },
+        }}
+      />
 
-            <HeaderFormSection />
-            <BackgroundFormSection />
-            <WishesFormSection />
-            <ButtonToGenerate />
-        </>
-    );
+      <HeaderFormSection />
+      <BackgroundFormSection />
+      <WishesFormSection />
+      <MusicFormSection />
+      <ButtonToGenerate />
+    </>
+  );
 }

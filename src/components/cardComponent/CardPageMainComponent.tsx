@@ -4,18 +4,20 @@ import cx from "classnames";
 import { Background } from "./background/Background";
 import { WishesSection } from "./wishesSection/WishesSection";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
+import { useMusicOnStartCard } from "hooks/musicSection/useMusicOnStartCard";
 
 export function CardPageMainComponent() {
-    const { isActive } = useHeaderSectionStore();
+  const { isActive } = useHeaderSectionStore();
+  useMusicOnStartCard();
 
-    return (
-        <Background>
-            {isActive && (
-                <div className={cx(classes.headerSection, "flexCenter")}>
-                    <HeaderSection />
-                </div>
-            )}
-            <WishesSection />
-        </Background>
-    );
+  return (
+    <Background>
+      {isActive && (
+        <div className={cx(classes.headerSection, "flexCenter")}>
+          <HeaderSection />
+        </div>
+      )}
+      <WishesSection />
+    </Background>
+  );
 }
