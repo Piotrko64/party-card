@@ -3,6 +3,48 @@
     margin-right: auto;
     max-width: 700px;
     margin-bottom: 100px;
+
+.generatedActions {
+  margin-top: 30px;
+  text-align: center;
+
+  .successMessage {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--success, green);
+    margin-bottom: 20px;
+  }
+
+  .secondaryButton {
+    margin: 15px 0 5px;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 12px;
+    background-color: var(--violet);
+    color: white;
+    font-family: "Oswald";
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #4a2c6d;
+      color: white;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+  .helper {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+
     h2{
         margin-bottom: 40px;;
     }

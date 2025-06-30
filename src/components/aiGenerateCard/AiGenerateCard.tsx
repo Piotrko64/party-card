@@ -2,44 +2,53 @@ import { useAICardGenerate } from "components/generatorPage/form/sections/aiCard
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { InputText } from "ui/form/inputText/InputText";
+import { useNavigate } from "react-router-dom";
 import styles from "./aiGeneratedCard.module.scss";
 
 export function AiGenerateCard() {
   const { t } = useTranslation("ai");
+  const navigate = useNavigate();
 
-  const [formData, setFormData] = useState({
+  const [{ recipient, token, prompt, model }, setFormData] = useState({
     token: "",
     model: "gpt-4o",
     recipient: "",
     prompt: "",
   });
 
+  const [loading, setLoading] = useState(false);
+  const [isCardGenerated, setIsCardGenerated] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
   const generateCard = useAICardGenerate();
 
-  const handleInputChange = (
-    nameProperty: string,
-    newValue: string,
-    lastProperty: "text"
-  ) => {
+  const handleInputChange = (nameProperty: string, newValue: string) => {
     setFormData((prev) => ({
       ...prev,
       [nameProperty]: newValue,
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    generateCard(
-      formData.recipient,
-      formData.prompt,
-      formData.token,
-      formData.model
-    );
-    alert(
-      `Token: ${formData.token}\nModel: ${formData.model}\nImię jubilata: ${formData.recipient}\nPrompt:\n${formData.prompt}`
-    );
+    setLoading(true);
+    setIsCardGenerated(false);
+    setErrorMessage("");
+    try {
+      await generateCard(recipient, prompt, token, model);
+      setIsCardGenerated(true);
+    } catch (err: any) {
+      console.error("Generation error:", err);
+      setErrorMessage(
+        err.message || "Wystąpił nieoczekiwany błąd podczas generowania kartki."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
+
+  const goToGenerator = () => navigate("/generateCard");
+  const goToPreview = () => navigate("/previewCard");
 
   return (
     <form onSubmit={handleSubmit} className={styles.container}>
@@ -51,36 +60,37 @@ export function AiGenerateCard() {
         poczekać na wynik!
       </p>
 
-      {t("tokenLabel")}
       <InputText
+        labelText={t("tokenLabel")!}
         namePropertyToChange="token"
-        valueInput={formData.token}
+        valueInput={token}
         callbackToChangeValueText={handleInputChange}
         maxLength={100}
         placeholder="sk-..."
+        isVisibleEmojiPicker={false}
       />
       <p className={styles.helper}>{t("tokenHelper")}</p>
 
-      {t("modelLabel")}
       <InputText
+        labelText={t("modelLabel")!}
         namePropertyToChange="model"
-        valueInput={formData.model}
+        valueInput={model}
         callbackToChangeValueText={handleInputChange}
         maxLength={40}
         placeholder={t("modelHelper")!}
+        isVisibleEmojiPicker={false}
       />
       <p className={styles.helper}>{t("modelHelper")}</p>
 
-      <label>
-        {t("recipientLabel")}
-        <InputText
-          namePropertyToChange="recipient"
-          valueInput={formData.recipient}
-          callbackToChangeValueText={handleInputChange}
-          maxLength={60}
-          placeholder={t("recipientLabel")!}
-        />
-      </label>
+      <InputText
+        labelText={t("recipientLabel")!}
+        namePropertyToChange="recipient"
+        valueInput={recipient}
+        callbackToChangeValueText={handleInputChange}
+        maxLength={60}
+        placeholder={t("recipientLabel")!}
+        isVisibleEmojiPicker={false}
+      />
 
       <label>
         {t("promptLabel")}
@@ -88,10 +98,8 @@ export function AiGenerateCard() {
           <textarea
             name="prompt"
             placeholder={t("promptLabel")!}
-            value={formData.prompt}
-            onChange={(e) =>
-              handleInputChange("prompt", e.target.value, "text")
-            }
+            value={prompt}
+            onChange={(e) => handleInputChange("prompt", e.target.value)}
             required
             className={styles.textArea}
             maxLength={2000}
@@ -99,9 +107,45 @@ export function AiGenerateCard() {
         </div>
       </label>
 
-      <button className={styles.createButton} type="submit">
-        {t("submitButton")}
+      <button
+        className={styles.createButton}
+        style={{ pointerEvents: loading ? "none" : "auto" }}
+        type="submit"
+        disabled={loading}
+      >
+        {loading ? "Tworzenie..." : t("submitButton")}
       </button>
+
+      {errorMessage && <p className={styles.error}>{errorMessage}</p>}
+
+      {isCardGenerated && !errorMessage && (
+        <div className={styles.generatedActions}>
+          <p className={styles.successMessage}>Hura! udało się!</p>
+
+          <button
+            type="button"
+            className={styles.secondaryButton}
+            onClick={goToGenerator}
+          >
+            Przejdź do generatora
+          </button>
+          <p className={styles.helper}>
+            Dodaj swoje poprawki, stwórz i udostępnij kartkę
+          </p>
+
+          <button
+            type="button"
+            className={styles.secondaryButton}
+            onClick={goToPreview}
+          >
+            Zobacz podgląd kartki
+          </button>
+          <p className={styles.helper}>
+            Zobacz jak to wygląda, a potem przejdź do formularza w celu
+            udostępnienia party carda!
+          </p>
+        </div>
+      )}
     </form>
   );
 }
