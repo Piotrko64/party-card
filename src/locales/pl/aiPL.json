@@ -1,10 +1,17 @@
 {
-    "aiGenerateCard": "Stwórz kartkę z AI",
+    "aiGenerateCard": "Wygeneruj kartkę AI",
     "tokenLabel": "Twój token (ChatGPT / DeepSeek)",
-    "tokenHelper": "Nie przechowujemy Twojego klucza nigdzie — służy tylko do wygenerowania kartki. Możesz go uzyskać z platformy OpenAI lub DeepSeek API.",
-    "modelLabel": "Model językowy",
-    "modelHelper": "Np. deepseek-reasonal, deepseek-chat, gpt-4o",
-    "recipientLabel": "Imię jubilata",
-    "promptLabel": "Opisz, co ma być na kartce. Daj się ponieść kreatywności!",
-    "submitButton": "Tworzymy!"
+    "tokenHelper": "Token wymagany do wygenerowania kartki",
+    "modelLabel": "Model AI",
+    "modelHelper": "np. gpt-4o, gpt-4, deepseek-chat",
+    "recipientLabel": "Imię odbiorcy",
+    "promptLabel": "Opisz, co chcesz na kartce. Nie ograniczaj się!",
+    "submitButton": "Stwórz kartkę!",
+    "generationSuccess": "Hura! udało się!",
+    "generatorButton": "Przejdź do generatora",
+    "generatorHelper": "Dodaj swoje poprawki, stwórz i udostępnij kartkę",
+    "previewButton": "Zobacz podgląd kartki",
+    "previewHelper": "Zobacz jak to wygląda, a potem przejdź do formularza w celu udostępnienia party carda!",
+    "generationErrorDefault": "Wystąpił nieoczekiwany błąd podczas generowania kartki.",
+    "loadingText": "Tworzenie..."
 }

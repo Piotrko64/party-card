@@ -1,10 +1,17 @@
 {
-    "aiGenerateCard": "Generate an AI-Powered Card",
-    "tokenLabel": "Your token (ChatGPT / DeepSeek)",
-    "tokenHelper": "We do not store your API key—it's only used to generate the card. You can get it from OpenAI Platform or DeepSeek API.",
-    "modelLabel": "Language model",
-    "modelHelper": "E.g. deepseek-reasonal, chat, gpt-4o",
+    "aiGenerateCard": "Generate a greeting card with AI",
+    "tokenLabel": "Your API token (ChatGPT / DeepSeek)",
+    "tokenHelper": "Token required to generate a card",
+    "modelLabel": "AI Model",
+    "modelHelper": "e.g., gpt-4o, gpt-4, deepseek-chat",
     "recipientLabel": "Recipient’s name",
     "promptLabel": "Describe what you want on the card. Let your creativity flow!",
-    "submitButton": "Create!"
+    "submitButton": "Create!",
+    "generationSuccess": "Hooray! It worked!",
+    "generatorButton": "Go to generator",
+    "generatorHelper": "Add your edits, create and share your card",
+    "previewButton": "Preview the card",
+    "previewHelper": "See how it looks, then go to the form to publish the party card!",
+    "generationErrorDefault": "An unexpected error occurred while generating the card.",
+    "loadingText": "Creating..."
 }

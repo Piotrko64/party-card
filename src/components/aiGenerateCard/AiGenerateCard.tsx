@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { InputText } from "ui/form/inputText/InputText";
 import { useNavigate } from "react-router-dom";
 import styles from "./aiGeneratedCard.module.scss";
+import { HomeLink } from "ui/homeLink/HomeLink";
+import cx from "classnames";
 
 export function AiGenerateCard() {
   const { t } = useTranslation("ai");
@@ -52,6 +54,8 @@ export function AiGenerateCard() {
 
   return (
     <form onSubmit={handleSubmit} className={styles.container}>
+      <HomeLink />
+
       <h2>🎉 {t("aiGenerateCard")}</h2>
 
       <p className={styles.description}>
@@ -107,43 +111,33 @@ export function AiGenerateCard() {
         </div>
       </label>
 
-      <button
-        className={styles.createButton}
-        style={{ pointerEvents: loading ? "none" : "auto" }}
-        type="submit"
-        disabled={loading}
-      >
-        {loading ? "Tworzenie..." : t("submitButton")}
+      <button className={styles.createButton} type="submit" disabled={loading}>
+        {loading ? t("loadingText") : t("submitButton")}
       </button>
 
       {errorMessage && <p className={styles.error}>{errorMessage}</p>}
 
       {isCardGenerated && !errorMessage && (
         <div className={styles.generatedActions}>
-          <p className={styles.successMessage}>Hura! udało się!</p>
+          <p className={styles.successMessage}>{t("generationSuccess")}</p>
 
           <button
             type="button"
             className={styles.secondaryButton}
             onClick={goToGenerator}
           >
-            Przejdź do generatora
+            {t("generatorButton")}
           </button>
-          <p className={styles.helper}>
-            Dodaj swoje poprawki, stwórz i udostępnij kartkę
-          </p>
+          <p className={styles.helper}>{t("generatorHelper")}</p>
 
           <button
             type="button"
-            className={styles.secondaryButton}
+            className={cx(styles.secondaryButton, styles.previewButton)}
             onClick={goToPreview}
           >
-            Zobacz podgląd kartki
+            {t("previewButton")}
           </button>
-          <p className={styles.helper}>
-            Zobacz jak to wygląda, a potem przejdź do formularza w celu
-            udostępnienia party carda!
-          </p>
+          <p className={styles.helper}>{t("previewHelper")}</p>
         </div>
       )}
     </form>

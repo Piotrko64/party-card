@@ -20,7 +20,7 @@
     width: 100%;
     font-size: 1.2rem;
     padding: 12px;
-    background-color: var(--violet);
+    background-color: rgb(184, 125, 13);
     color: white;
     font-family: "Oswald";
     border-radius: 5px;
@@ -28,8 +28,12 @@
     cursor: pointer;
     transition: all 0.3s ease;
 
+    &.previewButton {
+      background-color: rgb(149, 0, 152);
+    }
+
     &:hover {
-      background-color: #4a2c6d;
+      background-color: #bd5d04;
       color: white;
     }
 
@@ -38,11 +42,7 @@
     }
   }
 }
-  .helper {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 10px;
-  }
+
 
 
     h2{
@@ -71,9 +71,9 @@
 
     }
     p.helper{
-        font-size: 14px;
+        font-size: 16px;
         margin-top: 0;
-        color: var(--secondBackColor);
+        color: var(--gray);
         margin-bottom: 32px;;
     }
     .textAreaContainer {
