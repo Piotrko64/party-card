@@ -56,7 +56,7 @@ export function AiGenerateCard() {
     <form onSubmit={handleSubmit} className={styles.container}>
       <HomeLink />
 
-      <h2>🎉 {t("aiGenerateCard")}</h2>
+      <h1>🎉 {t("aiGenerateCard")}</h1>
 
       <p className={styles.description}>
         Stwórz kartkę z życzeniami z... użyciem AI! Musisz mieć jednak swój
@@ -101,7 +101,6 @@ export function AiGenerateCard() {
         <div className={styles.textAreaContainer}>
           <textarea
             name="prompt"
-            placeholder={t("promptLabel")!}
             value={prompt}
             onChange={(e) => handleInputChange("prompt", e.target.value)}
             required
