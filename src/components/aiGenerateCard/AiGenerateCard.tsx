@@ -69,7 +69,7 @@ export function AiGenerateCard() {
         namePropertyToChange="token"
         valueInput={token}
         callbackToChangeValueText={handleInputChange}
-        maxLength={100}
+        maxLength={500}
         placeholder="sk-..."
         isVisibleEmojiPicker={false}
       />
