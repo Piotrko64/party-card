@@ -10,27 +10,29 @@ import { HeaderSection } from "types/stores/HeaderSection";
 import { UnionWishElements } from "types/stores/WishesSectionStore";
 
 export function useExamplesPanel() {
-    const { id } = useParams();
-    const { t } = useTranslation("ui");
-    const { setEntireHeaderStore } = useHeaderSectionStore();
-    const { setEntireBackgroundStore } = useBackgroundStore();
-    const { setWishesElements } = useWishesSectionStore();
-    const navigate = useNavigate();
+  const { id } = useParams();
+  const { t } = useTranslation("ui");
+  const { setEntireHeaderStore } = useHeaderSectionStore();
+  const { setEntireBackgroundStore } = useBackgroundStore();
+  const { setWishesElements } = useWishesSectionStore();
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        const index = +id! - 1;
-        if (!listExamplesCard[index]) {
-            navigate("/404");
-            return;
-        }
+  useEffect(() => {
+    const index = +id! - 1;
+    if (!listExamplesCard[index]) {
+      navigate("/404");
+      return;
+    }
 
-        const card = listExamplesCard[index];
-        setEntireHeaderStore(card.headerSection as HeaderSection);
-        setEntireBackgroundStore(card.backgroundSection as BackgroundStoreWithoutFunctions);
-        setWishesElements(card.wishesSection as Array<UnionWishElements>);
+    const card = listExamplesCard[index];
+    setEntireHeaderStore(card.headerSection as HeaderSection);
+    setEntireBackgroundStore(
+      card.backgroundSection as BackgroundStoreWithoutFunctions
+    );
+    setWishesElements(card.wishesSection as Array<UnionWishElements>);
 
-        window.scrollTo(0, 0);
-    }, [id]);
+    window.scrollTo(0, 0);
+  }, [id]);
 
-    return { t, id };
+  return { t, id };
 }
