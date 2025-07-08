@@ -48,5 +48,12 @@
     "maxLength": "Przekroczono maksymalną ilość elementów",
     "noSelect": " Nie wybrano żadnych elementów ",
     "addNew": "Dodaj nowe pole",
-    "elementList": "List element"
+    "elementList": "List element",
+    "music": "Muzyka",
+    "enableMusic": "Dodaj muzyke 🎵🎶",
+    "volume": "Głośność",
+    "musicUrlLabel": "Adres URL pliku .mp3",
+    "musicUrlPlaceholder": "Wklej link do pliku .mp3",
+    "seeCard": "Zobacz kartkę",
+    "soundWarning": "Uwaga, będzie z dźwiękiem!"
 }

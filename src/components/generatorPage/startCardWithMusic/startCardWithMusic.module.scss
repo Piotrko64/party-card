@@ -1,0 +1,36 @@
+.overlay {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  text-align: center;
+}
+
+.button {
+  border: 4px solid var(--violet);
+background-color: transparent;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  color: var(--violet);
+  font-size: 1.2rem;
+  min-width: 80vw;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+
+  &:hover {
+    background-color: var(--violet);
+    color: black
+  }
+}
+
+.note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--gray);
+}

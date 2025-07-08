@@ -48,5 +48,12 @@
     "maxLength": "Maximum number of elements exceeded",
     "noSelect": "No elements selected",
     "addNew": "Add new field",
-    "elementList": "List element"
+    "elementList": "List element",
+    "music": "Music",
+    "enableMusic": "Enable music",
+    "volume": "Volume",
+    "musicUrlLabel": "URL to .mp3 file",
+    "musicUrlPlaceholder": "Paste the link to a .mp3 file",
+    "seeCard": "View the card",
+    "soundWarning": "Warning: there will be sound!"
 }
