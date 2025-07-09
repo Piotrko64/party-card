@@ -2,5 +2,6 @@
     "goToMain": "Go to Party Card Home Page",
     "goToGenerator": "Go to Generator",
     "goToExamples": "See other examples",
-    "realization": "Project idea and implementation:"
+    "realization": "Project idea and implementation:",
+    "goToAI": "Try Party Card with AI (using OpenAI or DeepSeek API key)"
 }
