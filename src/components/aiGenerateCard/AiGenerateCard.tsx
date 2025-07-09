@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { InputText } from "ui/form/inputText/InputText";
 import { useNavigate } from "react-router-dom";
@@ -6,6 +6,7 @@ import styles from "./aiGeneratedCard.module.scss";
 import { HomeLink } from "ui/homeLink/HomeLink";
 import cx from "classnames";
 import { useAICardGenerate } from "hooks/useAICardGenerate";
+import { use } from "i18next";
 
 export function AiGenerateCard() {
   const { t } = useTranslation("ai");
@@ -24,6 +25,10 @@ export function AiGenerateCard() {
 
   const generateCard = useAICardGenerate();
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   const handleInputChange = (nameProperty: string, newValue: string) => {
     setFormData((prev) => ({
       ...prev,
@@ -36,13 +41,15 @@ export function AiGenerateCard() {
     setLoading(true);
     setIsCardGenerated(false);
     setErrorMessage("");
+
     try {
       await generateCard(recipient, prompt, token, model);
       setIsCardGenerated(true);
     } catch (err: any) {
-      console.error("Generation error:", err);
+      setIsCardGenerated(false);
       setErrorMessage(
-        err.message || "Wystąpił nieoczekiwany błąd podczas generowania kartki."
+        err?.message ||
+          "Wystąpił nieoczekiwany błąd podczas generowania kartki."
       );
     } finally {
       setLoading(false);
@@ -60,7 +67,7 @@ export function AiGenerateCard() {
 
       <p className={styles.description}>
         Stwórz kartkę z życzeniami z... użyciem AI! Musisz mieć jednak swój
-        własny klucz API. Potem wystarcy już tylko dobrze uzupełnić propmty i
+        własny klucz API. Potem wystarczy już tylko dobrze uzupełnić prompt i
         poczekać na wynik!
       </p>
 
@@ -96,7 +103,7 @@ export function AiGenerateCard() {
         isVisibleEmojiPicker={false}
       />
 
-      <label>
+      <label className={styles.textAreaLabel}>
         {t("promptLabel")}
         <div className={styles.textAreaContainer}>
           <textarea

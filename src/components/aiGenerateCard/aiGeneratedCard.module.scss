@@ -4,6 +4,17 @@
     max-width: 700px;
     margin-bottom: 100px;
 
+.textAreaLabel {
+  font-size: 0.9rem;
+
+}
+
+.error{
+  color: var(--red);
+  font-size: 1rem;
+  text-align: center;
+}
+
 .generatedActions {
   margin-top: 30px;
   text-align: center;

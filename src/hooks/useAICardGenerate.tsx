@@ -3,7 +3,8 @@ import { useBackgroundStore } from "stores/BackgroundStore/BackgroundStore";
 import { useHeaderSectionStore } from "stores/HeaderSectionStore/HeaderSectionStore";
 import { useWishesSectionStore } from "stores/WishesSectionStore/WishesSectionStore";
 
-const API_URL = "https://suno-ai-vercel-serverless.vercel.app/api/party-card/generate-party-card";
+const API_URL =
+  "https://suno-ai-vercel-serverless.vercel.app/api/party-card/generate-party-card";
 
 export function useAICardGenerate() {
   const [wasTriggered, setWasTriggered] = useState(false);
@@ -33,7 +34,11 @@ export function useAICardGenerate() {
 
       if (!response.ok) {
         const error = await response.json();
-        throw new Error(error?.error || "Unknown backend error");
+        throw new Error(
+          error?.errorDetails?.error?.message ||
+            error?.error ||
+            "Unknown backend error"
+        );
       }
 
       const parsed = await response.json();
@@ -42,10 +47,11 @@ export function useAICardGenerate() {
       setWishesElements(parsed.wishesSection);
       setEntireHeaderStore(parsed.headerSection);
       setWasTriggered(true);
-
-      console.log("Generated JSON:", parsed);
     } catch (err) {
       console.error("Backend call error:", err);
+      throw new Error(
+        err instanceof Error ? err.message : "An unexpected error occurred"
+      );
     }
   }
 
