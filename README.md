@@ -24,6 +24,37 @@
 
 </div>
 
+<br/>
+
+## August 2025 Update – Background Music 🎵 & AI Generation
+
+This update brings two exciting features to **Party Card**:
+
+### 🎵 Background Music  
+You can now **add background music** by providing a direct URL.  
+The music will automatically play in the background while viewing the card.
+
+### 🤖 AI-Powered Card Generation  
+Use your **own API key** from **OpenAI** or **DeepSeek** to generate personalized cards.  
+
+<div align="center">
+
+<img src="https://images.seeklogo.com/logo-png/52/1/langchain-logo-png_seeklogo-528369.png" alt="langchain" height="50"  align="center" title="langchain"/>
+<img src="https://static.vecteezy.com/system/resources/thumbnails/021/059/825/small_2x/chatgpt-logo-chat-gpt-icon-on-green-background-free-vector.jpg" alt="GPT"  height="50" align="center"/>
+<img src="https://brandlogos.net/wp-content/uploads/2025/02/deepseek_logo_icon-logo_brandlogos.net_s5bgc.png" alt="DeepSeek"  height="50" align="center"/>
+</div>
+<br/>
+A dedicated feature lets you create full Party Cards based on a <b>prompt</b> and <b>recipient's name</b>.
+
+Backend implementation is available here:  
+👉 [GitHub – Vercel Serverless LangChain API For Party Card and Suno AI API](https://github.com/Piotrko64/suno-ai-and-partycard-vercel-serverless)
+
+For better AI output I use <b>Langchain framework for NodeJS</b>
+
+---
+
+These features open the door for even more **creative**, **automated**, and **interactive** card-making!
+
 <br />
 
 # Table of contents
